@@ -1,0 +1,25 @@
+
+md-sidenav.md-sidenav-left(md-component-id='left', md-whiteframe='4')
+	md-toolbar.md-theme-indigo
+		.md-toolbar-tools
+			ext-svg(data-content="config.BIZ4Z_LOGO")
+			span(flex)
+			//- h1 {{ 'Global.Menu' | translate }}
+			span(flex)
+			.md-toolbar-item(hide-gt-xs='')
+				md-button.md-icon-button(ng-click='toggleLeft()', aria-label='Toggle Menu') 
+					md-icon.material-icons close
+	md-content
+		include breadcrumbs
+		md-sidemenu
+			md-sidemenu-group
+				md-sidemenu-content(md-heading="{{ 'Page.Features.Main' | translate }}", md-arrow='true') 
+					md-sidemenu-button(ui-sref="feature", ui-sref-active="active", ng-click='toggleLeft()') {{ 'Page.Features.Main' | translate }} 
+					md-sidemenu-button(ui-sref="feature", ui-sref-active="active", ng-click='toggleLeft()') {{ 'Page.Features.Rates' | translate }} 
+					md-sidemenu-button(ui-sref="feature", ui-sref-active="active", ng-click='toggleLeft()') {{ 'Page.Features.Management' | translate }} 
+					md-sidemenu-button(ui-sref="feature", ui-sref-active="active", ng-click='toggleLeft()') {{ 'Page.Features.Booking' | translate }} 
+			md-sidemenu-group
+				md-sidemenu-button(ui-sref="price", ui-sref-active="active", ng-click='toggleLeft()') {{ 'Page.Pricing' | translate }} 
+				md-sidemenu-button(ui-sref="support", ui-sref-active="active", ng-click='toggleLeft()') {{ 'Page.Support' | translate }} 
+				md-sidemenu-button(ui-sref="login", ui-sref-active="active", ng-click='toggleLeft()') {{ 'Page.Login' | translate }} 
+				md-sidemenu-button(ui-sref="try", ui-sref-active="active", ng-click='toggleLeft()') {{ 'Page.Try' | translate }} 

@@ -76,6 +76,7 @@ npm-debug.log
 
 # IDE #
 .idea/
+dist/
 *.swp
 
 $RECYCLE.BIN/

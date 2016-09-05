@@ -1,0 +1,103 @@
+=set-button($value, $bg: #000, $color :#FFF, $per: 5%)
+	.md-button
+		&.md-button-#{$value}
+			+border-radius(3px)
+			+link ($color)
+			+bg ($bg, darken($bg, $per), darken($bg, $per))
+
++set-button(link, color-get($colors, link))
++set-button(hover, color-get($colors, hover))
++set-button(muted, darken(color-get($colors, white), 55%), darken(color-get($colors, white), 10%))
++set-button(main, color-get($colors, main))
++set-button(con, color-get($colors, con))
++set-button(danger, color-get($colors, danger))
++set-button(primary, color-get($colors, peter-river))
++set-button(warning, color-get($colors, warning))
++set-button(success, color-get($colors, success))
++set-button(voted, color-get($colors, sun-flower))
++set-button(amethyst, color-get($colors, amethyst))
++set-button(turquoise, color-get($colors, tquoise))
++set-button(orange, color-get($colors, dangerorange))
+
+.md-button
+	&.no-radius
+		+bor-rad(0)
+	&.no-marrgin
+		+mar(0)
+	&.no-shadow
+		+box-shadow('none !important')
+	&.md-button-xs
+		+lh(1.5rem)
+		min-height: 1.5rem
+		+fz(.75rem)
+	&.md-button-sm
+		+lh(2.2rem)
+		min-height: 2.2rem
+		+pad(0 1rem)
+	&.md-button-md
+		+lh(2.5rem)
+		min-height: 2.5rem
+		+pad(.25rem 1.3rem)
+		+fz(1.1rem)
+	&.md-button-lg
+		+lh(2.8rem)
+		min-height: 2.8rem
+		+pad(.5rem 1.8rem)
+		+fz(1.3rem)
+	&.md-button-shadow
+		+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 rgba(0, 0, 0, 0.4)')
+		border: 0
+		&.md-button-link
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, link), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, link), 10%)}')
+		&.md-button-hover
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, hover), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, hover), 10%)}')
+		&.md-button-muted
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, brown), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, brown), 10%)}')
+		&.md-button-main
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, main), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, main), 10%)}')
+		&.md-button-con
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, con), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, con), 10%)}')
+		&.md-button-danger
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, danger), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, danger), 10%)}')
+		&.md-button-primary
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, peter-river), 15%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, peter-river), 20%)}')
+		&.md-button-warning
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, warning), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, warning), 10%)}')
+		&.md-button-success
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, success), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, success), 10%)}')
+		&.md-button-voted
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, sun-flower), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, sun-flower), 10%)}')
+		&.md-button-amethyst
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, amethyst), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, amethyst), 10%)}')
+		&.md-button-turquoise
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, tquoise), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, tquoise), 10%)}')
+		&.md-button-orange
+			+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, dangerorange), 5%)}')
+			&:hover
+				+box-shadow('0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 3px 0 #{darken(color-get($colors, dangerorange), 10%)}')
+		
+

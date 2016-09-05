@@ -1,0 +1,39 @@
+.footer
+	background: darken(color(white),80%)
+	color: darken(color(white),30%)
+	+pad(2rem .5rem)
+	+media-xs-up
+		+pad(2.2rem 1rem)
+	+media-sm-up
+		+pad(3rem 2rem)
+	h3 
+		cursor: pointer 
+		svg 
+			max-height: 34px 
+			margin-top: 8px
+			max-width: 60px
+			* 
+				fill: color(white)
+		+media-sm-up
+			svg 
+				max-height: 44px 
+				margin-top: 5px
+				max-width: 78px
+	.logo
+		.pr 
+			+mar(1rem null null null)
+		ul 
+			li 
+				+mar(.5rem null null null)
+				+pad(0 .5rem)
+				+media-sm-up
+					+mar(0)
+					&:last-child 
+						+pad(0 0 0 .5rem)
+	.copy
+		+mar(1rem null null null)
+		+fz(.85rem)
+		.pr 
+			+mar(.5rem null null null)
+			+media-sm-up
+				+mar(0)

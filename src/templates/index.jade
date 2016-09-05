@@ -1,0 +1,9 @@
+extends _layout/layout
+
+block body 
+    nav(md-scroll-y, layout="column", flex, ui-view="nav")
+    header(flex, layout="column", ui-view="header")
+    main(flex, layout="column")
+        nav(ui-view="breadcrumbs")
+        ui-view(autoscroll="false")
+    footer(ui-view="footer")

@@ -1,0 +1,14 @@
+{
+    "Lang": {
+        "Root": "Ngôn ngữ",
+        "EN": "English",
+        "VN": "Vietnamese"
+    },
+    "Global": {
+        "Menu": "Danh mục"
+    },
+     "Page": {
+        "Home": "Trang chủ",
+        "About": "Về chúng tôi"
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "k-lite-task",
+  "description": "",
+  "main": "",
+  "authors": [
+    "baonguyen"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/baonguyenyam/k-lite-task",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "angular": "^1.5.8",
+    "angular-material": "^1.1.0",
+    "angular-ui-router": "ui-route#^0.3.1",
+    "angular-route": "^1.5.8",
+    "angular-translate": "^2.11.1",
+    "angular-translate-loader-url": "^2.11.1",
+    "angular-cookies": "^1.5.8",
+    "angular-translate-loader-static-files": "^2.11.1",
+    "angular-sanitize": "^1.5.8",
+    "angular-translate-storage-cookie": "^2.11.1",
+    "angular-utils-ui-breadcrumbs": "^0.2.2",
+    "angular-material-sidemenu": "^1.0.1",
+    "k-sass-core": "^2.0.6",
+    "material-colors": "^1.0.0",
+    "owl.carousel": "^2.1.6"
+  },
+  "devDependencies": {}
+}

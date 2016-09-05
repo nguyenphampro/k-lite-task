@@ -1,0 +1,23 @@
+=set-text($value, $val: #000)
+	.text-#{$value}
+		color: #{$val}
+
++set-text(link, color-get($colors, link))
++set-text(hover, color-get($colors, hover))
++set-text(muted, darken(color-get($colors, white), 55%))
++set-text(main, color-get($colors, main))
++set-text(con, color-get($colors, con))
++set-text(danger, color-get($colors, danger))
++set-text(primary, color-get($colors, peter-river))
++set-text(warning, color-get($colors, warning))
++set-text(success, color-get($colors, success))
++set-text(voted, color-get($colors, sun-flower))
++set-text(amethyst, color-get($colors, amethyst))
++set-text(turquoise, color-get($colors, tquoise))
++set-text(orange, color-get($colors, dangerorange))
++set-text(white, color-get($colors, white))
++set-text(black, color-get($colors, blacks))
+
+.no-padding
+	+pad(0_)
+

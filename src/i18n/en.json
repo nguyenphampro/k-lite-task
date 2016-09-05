@@ -1,0 +1,27 @@
+{
+    "Lang": {
+        "Root": "Language",
+        "EN": "English",
+        "VN": "Vietnamese"
+    },
+    "Global": {
+        "Menu": "Menu"
+    },
+     "Page": {
+        "Home": "Home",
+        "About": "About Us",
+        "Features": {
+            "Main": "Features",
+            "Rates": "Live FX Rates",
+            "Management": "Risk Management",
+            "Booking": "Customer Booking"
+        },
+        "Pricing": "Pricing",
+        "Login": "Login",
+        "Try": "Try For Free",
+        "News": "News",
+        "Support": "Support",
+        "Contact": "Contact Us",
+        "Resources": "Resources"
+    }
+}

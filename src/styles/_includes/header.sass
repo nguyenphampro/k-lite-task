@@ -1,0 +1,33 @@
+header
+    // position: fixed
+    width: 100hw
+    z-index: 100
+    .md-nav-bar
+        border: 0
+    .md-button
+        text-transform: capitalize
+        +fz(1rem)
+    md-select
+        +mar(0 8px)
+        +pad(0 6px)
+        .md-select-value 
+            &.md-select-placeholder
+                color: color(white)
+        &:focus
+            &:not([disabled])
+                .md-select-value 
+                    &.md-select-placeholder
+                        color: color(white)
+    h1 
+        cursor: pointer 
+    svg 
+        max-height: 34px 
+        margin-top: 8px
+        max-width: 60px
+        * 
+            fill: color(white)
+    +media-sm-up
+        svg 
+            max-height: 44px 
+            margin-top: 5px
+            max-width: 78px

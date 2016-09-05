@@ -1,0 +1,15 @@
+.footer 
+	section.logo(flex, layout="column", layout-gt-sm="row", layout-align-xs="center center", layout-align-sm="center center")
+		div(flex, flex-gt-xs="20")
+			h3(ui-sref="home") 
+				ext-svg(data-content="config.BIZ4Z_LOGO")
+		div.pr(flex, flex-gt-xs="80")
+			ul(flex, layout-align="end", layout="column", layout-gt-xs="row", layout-align-xs="center center", layout-align-sm="center center")
+				li(ui-sref="about", ui-sref-active="active") {{ 'Page.About' | translate }} 
+				li(ui-sref="resource", ui-sref-active="active") {{ 'Page.Resource' | translate }} 
+				li(ui-sref="support", ui-sref-active="active") {{ 'Page.Support' | translate }} 
+				li(ui-sref="contact", ui-sref-active="active") {{ 'Page.Contact' | translate }} 
+
+	section.copy(flex, layout="column", layout-gt-sm="row", layout-align-xs="center center", layout-align-sm="center center")
+		div(flex, flex-gt-sm="50") Copyright 2016 by 4xLabs.
+		div.pr(flex, flex-gt-sm="50", layout-align="end", layout-gt-sm="row") Privacy Policy & Terms of Service

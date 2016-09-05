@@ -1,0 +1,49 @@
+=media-xs
+	@media (max-width: $layout-breakpoint-xs)
+		@content
+=media-xs-down
+	@media (max-width: $layout-breakpoint-xs - 1)
+		@content
+=media-xs-up
+	@media (min-width: $layout-breakpoint-xs + 1)
+		@content
+
+=media-sm
+	@media (max-width: $layout-breakpoint-sm)
+		@content
+=media-sm-down
+	@media (max-width: $layout-breakpoint-sm - 1)
+		@content
+=media-sm-up
+	@media (min-width: $layout-breakpoint-sm + 1)
+		@content
+
+=media-md
+	@media (max-width: $layout-breakpoint-md)
+		@content
+=media-md-down
+	@media (max-width: $layout-breakpoint-md - 1)
+		@content
+=media-md-up
+	@media (min-width: $layout-breakpoint-md + 1)
+		@content
+
+=media-lg
+	@media (max-width: $layout-breakpoint-lg)
+		@content
+=media-lg-down
+	@media (max-width: $layout-breakpoint-lg - 1)
+		@content
+=media-lg-up
+	@media (min-width: $layout-breakpoint-lg + 1)
+		@content
+
+// =media-xl
+// 	@media (min-width: $layout-breakpoint-lg + 400)
+// 		@content
+// =media-xl-down
+// 	@media (max-width: $layout-breakpoint-lg - 399)
+// 		@content
+// =media-xl-up
+// 	@media (min-width: $layout-breakpoint-lg + 401)
+// 		@content

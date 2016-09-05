@@ -1,0 +1,29 @@
+md-toolbar.md-whiteframe-glow-z1
+	.md-toolbar-tools
+		h1.md-toolbar-item.md-breadcrumb.md-headline(ui-sref="home") 
+			ext-svg(data-content="config.BIZ4Z_LOGO")
+			//- span.md-breadcrumb-page.md-primary.color-blue-500 {{RootTitle}}
+		span(flex)
+		.md-toolbar-item(hide-gt-xs='')
+			md-button.md-icon-button(ng-click='toggleLeft()', aria-label='Toggle Menu', class="md-icon-button") 
+				md-icon.material-icons menu
+		.md-toolbar-item(hide-xs='')
+			md-select.md-subhead.md-no-underline(ng-model="Features", placeholder="{{'Page.Features.Main'  | translate}}")
+				md-option(ui-sref="feature", ui-sref-active="active") {{ 'Page.Features.Main' | translate }} 
+				md-option(ui-sref="feature", ui-sref-active="active") {{ 'Page.Features.Rates' | translate }} 
+				md-option(ui-sref="feature", ui-sref-active="active") {{ 'Page.Features.Management' | translate }} 
+				md-option(ui-sref="feature", ui-sref-active="active") {{ 'Page.Features.Booking' | translate }} 
+		.md-toolbar-item(hide-xs='')
+			md-button(md-no-ink, aria-label="{{ 'Page.Pricing' | translate }} ", ui-sref="price", ui-sref-active="active") {{ 'Page.Pricing' | translate }} 
+			md-button(md-no-ink, aria-label="{{ 'Page.Support' | translate }} ", ui-sref="support", ui-sref-active="active") {{ 'Page.Support' | translate }} 
+			md-button(md-no-ink, aria-label="{{ 'Page.Login' | translate }} ", ui-sref="login", ui-sref-active="active") {{ 'Page.Login' | translate }} 
+			md-button(md-no-ink, aria-label="{{ 'Page.Try' | translate }} ", ui-sref="try", ui-sref-active="active") {{ 'Page.Try' | translate }} 
+		//- .md-toolbar-item(hide-xs='')
+		//- 	md-nav-bar(md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links")
+		//- 		md-nav-item(md-nav-sref="home", ui-sref-active="active") {{ 'Page.Home' | translate }} 
+		//- 		md-nav-item(md-nav-sref="about", ui-sref-active="active") {{ 'Page.About' | translate }} 
+		//- Language 
+		.md-toolbar-item(hide-xs='')
+			md-select.md-subhead.md-no-underline(ng-model="ChangeLang", placeholder="{{'Lang.Root'  | translate}}")
+				md-option(ng-click="changeLanguage('en')" translate="Lang.EN")
+				md-option(ng-click="changeLanguage('vi')" translate="Lang.VN")

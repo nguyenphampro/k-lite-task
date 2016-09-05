@@ -1,0 +1,149 @@
+.page-index
+	.index-slider
+		+background-gradient(lighten(color-get($colors,main), 10%), color-get($colors,con))
+		color: $md-white
+		z-index: 1
+		position: relative
+		+media-sm-up
+			+pad(3rem 0rem)
+		+media-md-up
+			+pad(6rem 0rem)
+		&:after 
+			content: ''
+			+pos(abs, 0 null null 0)
+			background: url('../img/home/bg.png')
+			background-size: cover 
+			background-repeat: no-repeat
+			background-position: center center 
+			width: 100%
+			height: 100% 
+			z-index: -1
+	.index-choose
+		background: darken(color(white), 5%)
+		.choose-item
+			+media-xs-down
+				+pad(1rem 0)
+			.item
+				+pad(2rem .5rem)
+				text-transform: uppercase 
+				&:hover
+					background: darken(color(white), 10%)
+				i
+					color: darken(color(white), 35%)
+					+mar(null null .5rem null)
+					+fz(2.5rem)
+			+media-xs-down
+				.item
+					+pad(1rem 2rem)
+	.index-why 
+		+pad(2rem 1rem)
+		+media-xs-up
+			+pad(3rem .5rem)
+		+media-sm-up
+			+pad(5rem .5rem)
+		h4 
+			text-transform: uppercase
+		.lead
+			color: darken(color(white), 35%)
+			+mar(2rem 0)
+		.why-item
+			.item 
+				h5 
+					+fw(700)
+				p 
+					color: darken(color(white), 35%)
+					+mar(1rem 0)
+	.index-news
+		background: darken(color(white), 5%)
+		.news-item
+			+pad(2rem 1rem)
+			+media-xs-up
+				+pad(3.6rem 1rem)
+			hr 
+				max-width: 60px
+				border: 0
+				height: 3px
+				background: darken(color-get($colors, main), 0%)
+			p 
+				color: darken(color(white), 70%)
+				+mar(2rem 0)
+			ul 
+				color: darken(color(white), 35%)
+				+mar(1rem)
+				li 
+					list-style-type: disc
+					+mar(.5rem 0)
+	.index-news2
+		background: color-get($colors,con)
+		color: darken(color(white), 0%)
+		.news-item
+			+pad(2rem 1rem)
+			+media-xs-up
+				+pad(3.6rem 1rem)
+			hr 
+				max-width: 60px
+				height: 3px
+				border: 0
+				background: darken(color-get($colors, main), 0%)
+			p 
+				color: darken(color(white), 0%)
+				+mar(2rem 0)
+			ul 
+				color: darken(color(white), 10%)
+				+mar(1rem)
+				li 
+					list-style-type: disc
+					+mar(.5rem 0)
+	.index-news2
+		background: color-get($colors,con)
+		color: darken(color(white), 0%)
+		.news-item
+			+pad(2rem 1rem)
+			+media-xs-up
+				+pad(3.6rem 1rem)
+			hr 
+				max-width: 60px
+				height: 3px
+				border: 0
+				background: darken(color-get($colors, main), 0%)
+			p 
+				color: darken(color(white), 0%)
+				+mar(2rem 0)
+			ul 
+				color: darken(color(white), 10%)
+				+mar(1rem)
+				li 
+					list-style-type: disc
+					+mar(.5rem 0)
+	.index-news3
+		background: darken(color(white), 70%)
+		color: darken(color(white), 0%)
+		.news-item
+			+pad(2rem 1rem)
+			+media-xs-up
+				+pad(3.6rem 1rem)
+			hr 
+				max-width: 60px
+				height: 3px
+				border: 0
+				background: darken(color-get($colors, main), 0%)
+			p 
+				color: darken(color(white), 0%)
+				+mar(2rem 0)
+			ul 
+				color: darken(color(white), 35%)
+				+mar(1rem)
+				li 
+					list-style-type: disc
+					+mar(.5rem 0)
+	
+	.index-started
+		+background-gradient(lighten(color-get($colors,main), 10%), color-get($colors,con))
+		color: $md-white
+		z-index: 1
+		position: relative
+		+media-sm-up
+			+pad(3rem 0rem)
+		+media-md-up
+			+pad(6rem 0rem)
+	
