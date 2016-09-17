@@ -85,7 +85,7 @@ gulp.task('k-task', function(cb) {
 gulp.task('ser', function(cb) {
     runSequence(
         'k-task',
-        'browserSyncPhp',
+        'browserSync',
         'watch',
         cb
     );
