@@ -1,14 +1,14 @@
-config: 
+config:
 # Concat
-  concat: 
+  concat:
     babelconcat: app.bundler
     namejs: addons
     namecss: addons
-    js: 
+    js:
       - "bower_components/jquery/dist/jquery.js"
       - "bower_components/tether/dist/js/tether.js"
       - "bower_components/bootstrap/dist/js/bootstrap.js"
-    css: 
+    css:
       - "bower_components/animate.css/animate.css"
       - "bower_components/font-awesome/css/font-awesome.css"
 # Base config
@@ -28,20 +28,20 @@ config:
   blank: "_blank"
   images: "img"
 # Layout
-  layouts: 
+  layouts:
     assets: "partials"
     root: "templates"
     jade: "templates"
     nunjucks: "templates/nunjucks"
 # Scripts
-  scripts: 
+  scripts:
     assets: "js"
     root: "scripts"
     typescript: "scripts/typescript"
     javascript: "scripts"
     coffee: "scripts/coffee"
 # Styles
-  styles: 
+  styles:
     assets: "css"
     root: "styles"
     css: "styles/css"
@@ -49,7 +49,7 @@ config:
     sass: "styles"
     stylus: "styles/stylus"
 # Ignore
-  ignore: 
+  ignore:
     copy: "{**/*.jade,**/*.nunjucks,**/*.js,**/*.ts,**/*.coffee}"
     scripts: "{**/*.ts,**/*.coffee}"
     jade: "{include,include/**}"
@@ -64,12 +64,13 @@ config:
   port: "9999"
   sameport: "6000"
   proxy: "9018"
+  website: "baonguyenyam.github.io"
 # Packer
   packer: main.js
   packerdist: app.js #to app.min.js
 # License
   title: "Gulp App"
-  author: 
+  author:
     email: "baonguyenyam@gmail.com"
     name: "BaoNguyen"
     link: "https://github.com/baonguyenyam"
@@ -94,4 +95,5 @@ config:
     cfg_content: "Brands Designer/Web Developer/Apps Developer/Photograper/Front-End Developer"
     cfg_author: "Bao Nguyen"
     cfg_url: "baonguyenyam.github.io"
-    cfg_sitenameurl: "baonguyenyam" 
+    cfg_sitenameurl: "baonguyenyam"
+    cfg_sitenameurlgoogle: "876987987987897"

@@ -1,2 +1,15 @@
 @import ../../bower_components/k-sass-core/src/sass/k-sass-core-only
-@import ../../bower_components/bootstrap/scss/bootstrap-flex
+@import ../../bower_components/bootstrap/scss/bootstrap
+
+@import common/colors
+@import common/base
+
+
+// Sapmle
+@include media-breakpoint-down(md)
+	.container
+		width: 100%
+
+.abc
+	+bor-rad(3px_)
+
