@@ -1,55 +1,34 @@
-- var menu = { 'Home': 'https://4xlabs.co/index.html', 'About': { 'Company': 'https://4xlabs.co/company.html','Executive team': 'https://4xlabs.co/team.html' }, 'Press': 'https://4xlabs.co/press.html', 'Careers': 'https://4xlabs.co/careers.html', 'Contact': 'https://4xlabs.co/contact.html' };
-//- - var menu = { 'Home': '/index.html', 'About': { 'Company': '/company.html','Executive team': '/team.html','Press room': '/press.html' }, 'Products': '/products.html', 'Careers': '/careers.html', 'Contact': '/contact.html' };
+
+- var menu = { 'Home': 'index.html', 'About': { 'Company': 'company.html','Executive team': 'team.html' },  'Contact': 'contact.html' };
 
 header.pos-f-t
-	.navbar.navbar-light.navbar-static-top.bd-navbar(role='banner')
+	nav.navbar.navbar-toggleable-sm.navbar-light.bg-faded
 		.container
-			.clearfix.mobile
-				button.navbar-toggler.hidden-md-up.float-sm-right.float-xs-right(type='button', data-toggle='collapse', data-target='#XLABSGlobalMenu')
-					i.fa.fa-bars
-				ul.nav.navbar-nav.hidden-md-up
-					li.nav-item
-						a.navbar-brand(href='https://4xlabs.co')
-							i.xlabs(4xlabs-logo)
-			#XLABSGlobalMenu.collapse.navbar-toggleable-sm
-				a.navbar-brand.hidden-sm-down(href='https://4xlabs.co')
-					i.xlabs(4xlabs-logo)
-				nav#XLABSNAV
-
-					ul.nav.navbar-nav.float-md-right
-						each val, key in menu
-							if (typeof(val) == "object")
-								if selected === key
-									li.nav-item.active.dropdown
-										a#supportedContentDropdown.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')= key
-										.dropdown-menu(aria-labelledby='supportedContentDropdown')
-											each val1, key1 in val
-												a.dropdown-item(href=val1, title=key1)= key1
-								else
-									li.nav-item.dropdown
-										a#supportedContentDropdown.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')= key
-										.dropdown-menu(aria-labelledby='supportedContentDropdown')
-											each val1, key1 in val
-												a.dropdown-item(href=val1, title=key1)= key1
+			button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#XLABSGlobalMenu', aria-controls='XLABSGlobalMenu', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			a.navbar-brand(href='#') Logo
+			#XLABSGlobalMenu.collapse.navbar-collapse
+				ul#XLABSNAV.navbar-nav.mr-auto
+					each val, key in menu
+						if (typeof(val) == "object")
+							if selected === key
+								li.nav-item.active.dropdown
+									a#supportedContentDropdown.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')= key
+									.dropdown-menu(aria-labelledby='supportedContentDropdown')
+										each val1, key1 in val
+											a.dropdown-item(href=val1, title=key1)= key1
 							else
-								if selected === key
-									li.nav-item.active
-										a.nav-link(href=val, title=key)= key
-								else
-									li.nav-item
-										a.nav-link(href=val, title=key)= key
-
-						//- li.nav-item
-						//- 	a.nav-link(href='/') Home
-						//- li.nav-item.dropdown
-						//- 	a#supportedContentDropdown.nav-link.dropdown-toggle(href='/company.html', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true') About
-						//- 	.dropdown-menu(aria-labelledby='supportedContentDropdown')
-						//- 		a.dropdown-item(href='/company.html') Company
-						//- 		a.dropdown-item(href='/team.html') Executive team
-						//- 		a.dropdown-item(href='/press.html') Press room
-						//- li.nav-item
-						//- 	a.nav-link(href='/products.html') Products
-						//- li.nav-item
-						//- 	a.nav-link(href='/careers.html') Careers
-						//- li.nav-item
-						//- 	a.nav-link(href='/contact.html') Contact
+								li.nav-item.dropdown
+									a#supportedContentDropdown.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')= key
+									.dropdown-menu(aria-labelledby='supportedContentDropdown')
+										each val1, key1 in val
+											a.dropdown-item(href=val1, title=key1)= key1
+						else
+							if selected === key
+								li.nav-item.active
+									a.nav-link(href=val, title=key)= key
+							else
+								li.nav-item
+									a.nav-link(href=val, title=key)= key
+				span.navbar-text
+					| Navbar text with an inline element

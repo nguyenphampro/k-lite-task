@@ -25,6 +25,10 @@ html(dir='ltr', lang='en', itemscope, itemtype="http://schema.org/WebSite", pref
 		include ../_include/_css
 		block css
 	body(class="#{prefix}#{bodyclass || 'default'}")
-		block body
+		include header
+		main 
+			block body
+		include footer
 		include ../_include/_script
 		block js
+

@@ -1,0 +1,69 @@
+extends _layout/layout
+
+block variables
+	- var title = 'Contact | 4xLabs - Innovation in foreign exchange'
+	- var description = '4xLabs is a forward thinking technology company that is bringing efficiency and transparency to the foreign exchange market.'
+	- var bodyclass = 'contact'
+	- var selected = 'Contact';
+	- var href = '//4xlabs.co/contact';
+
+block body
+	//- section.slider(bg-img-responsive="/img/bg/contact.jpg", bg-img-responsive-sm="/img/bg/contact-sm.jpg", bg-img-responsive-xs="/img/bg/contact-xs.jpg")
+		.info
+			.container
+				.row
+					.col-sm-12
+						h1 CONTACT
+						p Knowledge is power. Talk to us.
+
+	section.part.container-fluid
+		.row.section.block
+			.col-sm-6.col-lg-5.info
+				.row
+					.col-lg-12
+						h3.text-main OUR HEADQUARTERS
+					.col-md-12
+						p.mrt-xs-1r
+							img.img-fluid(src='/img/1.jpg', alt='4xlabs', data-pin-nopin='true')
+					.col-md-12
+						p.mrt-xs-1r 4xLabs Pte Ltd.
+						p.mrb-xs-0.text-muted.text-xs 80 Robinson Road, #08-01, Singapore 068898
+						p.mrb-xs-0.text-muted.text-xs +65 6816 2698
+						p.mrb-xs-0.text-muted.text-xs
+							a(href="mailto:hello@4xlabs.co") hello@4xlabs.co
+
+			.col-sm-6.col-lg-7.ma
+				.row
+					.col-xs-12
+						#gmap_canvas.gmap
+							.Lat 1.2802535
+							.Lng 103.8471964
+							.MarginLat 0
+							.MarginLng 0
+							.imgMap img/1.jpg
+							address 80 Robinson Road, #08-01, Singapore 068898
+							.infoWindow
+								h3 4xLabs Pte Ltd.
+								p
+									strong
+									//- | 80 Robinson Road, #08-00, Singapore 068898
+									//- br
+									//- |  Email: hello@4xlabs.co
+									//- br
+									|  Tel :
+									a(href='tel:+6568162698', onclick="_gaq.push(['_trackEvent', 'Mobile', 'Click to Call'])") +65 6816 2698
+							.mapType ROADMAP
+							.mapCenter true
+							.Title 4xLabs Pte Ltd.
+							.infoWidth 200
+							.ms white
+							.mapZoom 15
+							.scrollwheel false
+							.disableDoubleClickZoom true
+							.fullscreenControl true
+							.disableOpenURL false
+							.OpenURL View full map
+							.draggable false
+							.disableDefaultUI false
+
+	script(src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&key=AIzaSyC4TPIe70ez19mrYgRtgj0oTcjxHxiJObY")

@@ -1,124 +1,58 @@
 extends _layout/layout
 
 block variables
-  - var title = 'K-Gulp Tasks'
-  - var bodyclass = 'index'
+	- var title = '4xLabs - Innovation in foreign exchange'
+	- var description = '4xLabs is a forward thinking technology company that is bringing efficiency and transparency to the foreign exchange market.'
+	- var bodyclass = 'index'
+	- var selected = 'Home';
+	- var href = '//4xlabs.co/index';
 
-block css
-  link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+block body
+	section.slider(bg-img-responsive="https://4xlabs.co/images/bg/home.jpg", bg-img-responsive-sm="https://4xlabs.co/images/bg/home-sm.jpg", bg-img-responsive-xs="https://4xlabs.co/images/bg/home-xs.jpg")
+		.info
+			.container
+				.row
+					.col-sm-12
+						h1 INNOVATION
+							span  IN FOREIGN EXCHANGE
+						p Bringing price transparency to the millions of people and businesses exchanging currencies globally.
 
-block body 
-  .container 
-    .row 
-      .col-sm-12
-        h1.display-4(style="margin:20px 0") K-Gulp Tasks
-
-        p This is a Tool for WebApp Front-End with All-in-One Gulp task 
-        h4 Github
-        p 
-          a(href="https://github.com/baonguyenyam/k-gulp-task") https://github.com/baonguyenyam/k-gulp-task
-        hr
-
-
-
-        h5 Template 
-
-        pre.prettyprint.lang-html.
-          * Jade Template
-          * Nunjucks Template
-
-        h5 Scripts 
-
-        pre.prettyprint.lang-html.
-          * Babel
-          * Typescript
-          * Coffee 
-
-        h5 Styles
-
-        pre.prettyprint.lang-html.
-          * SASS/SCSS
-          * LESS
-          * Stylus
-          * CSS
-
-        h5 Image Tools
-        pre.prettyprint.lang-html.
-          * SVG
-          * Real Favicon
-
-        h5 Build Tools
-        pre.prettyprint.lang-html.
-
-          * CSSMin
-          * Uglify
-          * HTML minify
-          * ImageMin
-          * Concat 
-
-        h5 Test Tools
-
-        pre.prettyprint.lang-html.
-          * Browserify
-          * BrowserSync
-          * Phantom
-          * Karma
+	
 
 
-        h3 Install Project 
+	section.clients
+		.container
+			.row.mrt-xs-3r
+				.col-sm-12.xs-center.md-left
+					h2.text-xs-center.mrb-xs-2r FEATURED ON
+					.mrt-2r.mrb-xs-3r
+						.owl-carousel.owl-theme
+							.item
+								a(href='https://www.techinasia.com/get4x-exchange-rate-app', target='_blank')
+									img.gray_to_def(src='https://4xlabs.co/images/techinasia-logo-200x100.jpg', alt='')
+							.item
+								a(href='http://www.straitstimes.com/business/start-singapore-online-media-platform-for-experts', target='_blank')
+									img.gray_to_def(src='https://4xlabs.co/images/thestratistimes-logo-200x100.jpg', alt='')
+							.item
+								a(href='http://www.dealstreetasia.com/stories/singapores-tech-startup-4xlabs-expands-launches-forex-comparison-app-three-asian-cities-38364', target='_blank')
+									img.gray_to_def(src='https://4xlabs.co/images/dealstreetasia-logo-200x100.jpg', alt='')
+							.item
+								a(href='https://e27.co/currency-exchange-rate-aggregator-get4x-launches-in-bangkok-mumbai-and-thailand-20160419/', target='_blank')
+									img.gray_to_def(src='https://4xlabs.co/images/e27-logo-200x100.jpg', alt='')
+							.item
+								a(href='http://archive1.rthk.hk/mp3/radio/archive/radio3/money_talk/mp3/20160429.mp3', target='_blank')
+									img.gray_to_def(src='https://4xlabs.co/images/rthk-radio-logo-200x100.jpg', alt='')
+							.item
+								a(href='http://sbr.com.sg/financial-services/exclusive/find-cheapest-forex-rates-in-real-time-new-mobile-app', target='_blank')
+									img.gray_to_def(src='https://4xlabs.co/images/business-singapore-preview-logo-200x100.jpg', alt='')
+							.item
+								a(href='http://www.scmp.com/tech/start-ups/article/1941412/o2o-money-changer-app-get4x-aims-ease-hongkongers-currency-exchange', target='_blank')
+									img.gray_to_def(src='https://4xlabs.co/images/south-china-morning-post-logo-200x100.jpg', alt='')
+							.item
+								a(href='http://tabi-labo.com/261394/get4x/', target='_blank')
+									img.gray_to_def(src='https://4xlabs.co/images/tabi-labo-preview-logo-200x100.jpg', alt='')
+							.item
+								a(href='https://www.whub.io/posts/4xlabs-solving-a-real-life-pain-from-travel-experience-to-a-business-idea', target='_blank')
+									img.gray_to_def(src='https://4xlabs.co/images/whub-logo_200x100-200x100.png', alt='')
 
-        pre.prettyprint.lang-html. 
-          Windows: run file `install.bat`
 
-        pre.prettyprint.lang-html.
-          MAC/Ubuntu: run file `sh install.sh` 
-
-        h3 Update Project
-
-        pre.prettyprint.lang-html.
-          Windows: run file `update.bat`
-
-        pre.prettyprint.lang-html.
-          MAC/Ubuntu: run file `sh update.sh` 
-
-        h3 Upgrade & Check Missing package
-
-        pre.prettyprint.lang-html.
-          run `npm run check`
-
-        h3 Config 
-
-        pre.prettyprint.lang-html.
-          Config file `config.yml`
-
-        h3 Working in Project
-
-        pre.prettyprint.lang-html.
-          Test: run `npm run test`
-
-        pre.prettyprint.lang-html.
-          Serve: run `npm run serve`
-
-        pre.prettyprint.lang-html.
-          Build: run `npm run pro`
-
-        pre.prettyprint.lang-html.
-          Dev: run `npm run dev`
-
-        pre.prettyprint.lang-html.
-          Tools: run `npm run tool`
-
-        h2 Licence
-
-        p Copyright &copy; 2016 Bao Nguyen
-
-        p Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-        p The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-        p THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-        h4 Bảo Nguyên
-
-        
-  script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst")

@@ -1,0 +1,115 @@
+footer.footer
+	background-color: darken(#fff ,80%)
+	position: relative
+	z-index: 1
+	color: darken(#fff ,50%)
+	+pad(0)
+	overflow: hidden
+	// @include media-breakpoint-down(xs)
+	// 	text-align: center
+	.container-fluid
+		@include media-breakpoint-up(md)
+			+pad(0)
+			.topfoot
+				display: table
+				width: 100%
+				+mar(0)
+	.info
+		background-color: darken(#fff ,85%)
+		+pad(4rem 2rem)
+		@include media-breakpoint-up(sm)
+			+pad(4rem 4em)
+		@include media-breakpoint-up(md)
+			float: none
+			display: table-cell
+			vertical-align: middle
+		p
+			+mar(null null 0 null)
+			+fz(.9rem)
+			+lh(1.3rem)
+		.get4x
+			svg
+				width: 100%
+				height: 100%
+				max-width: 120px
+				*
+					fill: #fff
+			&:before
+				background-color: #fff
+			@include media-breakpoint-up(sm)
+				min-height: 60px
+				min-width: 100px
+				width: 100px
+		.slogan
+			color: #fff
+			line-height: 1.7rem
+			font-size: 1.2rem
+	.linkfooter
+		+pad(4rem 1rem)
+		background-color: darken(#fff ,80%)
+		@include media-breakpoint-up(sm)
+			+pad(2rem 1rem)
+		@include media-breakpoint-up(md)
+			float: none
+			display: table-cell
+			vertical-align: top
+		h4
+			color: #fff
+			text-transform: uppercase
+			+fw(300)
+			letter-spacing: 1px
+			+mar(null null 2rem null)
+		.list-group
+			.list-group-item
+				+bg(none, none, none)
+				border: 0
+				+fw(300)
+				+link(darken(#fff,50%),#fff,#fff)
+				+pad(.5rem 0)
+				&:hover, &.active
+					text-decoration: underline
+				@include media-breakpoint-up(md)
+	
+		.socials
+			@include media-breakpoint-down(sm)
+				+mar(2rem null null null)
+			.list-inline
+				+mar(0)
+				.list-inline-item
+					+fz(.9rem)
+					+link(darken(#fff, 85%), #fff, #fff)
+					+mar(null 1rem null null)
+					a
+						display: block
+						height: 2rem
+						width: 2rem
+						+lh(2rem)
+						+bg(darken(#fff,40%), #fff, #fff)
+						+link(darken(#fff,85%))
+						+border-radius(50%)
+						text-align: center
+						i 
+							+lh(2rem)
+					&:last-child
+						+mar(0)
+			.qrcode
+				border: 1px solid #000
+				display: inline-block
+				img
+					width: 80px
+	.copyright
+		background-color: darken(#fff ,100%)
+		+pad(1rem 2rem)
+		a
+			+link(darken(#fff ,15%), #fff)
+
+	&.line 
+		@include media-breakpoint-up(md)
+			.topfoot
+				.linkfooter
+					+pad(1rem)
+					.list-group
+						.list-group-item
+							display: inline
+							+pad(null null null .5rem)
+							+pad(null .5rem null null)

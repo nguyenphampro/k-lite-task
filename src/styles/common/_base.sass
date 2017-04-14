@@ -1,5 +1,5 @@
 html, body
-	font-family: 'Roboto'
+	// font-family: 'Roboto'
 	background-color: color-get($colors,bg)
 	font-size: 14px
 	height: 100%
@@ -8,3 +8,31 @@ html, body
 		background-color: color-get($colors,main)
 		color: #fff
 
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+	font-weight: 400
+	
+// // Set Link Hover
+=link ($link, $hover:$link, $active:$link, $visit:$link)
+	color: #{$link}
+	&:visited
+		color: #{$visit}
+	&:hover 
+		color: #{$hover}   
+	&:active, &:focus , &.active, &.activated
+		color: #{$active}
+
+// Set bg hover
+=bg ($link, $hover:$link, $active:$link)
+	@if $link != "none"
+		background-color: #{$link}
+		&:hover 
+			background-color: #{$hover}
+		&:active, &:focus , &.active, &.activated
+			background-color: #{$active}
+	@else 
+		background: none
+		&:hover 
+			background-color: #{$hover}
+		&:active, &:focus , &.active, &.activated
+			background-color: #{$active}

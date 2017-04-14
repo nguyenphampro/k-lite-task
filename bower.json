@@ -1,24 +1,26 @@
 {
-    "name": "k-lite-task",
-    "description": "",
-    "main": "",
-    "authors": [
-        "baonguyen"
-    ],
-    "license": "MIT",
-    "homepage": "https://github.com/baonguyenyam/k-lite-task",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "dependencies": {
-        "jquery": "^3.2.1",
-        "animate.css": "^3.5.2",
-        "font-awesome": "Font-Awesome#^4.7.0",
-        "bootstrap": "v4.0.0-alpha.6",
-        "k-sass-core": "^3.0.1"
-    }
+  "name": "k-lite-task",
+  "description": "",
+  "main": "",
+  "authors": [
+    "baonguyen"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/baonguyenyam/k-lite-task",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "animate.css": "^3.5.2",
+    "font-awesome": "Font-Awesome#^4.7.0",
+    "bootstrap": "^v4.0.0-alpha.6",
+    "owl.carousel": "^2.2.0",
+    "k-sass-core": "^3.0.1",
+    "k-gmaps": "^1.0.6"
+  }
 }

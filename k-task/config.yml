@@ -4,13 +4,17 @@ config:
     babelconcat: app.bundler
     namejs: addons
     namecss: addons
-    js:
+    js: 
       - "bower_components/jquery/dist/jquery.js"
       - "bower_components/tether/dist/js/tether.js"
       - "bower_components/bootstrap/dist/js/bootstrap.js"
-    css:
+      - "bower_components/owl.carousel/dist/owl.carousel.min.js"
+      - "bower_components/k-gmaps/dist/js/kmaps.js"
+    css: 
       - "bower_components/animate.css/animate.css"
       - "bower_components/font-awesome/css/font-awesome.css"
+      - "bower_components/owl.carousel/dist/assets/owl.carousel.min.css"
+      - "bower_components/owl.carousel/dist/assets/owl.theme.default.css"
 # Base config
   url: "./"
   baseUrl: "./"
