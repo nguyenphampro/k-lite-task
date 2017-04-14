@@ -85,6 +85,7 @@ gulp.task('k-task', function(cb) {
 gulp.task('ser', function(cb) {
     runSequence(
         'k-task',
+        'inject',
         'browserSync',
         'watch',
         cb
@@ -99,16 +100,20 @@ gulp.task('product', function(cb) {
         // Call new task 
         'favicon',
         'inject-favicon-markups',
-        'cssmin',
-        'uglify',
-        'htmlmin',
-        'imagemin',
+        // 'cssmin',
+        // 'uglify',
+        // 'htmlmin',
         'csscomb',
         'tobase64',
         'rev',
-        'delete-css',
-        'delete-js',
+        // 'delete-css',
+        // 'delete-js',
         'revreplace',
+        'sitemap',
+        // 'htmlmin',
+        'html-beautify',
+        'header',
+        'browserSyncPhp',
         'done',
         cb
     );

@@ -1,24 +1,19 @@
 'use strict';
-
 import path from 'path';
-import gulpif from 'gulp-if';
-import minifyHtml from 'gulp-htmlmin';
-import replace from 'gulp-replace';
+
+import prettify from 'gulp-html-prettify';
+
 
 module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     let url = config;
     let dest = path.join(target);
 
     // Run task
-
-    gulp.task('htmlmin', () => {
+    gulp.task('html-beautify', function() {
 
         return gulp.src(path.join(target, '**/*.html'))
-            .pipe(minifyHtml({ collapseWhitespace: true }))
-            .pipe(replace('</html></html>', '</html>'))
+            .pipe(prettify({ indent_char: ' ', indent_size: 2 }))
             // .pipe(plugins.changed(dest))
             .pipe(gulp.dest(dest));
-
     });
-
 }

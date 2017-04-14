@@ -80,7 +80,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
 
     gulp.task('inject-favicon-markups', () => {
         gulp.src([
-                path.join(target, '*.html')
+                path.join(target, '**/*.html')
             ])
             .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
             .pipe(gulp.dest(dest));

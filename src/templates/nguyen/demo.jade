@@ -1,0 +1,17 @@
+extends ../_layout/layout
+
+block variables
+	- var title = 'Custom Title'
+	- var bodyclass = 'index'
+	- var description = '4xLabs is a forward thinking technology company that is bringing efficiency and transparency to the foreign exchange market.'
+	- var selected = 'Contact';
+	- var href = '//4xlabs.co/contact';
+
+block body
+	main
+		include ../_layout/header
+	h1=config.title
+	p=config.SEO.cfg_description
+	p=_data.config.CON.version
+	p=_data.info.SET.name
+	p.echotext
