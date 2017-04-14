@@ -1,12 +1,4 @@
-/*
- ////////////////////////////////////////////////////////
- // Bao Nguyen Apps
- // @version v1.0
- // @link https://github.com/baonguyenyam
- // @license MIT
- // @Coding by Bao Nguyen
- ////////////////////////////////////////////////////////
-*//*!
+/*!
  * jQuery JavaScript Library v3.2.1
  * https://jquery.com/
  *

@@ -1,12 +1,4 @@
-/*
- ////////////////////////////////////////////////////////
- // Bao Nguyen Apps
- // @version v1.0
- // @link https://github.com/baonguyenyam
- // @license MIT
- // @Coding by Bao Nguyen
- ////////////////////////////////////////////////////////
-*/'use strict';
+'use strict';
 
 // Constructor
 
