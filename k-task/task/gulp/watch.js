@@ -14,7 +14,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
             // Concat
             gulp.watch([
                 path.join('./config.yml')
-            ], ['concat', 'inject']);
+            ], ['concat'])
 
 
             // Styles
@@ -32,12 +32,12 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
 
             gulp.watch([
                 path.join(url.source, url.styles.root, '**/*.{sass,scss}')
-            ], ['sass', 'inject']);
+            ], ['sass'])
 
             // Scripts
             gulp.watch([
                 path.join(url.source, url.scripts.root, '**/*.js')
-            ], ['babel-concat', 'inject']);
+            ], ['babel-concat'])
 
             gulp.watch([
                 path.join(url.source, url.scripts.root, '**/*.coffee')
@@ -52,7 +52,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                 path.join(url.source, '**/*.jade')
             ], function() {
                 runSequence('jade', 'inject');
-            });
+            })
 
             gulp.watch([
                 path.join(url.source, '**/*.nunjucks')

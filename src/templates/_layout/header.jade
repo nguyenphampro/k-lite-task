@@ -1,34 +1,29 @@
 
-- var menu = { 'Home': 'index.html', 'About': { 'Company': 'company.html','Executive team': 'team.html' },  'Contact': 'contact.html' };
+- var menu = [{'Name':'Home', 'URL':'/index.html', 'Icon':'home_icon_01.png', 'Image':'home_icon_01_text.png'}, {'Name':'Contact', 'URL':'/contact', 'Icon':'home_icon_02.png', 'Image':'home_icon_02_text.png'}];
 
+<!-- ////////////// HEADER ////////////// -->
 header.pos-f-t
-	nav.navbar.navbar-toggleable-sm.navbar-light.bg-faded
+	<!-- ////////////// GLOBAL MENU ////////////// -->
+	nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
 		.container
-			button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#XLABSGlobalMenu', aria-controls='XLABSGlobalMenu', aria-expanded='false', aria-label='Toggle navigation')
+			button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#VienSoiGlobalMenu', aria-controls='VienSoiGlobalMenu', aria-expanded='false', aria-label='Toggle navigation')
 				span.navbar-toggler-icon
-			a.navbar-brand(href='#') Logo
-			#XLABSGlobalMenu.collapse.navbar-collapse
-				ul#XLABSNAV.navbar-nav.mr-auto
+			a.navbar-brand.hidden-lg-up(href='/index.html')
+				strong NAME
+			#VienSoiGlobalMenu.collapse.navbar-collapse
+				ul#VienSoiNAV.navbar-nav.mr-auto
 					each val, key in menu
 						if (typeof(val) == "object")
-							if selected === key
-								li.nav-item.active.dropdown
-									a#supportedContentDropdown.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')= key
-									.dropdown-menu(aria-labelledby='supportedContentDropdown')
-										each val1, key1 in val
-											a.dropdown-item(href=val1, title=key1)= key1
-							else
-								li.nav-item.dropdown
-									a#supportedContentDropdown.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')= key
-									.dropdown-menu(aria-labelledby='supportedContentDropdown')
-										each val1, key1 in val
-											a.dropdown-item(href=val1, title=key1)= key1
-						else
-							if selected === key
+							if selected === val.Name
 								li.nav-item.active
-									a.nav-link(href=val, title=key)= key
+									a.nav-link.align-items-center(href=val.URL, title=val.Name)
+										img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
+										img.img-fluid(src='/images/'+val.Image, alt=val.Name)
+										//- span=val.Name
 							else
 								li.nav-item
-									a.nav-link(href=val, title=key)= key
-				span.navbar-text
-					| Navbar text with an inline element
+									a.nav-link.align-items-center(href=val.URL, title=val.Name)
+										img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
+										img.img-fluid(src='/images/'+val.Image, alt=val.Name)
+										//- span=val.Name
+<!-- ////////////// HEADER ////////////// -->

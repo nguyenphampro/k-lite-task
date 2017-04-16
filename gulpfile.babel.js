@@ -13,7 +13,7 @@ const fs = require('fs');
 const yaml = require("js-yaml");
 const load = yaml.load(fs.readFileSync("./k-task/config.yml"));
 
-// Global 
+// Global
 const plugins = gulpLoadPlugins();
 
 // Create karma server
@@ -30,10 +30,10 @@ const defaultNotification = function(err) {
     };
 };
 
-// Call Config 
+// Call Config
 let config = Object.assign({}, load.config, defaultNotification);
 
-// Call ENV 
+// Call ENV
 let setgulp = minimist(process.argv.slice(2));
 
 let target = setgulp.production ? config.dest : config.tmp;
@@ -72,10 +72,10 @@ gulp.task('build', ['cleanall'], () => {
 // Basic production-ready code
 gulp.task('k-task', function(cb) {
     runSequence(
-        'sass', // css, less, stylus 
+        'sass', // css, less, stylus
         'concat',
         'babel-concat',
-        'jade', // hamber, ejs, pug 
+        'jade', // hamber, ejs, pug
         'copy',
         'fonts',
         cb
@@ -97,7 +97,7 @@ gulp.task('ser', function(cb) {
 gulp.task('product', function(cb) {
     runSequence(
         'k-task',
-        // Call new task 
+        // Call new task
         'favicon',
         'inject-favicon-markups',
         'cssmin',
@@ -109,10 +109,37 @@ gulp.task('product', function(cb) {
         'delete-js',
         'revreplace',
         'sitemap',
-        'html-beautify',
         'htmlmin',
         'header',
+        'cleanup',
         'browserSyncPhp',
+        'done',
+        cb
+    );
+});
+// Not min & can run without localhost
+gulp.task('product-local', function(cb) {
+    runSequence(
+        'k-task',
+        'favicon',
+        'inject-favicon-markups',
+        'csscomb',
+        'tobase64',
+        'rev',
+        'delete-css',
+        'delete-js',
+        'revreplace',
+        'sitemap',
+        'beautiful-css',
+        'beautiful-js',
+        'html-beautify',
+        'remove-comment-css',
+        'remove-comment-js',
+        'header',
+        'cleanup',
+        'local-run',
+        'local-run-home',
+        'browserSync',
         'done',
         cb
     );

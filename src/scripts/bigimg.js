@@ -1,8 +1,6 @@
-
-$(function () {
-
-    // Set BG Resposive 
-    $('[bg-img]').each(function () {
+function VienSoiResponsive() {
+    // Set BG Resposive
+    $('[bg-img]').each(function() {
         var bgimg = $(this).attr('bg-img');
         $(this).css({
             "background-image": "url(" + bgimg + ")",
@@ -11,7 +9,7 @@ $(function () {
         });
     });
 
-    $('[bg-img-responsive]').each(function () {
+    $('[bg-img-responsive]').each(function() {
         var bgimg = $(this).attr('bg-img-responsive');
         var bgimgsm = $(this).attr('bg-img-responsive-sm');
         var bgimgxs = $(this).attr('bg-img-responsive-xs');
@@ -36,23 +34,25 @@ $(function () {
         }
     });
 
-    $('[img-src-responsive]').each(function () {
-        var bgimg = $(this).attr('img-src-responsive');
-        var bgimgsm = $(this).attr('img-src-responsive-sm');
-        var bgimgxs = $(this).attr('img-src-responsive-xs');
-        if ($(window).width() >= 1200) {
-            $(this).attr({
-                "src": "" + bgimg + ""
-            });
-        } else if ($(window).width() < 1200 && $(window).width() > 500) {
-            $(this).attr({
-                "src": "" + bgimgsm + ""
-            });
+    $('[img-src-responsive]').each(function() {
+        var bgimg2 = $(this).attr('img-src-responsive');
+        var bgimg2sm = $(this).attr('img-src-responsive-sm');
+        var bgimg2xs = $(this).attr('img-src-responsive-xs');
+        if ($(window).width() >= 1000) {
+            $(this).attr("src", "" + bgimg2 + "");
+        } else if ($(window).width() < 1000 && $(window).width() > 600) {
+            $(this).attr("src", "" + bgimg2sm + "");
         } else {
-            $(this).css({
-                "src": "" + bgimgxs + ""
-            });
+            $(this).attr("src", "" + bgimg2xs + "");
         }
     });
 
-});
+};
+
+$(function() {
+    VienSoiResponsive();
+})
+
+$(window).resize(function() {
+    VienSoiResponsive();
+})

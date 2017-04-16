@@ -1,19 +1,63 @@
 @import ../../bower_components/bootstrap/scss/bootstrap
-@import ../../bower_components/k-sass-core/dist/sass/k-sass-core-with-bootstrap 
+@import ../../bower_components/k-sass-core/dist/sass/k-sass-core-with-bootstrap
+
+// +font-face('HakusyuSousyoNenga', "../fonts/", "CenturyGothic")
 
 @import common/colors
 @import common/base
 @import common/header
 @import common/footer
 @import common/owl
+@import common/btt
 
 @import pages/home
 
-
 @include media-breakpoint-down(md)
-    .container
-        width: 100%
-        
-.text-main 
-    color: color-get($colors,con)
+	.container
+		width: 100%
 
+.text-sm
+	+fz(.9rem)
+.text-lg
+	+fz(1.3rem)
+.text-xl
+	+fz(1.8rem)
+.text-xxl
+	+fz(2.2rem)
+
+.ishover
+	&:hover
+		+opacity(.5)
+
+.text-white
+	color: color-get($colors, white)
+.text-green
+	color: color-get($colors, success)
+.text-pink
+	color: color-get($colors, alizarin)
+.text-pink-2
+	color: color-get($colors, c1)
+.text-blue
+	color: color-get($colors, c2)
+.text-cyan
+	color: color-get($colors, c3)
+
+.bg-green
+	background-color: color-get($colors, success)
+.bg-pink
+	background-color: color-get($colors, alizarin)
+.bg-pink-2
+	background-color: color-get($colors, c1)
+.bg-news
+	background-color: color-get($colors, c4)
+.bg-event
+	background-color: color-get($colors, c5)
+.bg-commute
+	background-color: color-get($colors, c2)
+
+@-moz-document url-prefix()
+  fieldset
+		display: table-cell
+.get-responsive
+	min-height: .01%
+	overflow-x: auto

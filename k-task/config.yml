@@ -4,13 +4,13 @@ config:
     babelconcat: app.bundler
     namejs: addons
     namecss: addons
-    js: 
+    js:
       - "bower_components/jquery/dist/jquery.js"
       - "bower_components/tether/dist/js/tether.js"
       - "bower_components/bootstrap/dist/js/bootstrap.js"
       - "bower_components/owl.carousel/dist/owl.carousel.min.js"
       - "bower_components/k-gmaps/dist/js/kmaps.js"
-    css: 
+    css:
       - "bower_components/animate.css/animate.css"
       - "bower_components/font-awesome/css/font-awesome.css"
       - "bower_components/owl.carousel/dist/assets/owl.carousel.min.css"
@@ -77,7 +77,7 @@ config:
   author:
     email: "baonguyenyam@gmail.com"
     name: "BaoNguyen"
-    link: "https://github.com/baonguyenyam"
+    link: "https://baonguyenyam.github.io"
     coding: "Coding by Bao Nguyen"
   license: "MIT"
   name: "Bao Nguyen Apps"
@@ -85,12 +85,14 @@ config:
 # SEO
   SEO:
     AppName: "WebApp"
-    cfg_name: "Bao Nguyen"
-    analytics: 'UA-79215807-1'
+    mobile_color: "#000000"
+    cfg_name: "DEMO SITE"
+    analytics: 'UA-XXXXXXXXXXX-1'
     app_appleID: '12345678'
-    seo_geo: 'VN-64'
-    seo_geo_lng: '106.673089'
-    seo_geo_dlg: '10.359352'
+    seo_lang: 'en'
+    seo_geo: 'EN'
+    seo_geo_lng: '36.204824'
+    seo_geo_dlg: '138.252924'
     app_facebook_adminsID: 'XXXXXXX,XXXXXXX'
     app_facebook_ID: '100000511421818'
     cfg_description: "I’ve been designing profesionally since 2003. I founded GC Com in 2008."
@@ -98,6 +100,6 @@ config:
     cfg_title: "Bao Nguyen - Bảo Nguyên - Brands Designer/Web Developer/Apps Developer/Photograper/Front-End Developer"
     cfg_content: "Brands Designer/Web Developer/Apps Developer/Photograper/Front-End Developer"
     cfg_author: "Bao Nguyen"
-    cfg_url: "baonguyenyam.github.io"
+    cfg_url: "demo-site.com"
     cfg_sitenameurl: "baonguyenyam"
     cfg_sitenameurlgoogle: "876987987987897"

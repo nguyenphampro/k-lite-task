@@ -3,19 +3,16 @@
 import path from 'path';
 import clean from 'gulp-clean';
 
+
 module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     let url = config;
-    let dest = path.join(target, url.scripts.assets);
+    let dest = path.join(target, url.styles.assets);
 
     // Run task
-
-    gulp.task('delete-js', () => {
-
-        return gulp.src([
-                path.join(target, url.scripts.assets, '*.*'),
-                '!' + path.join(target, url.scripts.assets, '*-*.js'),
-                path.join(target, url.scripts.assets, '**/*.*'),
-                '!' + path.join(target, url.scripts.assets, '**/*-*.js')
+    gulp.task('cleanup', function() {
+        gulp.src([
+                path.join(target, 'favicon.json'),
+                path.join(target, 'rev-manifest.json')
             ], {
                 read: false
             })
@@ -24,7 +21,5 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
             }))
             .pipe(plugins.changed(dest))
             .pipe(gulp.dest(dest));
-
     });
-
 }

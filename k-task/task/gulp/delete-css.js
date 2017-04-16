@@ -13,9 +13,9 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
 
         return gulp.src([
                 path.join(target, url.styles.assets, '*.*'),
-                '!' + path.join(target, url.styles.assets, '*.min-*.css'),
+                '!' + path.join(target, url.styles.assets, '*-*.css'),
                 path.join(target, url.styles.assets, '**/*.*'),
-                '!' + path.join(target, url.styles.assets, '**/*.min-*.css')
+                '!' + path.join(target, url.styles.assets, '**/*-*.css')
             ], {
                 read: false
             })

@@ -28,7 +28,8 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                 addRootSlash: true
             })))
             .pipe(replace('/' + target + '/', '/'))
-            .pipe(gulp.dest(dest));
+            .pipe(gulp.dest(dest))
+            .on('end', browserSync.reload)
     });
 
 };

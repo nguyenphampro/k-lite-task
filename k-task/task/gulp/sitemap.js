@@ -21,7 +21,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                 read: false
             })
             .pipe(sitemap({
-                siteUrl: 'https://' + config.website
+                siteUrl: '//' + config.website
             }))
             .pipe(gulp.dest(dest));
     })
