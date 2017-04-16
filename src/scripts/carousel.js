@@ -6,7 +6,7 @@ $(function() {
             items: 1,
             loop: true,
             center: false,
-            margin: 0,
+            margin: 20,
             navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
             nav: true,
             dots: false,

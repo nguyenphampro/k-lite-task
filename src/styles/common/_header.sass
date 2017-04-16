@@ -25,14 +25,26 @@ header
 					.nav-link
 						span
 							padding-left: 10px
-	// Responsive
-	+media-breakpoint-up(md)
+	// Responsive SM
+	+media-breakpoint-up(sm)
+		nav.navbar
+			#VienSoiGlobalMenu.navbar-collapse
+				ul#VienSoiNAV
+					flex-direction: initial
+					flex-wrap: wrap
+					.nav-item
+						width: 50%
+	// Responsive LG
+	+media-breakpoint-up(lg)
 		+pos(relative, initial null null initial)
 		nav.navbar
 			background: none
 			#VienSoiGlobalMenu.navbar-collapse
 				ul#VienSoiNAV
+					flex-direction: row
+					flex-wrap: initial
 					.nav-item
+						width: initial
 						.nav-link
 							span
 								padding-left: 0
