@@ -50,9 +50,13 @@ function VienSoiResponsive() {
 };
 
 $(function() {
-    VienSoiResponsive();
+    if (VIENSOI_APP.ACTIVE_RESPONSIVE) {
+        VienSoiResponsive();
+    }
 })
 
 $(window).resize(function() {
-    VienSoiResponsive();
+    if (VIENSOI_APP.ACTIVE_RESPONSIVE) {
+        VienSoiResponsive();
+    }
 })

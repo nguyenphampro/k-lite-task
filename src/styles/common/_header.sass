@@ -1,3 +1,4 @@
+// Logo
 [site-logo]
 	display: block
 	height: 2rem
@@ -5,6 +6,7 @@
 	svg
 		width: 100%
 		height: 100%
+// Header
 header
 	display: flex
 	flex-direction: column
@@ -12,7 +14,7 @@ header
 	width: 100%
 	z-index: 9999
 	nav.navbar
-		background: darken(color-get($colors,white),20%)
+		background: darken(color-get($colors,white),0%)
 		.navbar-toggler
 			+border-radius(2px)
 			+link(color-get($colors,white))
@@ -59,3 +61,22 @@ header
 						.nav-link
 							+pad(0)
 							+mar(null 1rem null null)
+
+
+	// Fixed header
+	&.fixedheader
+		+box-shadow(0 1px 0 rgba(255,255,255,.3))
+		+pos(fix, 0 null null 0)
+		+transition(all .5s ease-in-out)
+		// Responsive
+		+media-breakpoint-up(lg)
+			nav.navbar
+				background: rgba(255,255,255,.5)
+
+	// Active header
+	&.active
+		+box-shadow(0 2px 4px darken(color-get($colors,whites),30%))
+		// Responsive
+		+media-breakpoint-up(lg)
+			nav.navbar
+				background: rgba(255,255,255,1)
