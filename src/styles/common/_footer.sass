@@ -1,24 +1,18 @@
 footer.footer
-	margin-top: 6rem
-	background-color: color-get($colors,bg)
+	background-color: darken(color-get($colors,whites) ,80%)
 	position: relative
 	z-index: 1
-	color: darken(#fff ,100%)
+	color: darken(color-get($colors,whites) ,50%)
 	+pad(0)
 	overflow: hidden
-	.container-fluid
-		@include media-breakpoint-up(md)
-			+pad(0)
-			.topfoot
-				display: table
-				width: 100%
-				+mar(0)
+	+media-breakpoint-down(xs)
+		text-align: center
 	.info
-		background-color: color-get($colors,bg)
+		background-color: darken(color-get($colors,whites) ,85%)
 		+pad(4rem 2rem)
-		@include media-breakpoint-up(sm)
+		+media-breakpoint-up(sm)
 			+pad(4rem 4em)
-		@include media-breakpoint-up(md)
+		+media-breakpoint-up(md)
 			float: none
 			display: table-cell
 			vertical-align: middle
@@ -26,86 +20,73 @@ footer.footer
 			+mar(null null 0 null)
 			+fz(.9rem)
 			+lh(1.3rem)
-			@include media-breakpoint-up(sm)
+		.get4x
+			svg
+				width: 100%
+				height: 100%
+				max-width: 120px
+				*
+					fill: color-get($colors,whites)
+			&:before
+				background-color: color-get($colors,whites)
+			+media-breakpoint-up(sm)
 				min-height: 60px
 				min-width: 100px
 				width: 100px
 		.slogan
-			color: #fff
+			color: color-get($colors,whites)
 			line-height: 1.7rem
 			font-size: 1.2rem
 	.linkfooter
 		+pad(4rem 1rem)
-		background-color: color-get($colors,bg)
-		@include media-breakpoint-up(sm)
+		background-color: darken(color-get($colors,whites) ,80%)
+		+media-breakpoint-up(sm)
 			+pad(2rem 1rem)
-		@include media-breakpoint-up(md)
+		+media-breakpoint-up(md)
 			float: none
 			display: table-cell
 			vertical-align: top
 		h4
-			color: #fff
+			color: color-get($colors,whites)
 			text-transform: uppercase
 			+fw(300)
 			letter-spacing: 1px
 			+mar(null null 2rem null)
 		.list-group
 			.list-group-item
-				text-align: center
 				display: block
 				+bg(none, none, none)
 				border: 0
 				+fw(300)
-				+link(darken(#fff,100%),darken(#fff,50%),darken(#fff,50%))
+				+link(darken(color-get($colors,whites),50%),color-get($colors,whites),color-get($colors,whites))
 				+pad(.5rem 0)
 				&:hover, &.active
 					text-decoration: underline
-				@include media-breakpoint-up(md)
-					text-align: left
-					padding-bottom: 0
-					padding-left: 2rem
-					border-left: 2px solid darken(color-get($colors,border),7%)
 
 		.socials
-			@include media-breakpoint-down(sm)
+			+media-breakpoint-down(sm)
 				+mar(2rem null null null)
 			.list-inline
 				+mar(0)
 				.list-inline-item
 					+fz(.9rem)
-					+link(darken(#fff, 85%), #fff, #fff)
+					+link(darken(color-get($colors,whites), 85%), color-get($colors,whites), color-get($colors,whites))
 					+mar(null 1rem null null)
 					a
 						display: block
 						height: 2rem
 						width: 2rem
 						+lh(2rem)
-						+bg(darken(#fff,40%), #fff, #fff)
-						+link(darken(#fff,85%))
+						+bg(darken(color-get($colors,whites),40%), color-get($colors,whites), color-get($colors,whites))
+						+link(darken(color-get($colors,whites),85%))
 						+border-radius(50%)
 						text-align: center
 						i
 							+lh(2rem)
 					&:last-child
 						+mar(0)
-			.qrcode
-				border: 1px solid #000
-				display: inline-block
-				img
-					width: 80px
 	.copyright
-		// background-color: darken(#fff ,100%)
-		+pad(0 2rem)
+		background-color: darken(color-get($colors,whites) ,100%)
+		+pad(1rem 2rem)
 		a
-			color: darken(#fff ,100%)
-
-	&.line
-		@include media-breakpoint-up(md)
-			.topfoot
-				.linkfooter
-					+pad(1rem)
-					.list-group
-						.list-group-item
-							display: inline
-							+pad(null null null .5rem)
-							+pad(null .5rem null null)
+			+link(darken(color-get($colors,whites) ,15%), color-get($colors,whites))

@@ -1,1 +1,39 @@
 header
+	display: flex
+	flex-direction: column
+	+pos(fix, 0 null null 0)
+	width: 100%
+	z-index: 9999
+	nav.navbar
+		background: darken(color-get($colors,white),20%)
+		.navbar-toggler
+			+border-radius(2px)
+			+link(color-get($colors,white))
+			+pad(.15rem .35rem)
+			font-size: 1.25rem
+			line-height: 1
+			border: 1px solid transparent
+			+mar(0)
+			.navbar-toggler-icon
+				+fz(1.3rem)
+				+lh(1.3rem)
+		#VienSoiGlobalMenu.navbar-collapse
+			max-height: 300px
+			overflow: auto
+			ul#VienSoiNAV
+				.nav-item
+					.nav-link
+						span
+							padding-left: 10px
+	// Responsive
+	+media-breakpoint-up(md)
+		+pos(relative, initial null null initial)
+		nav.navbar
+			background: none
+			#VienSoiGlobalMenu.navbar-collapse
+				ul#VienSoiNAV
+					.nav-item
+						.nav-link
+							span
+								padding-left: 0
+								display: block

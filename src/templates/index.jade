@@ -3,9 +3,16 @@ extends _layout/layout
 block variables
 	- var title = 'Home'
 	- var description = 'Description for home page'
-	- var bodyclass = 'index'
+	- var bodyclass = 'index-page'
 	- var selected = 'Home';
 	- var href = '';
 
 block body
-	p Home page
+	section.home
+		.container
+			.row.mrt-xs-2r.mrb-xs-2r
+				.col
+					h1=config.title
+					p=config.SEO.cfg_description
+					p=_data.config.CON.version
+					p=_data.info.SET.name

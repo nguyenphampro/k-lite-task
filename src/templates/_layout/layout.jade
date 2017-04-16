@@ -26,7 +26,7 @@ html(dir='ltr', lang='#{config.SEO.seo_lang}', itemscope, itemtype="http://schem
 		<!-- ////////////// CSS Include ////////////// -->
 		include ../_include/_css
 		block css
-	body#vsbody(class="#{prefix}#{bodyclass || 'default'}")
+	body#top-page(class="#{prefix}#{bodyclass || 'default'}")
 		<!-- ////////////// Header ////////////// -->
 		include header
 		<!-- ////////////// End Header ////////////// -->
@@ -38,7 +38,7 @@ html(dir='ltr', lang='#{config.SEO.seo_lang}', itemscope, itemtype="http://schem
 		include footer
 		<!-- ////////////// End Footer ////////////// -->
 		<!-- ////////////// Back to Top ////////////// -->
-		a(href="#vsbody", id="back-to-top", title="Back to top")
+		a(href="#top-page", id="back-to-top", title="Back to top")
 			span TOP
 			i.fa.fa-angle-up
 		<!-- ////////////// Javascript Include ////////////// -->
