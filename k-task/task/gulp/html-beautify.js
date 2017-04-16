@@ -35,7 +35,6 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                 // "wrap_attributes_indent_size": 4,
                 // "end_with_newline": true
             }))
-            // .pipe(replace('</html></html>', '</html>'))
             // .pipe(plugins.changed(dest))
             .pipe(gulp.dest(dest));
     });

@@ -39,35 +39,20 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 .text-xxl
 	+fz(2.2rem)
 
+.text-bold
+	+fw(bold)
+.text-400
+	+fw(400)
+.text-500
+	+fw(500)
+.text-600
+	+fw(600)
+.text-700
+	+fw(700)
+
 .ishover
 	&:hover
 		+opacity(.5)
-
-.text-white
-	color: color-get($colors, white)
-.text-green
-	color: color-get($colors, success)
-.text-pink
-	color: color-get($colors, alizarin)
-.text-pink-2
-	color: color-get($colors, c1)
-.text-blue
-	color: color-get($colors, c2)
-.text-cyan
-	color: color-get($colors, c3)
-
-.bg-green
-	background-color: color-get($colors, success)
-.bg-pink
-	background-color: color-get($colors, alizarin)
-.bg-pink-2
-	background-color: color-get($colors, c1)
-.bg-news
-	background-color: color-get($colors, c4)
-.bg-event
-	background-color: color-get($colors, c5)
-.bg-commute
-	background-color: color-get($colors, c2)
 
 @-moz-document url-prefix()
   fieldset
@@ -76,3 +61,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 .get-responsive
 	min-height: .01%
 	overflow-x: auto
+
+// Get text colors
+@each $value in $colors
+	$key: nth($value, 1);
+	$val: nth($value, 2);
+	.text-#{$key}
+		color: #{$val}
+// Get background colors
+@each $value in $colors
+	$key: nth($value, 1);
+	$val: nth($value, 2);
+	.bg-#{$key}
+		color: #{$val}

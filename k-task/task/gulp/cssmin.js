@@ -19,9 +19,9 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
         return gulp.src(path.join(target, '**/*.css'))
             .pipe(gulpif(!setgulp.production, plugins.sourcemaps.init()))
             .pipe(minifyCss())
-            // .pipe(rename({
-            //     suffix: '.min'
-            // }))
+            .pipe(rename({
+                suffix: '.min'
+            }))
             .pipe(gulpif(!setgulp.production, plugins.sourcemaps.write('./')))
             // .pipe(plugins.changed(dest))
             .pipe(gulp.dest(dest));

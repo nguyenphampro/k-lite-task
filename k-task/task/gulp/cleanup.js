@@ -11,8 +11,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     // Run task
     gulp.task('cleanup', function() {
         gulp.src([
-                path.join(target, 'favicon.json'),
-                path.join(target, 'rev-manifest.json')
+                path.join(target, url.cleanup)
             ], {
                 read: false
             })

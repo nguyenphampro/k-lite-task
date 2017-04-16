@@ -9,7 +9,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     let banner = [' ',
         '/////////////////////////////////////',
         '// K-TASK',
-        '// v4.5.6',
+        '// v6.0.0',
         '/////////////////////////////////////',
         ' '
     ].join('\n');
