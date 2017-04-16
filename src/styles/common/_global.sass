@@ -1,3 +1,9 @@
+// Trên dưới
+// .align-self-center: Cân bằng theo inline-block
+// .align-items-center: Cân bằng theo inline-block
+// Trái Phải
+// .justify-content-center
+// .justify-content-md-center
 
 html, body
 	// font-family: "Roboto"
@@ -9,20 +15,25 @@ html, body
 		background-color: color-get($colors,main)
 		color: #fff
 	+media-breakpoint-down(md)
+		.container
+			width: 100%
 		main
 			margin-top: 3.5rem
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 	font-weight: 400
 
-+media-breakpoint-down(md)
-	.container
-		width: 100%
+.flex
+	display: flex
 
+.text-xs
+	+fz(.8rem)
 .text-sm
 	+fz(.9rem)
+.text-md
+	+fz(1.2rem)
 .text-lg
-	+fz(1.3rem)
+	+fz(1.4rem)
 .text-xl
 	+fz(1.8rem)
 .text-xxl
@@ -61,6 +72,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 @-moz-document url-prefix()
   fieldset
 		display: table-cell
+
 .get-responsive
 	min-height: .01%
 	overflow-x: auto

@@ -1,5 +1,5 @@
 
-- var menu = [{'Name':'Home', 'URL':'/index.html', 'Icon':'home_icon.png'}, {'Name':'Contact', 'URL':'/contact', 'Icon':'contact_icon.png'}];
+- var menu = [{'Name':'Home', 'URL':'/index.html', 'Icon':'home_icon.png'}, {'Name':'Contact', 'URL':'/contact', 'Icon':'contact_icon.png'}, {'Name':'About', 'URL': [{'Name':'History', 'URL':'/history', 'Icon':'history_icon.png'}, {'Name':'Timeline', 'URL':'/timeline', 'Icon':'timeline_icon.png'}], 'Icon':'about_icon.png'}];
 
 <!-- ////////////// HEADER ////////////// -->
 header.pos-f-t
@@ -7,21 +7,38 @@ header.pos-f-t
 	nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
 		.container
 			button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#VienSoiGlobalMenu', aria-controls='VienSoiGlobalMenu', aria-expanded='false', aria-label='Toggle navigation')
-				span.navbar-toggler-icon
-			a.navbar-brand.hidden-lg-up(href='/index.html')
-				strong NAME
-			#VienSoiGlobalMenu.collapse.navbar-collapse
-				ul#VienSoiNAV.navbar-nav.mr-auto
+				i.fa.fa-bars
+			a.navbar-brand(href='/index.html')
+				strong(site-logo) NAME
+			#VienSoiGlobalMenu.collapse.navbar-collapse.align-items-center
+				ul#VienSoiNAV.navbar-nav.mr-auto.align-self-center
 					each val, key in menu
-						if (typeof(val) == "object")
+						if (typeof(val.URL) == "object")
+							if selected === val.Name
+								li.nav-item.dropdown.active
+									a.nav-link.dropdown-toggle.align-items-center.flex(href="#", title=val.Name, id="navbarDropdownMenu"+val.Name, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+										img.img-fluid(src='/images/'+val.Icon, alt=val.URL.Name)
+										span=val.Name
+									.dropdown-menu(aria-labelledby="navbarDropdownMenu"+val.Name)
+										each second_val, second_key in val.URL
+											a.dropdown-item(href=second_val.URL)=second_val.Name
+							else
+								li.nav-item.dropdown
+									a.nav-link.dropdown-toggle.align-items-center.flex(href="#", title=val.Name, id="navbarDropdownMenu"+val.Name, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+										img.img-fluid(src='/images/'+val.Icon, alt=val.URL.Name)
+										span=val.Name
+									.dropdown-menu(aria-labelledby="navbarDropdownMenu"+val.Name)
+										each second_val, second_key in val.URL
+											a.dropdown-item(href=second_val.URL)=second_val.Name
+						else
 							if selected === val.Name
 								li.nav-item.active
-									a.nav-link.align-items-center(href=val.URL, title=val.Name)
+									a.nav-link.align-items-center.flex(href=val.URL, title=val.Name)
 										img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
 										span=val.Name
 							else
 								li.nav-item
-									a.nav-link.align-items-center(href=val.URL, title=val.Name)
+									a.nav-link.align-items-center.flex(href=val.URL, title=val.Name)
 										img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
 										span=val.Name
 				.navbar-text Right Content

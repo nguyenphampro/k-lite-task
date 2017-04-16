@@ -1,3 +1,10 @@
+[site-logo]
+	display: block
+	height: 2rem
+	width: 70px !important
+	svg
+		width: 100%
+		height: 100%
 header
 	display: flex
 	flex-direction: column
@@ -9,14 +16,16 @@ header
 		.navbar-toggler
 			+border-radius(2px)
 			+link(color-get($colors,white))
-			+pad(.15rem .35rem)
+			+pad(.5rem)
 			font-size: 1.25rem
 			line-height: 1
 			border: 1px solid transparent
+			background: color-get($colors, blacks)
 			+mar(0)
 			.navbar-toggler-icon
 				+fz(1.3rem)
 				+lh(1.3rem)
+		.navbar-brand
 		#VienSoiGlobalMenu.navbar-collapse
 			max-height: 300px
 			overflow: auto
@@ -40,12 +49,13 @@ header
 		nav.navbar
 			background: none
 			#VienSoiGlobalMenu.navbar-collapse
+				max-height: initial
+				overflow: initial
 				ul#VienSoiNAV
 					flex-direction: row
 					flex-wrap: initial
 					.nav-item
 						width: initial
 						.nav-link
-							span
-								padding-left: 0
-								display: block
+							+pad(0)
+							+mar(null 1rem null null)
