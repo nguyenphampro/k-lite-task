@@ -67,6 +67,9 @@ gulp.task('server', ['clean'], () => {
 gulp.task('build', ['cleanall'], () => {
     gulp.start('product');
 });
+gulp.task('build-local', ['cleanall'], () => {
+    gulp.start('product-local');
+});
 
 
 // Basic production-ready code
@@ -112,7 +115,7 @@ gulp.task('product', function(cb) {
         'htmlmin',
         'header',
         'cleanup',
-        'browserSyncPhp',
+        'browserSync',
         'done',
         cb
     );
@@ -132,6 +135,7 @@ gulp.task('product-local', function(cb) {
         'sitemap',
         'beautiful-css',
         'beautiful-js',
+        'htmlmin',
         'html-beautify',
         'remove-comment-css',
         'remove-comment-js',
