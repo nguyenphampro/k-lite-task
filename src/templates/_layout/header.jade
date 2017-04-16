@@ -1,5 +1,5 @@
 
-- var menu = [{'Name':'Home', 'URL':'/index.html', 'Icon':'home_icon_01.png', 'Image':'home_icon_01_text.png'}, {'Name':'Contact', 'URL':'/contact', 'Icon':'home_icon_02.png', 'Image':'home_icon_02_text.png'}];
+- var menu = [{'Name':'Home', 'URL':'/index.html', 'Icon':'home_icon.png'}, {'Name':'Contact', 'URL':'/contact', 'Icon':'contact_icon.png'}];
 
 <!-- ////////////// HEADER ////////////// -->
 header.pos-f-t
@@ -18,12 +18,10 @@ header.pos-f-t
 								li.nav-item.active
 									a.nav-link.align-items-center(href=val.URL, title=val.Name)
 										img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
-										img.img-fluid(src='/images/'+val.Image, alt=val.Name)
-										//- span=val.Name
+										span=val.Name
 							else
 								li.nav-item
 									a.nav-link.align-items-center(href=val.URL, title=val.Name)
 										img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
-										img.img-fluid(src='/images/'+val.Image, alt=val.Name)
-										//- span=val.Name
+										span=val.Name
 <!-- ////////////// HEADER ////////////// -->
