@@ -24,6 +24,8 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
             .pipe(replace('href="/', 'href="../'))
             .pipe(replace('href="@@@', 'href="//'))
             .pipe(replace('../images/logo.png', '/images/logo.png'))
+            .pipe(replace('../images/logo.png', '/images/logo.png'))
+            .pipe(replace('//' + config.SEO.cfg_url + '../images/', '//' + config.SEO.cfg_url + '/images/'))
 
         // .pipe(plugins.changed(dest))
         .pipe(gulp.dest(dest));
@@ -42,6 +44,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
             .pipe(replace('href="/', 'href="'))
             .pipe(replace('href="@@@', 'href="//'))
             .pipe(replace('images/logo.png', '/images/logo.png'))
+            .pipe(replace('//' + config.SEO.cfg_url + 'images/', '//' + config.SEO.cfg_url + '/images/'))
 
         // .pipe(plugins.changed(dest))
         .pipe(gulp.dest(dest));
