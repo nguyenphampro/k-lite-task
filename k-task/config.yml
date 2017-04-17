@@ -35,6 +35,9 @@ config:
     app_facebook_adminsID: 'XXXXXXX,XXXXXXX'
     app_appleID: 'XXX-XXX-XXX-XXXX'
     cfg_sitenameurlgoogle: "XXXXXXXXXXXXXX"
+    verf_google: "VhfbPndGW-UftEvWql2Nwt7F1F5KBgd3lMcGgjn4Ovc"
+    verf_bing: "F7679394C660249FBA58732D6100A65A"
+    verf_yandex: "bc82adfacdd74cbf"
 # #####################################################################
 # Base config
   url: "./"

@@ -1,8 +1,19 @@
 link(rel='canonical', href='//#{config.SEO.cfg_url}#{href}')
 meta(name="generator", content="#{config.SEO.cfg_name}")
-meta(name="description" content="#{description}")
+meta(name="description", content="#{description}")
+link(rel="profile", href="http://gmpg.org/xfn/11")
+link(rel="pingback")
+// Meta verification
+//- Google
+meta(name="google-site-verification", content=config.SEO.verf_google)
+//- Bing
+meta(name="msvalidate.01", content=config.SEO.verf_bing)
+//- Yandex
+meta(name="yandex-verification", content=config.SEO.verf_yandex)
+//- Feeds
+link(rel="alternate", type="application/rss+xml", title=config.SEO.cfg_name, href="//#{config.SEO.cfg_url}/feed.xml")
 // Meta Tag
-meta(name='robots', content='index, follow')
+meta(name='robots', content='noodp')
 meta(name='keywords', content=config.SEO.cfg_keywords)
 meta(name='description', content=config.SEO.cfg_description)
 meta(name='robots', content='noindex, nofollow')
@@ -28,6 +39,7 @@ meta(name='twitter:image:src', content='//'+ config.SEO.cfg_url + '/images/logo.
 // Social: Facebook / Open Graph
 meta(property='fb:admins', content=config.SEO.app_facebook_adminsID)
 meta(property='fb:app_id', content=config.SEO.app_facebook_ID)
+meta(property="og:type", content="website")
 meta(property='og:url', content='//'+config.SEO.cfg_url+href)
 meta(property='og:title', content='#{title} - '+ config.SEO.cfg_name)
 meta(property='og:image', content='//'+ config.SEO.cfg_url + '/images/logo.png')
