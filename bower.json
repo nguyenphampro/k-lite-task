@@ -21,6 +21,7 @@
     "bootstrap": "^v4.0.0-alpha.6",
     "owl.carousel": "^2.2.0",
     "k-sass-core": "^3.0.1",
-    "k-gmaps": "^1.0.6"
+    "k-gmaps": "^1.0.6",
+    "bootstrap-offcanvas": "^2.4.0"
   }
 }

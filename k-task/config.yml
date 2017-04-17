@@ -11,11 +11,13 @@ config:
       - "bower_components/bootstrap/dist/js/bootstrap.js"
       - "bower_components/owl.carousel/dist/owl.carousel.min.js"
       - "bower_components/k-gmaps/dist/js/kmaps.js"
+      - "bower_components/bootstrap-offcanvas/dist/js/bootstrap.offcanvas.js"
     css:
       - "bower_components/animate.css/animate.css"
       - "bower_components/font-awesome/css/font-awesome.css"
       - "bower_components/owl.carousel/dist/assets/owl.carousel.min.css"
       - "bower_components/owl.carousel/dist/assets/owl.theme.default.css"
+      - "bower_components/bootstrap-offcanvas/dist/css/bootstrap.offcanvas.css"
 # SEO
   SEO:
     AppName: "Home"

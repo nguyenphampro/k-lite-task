@@ -22,13 +22,14 @@ html(dir='ltr', lang='#{config.SEO.seo_lang}', itemscope, itemtype="http://schem
 		title #{title || AppName} - #{config.SEO.cfg_name}
 		if process.argv.slice(3) == '--production'
 		include ../_include/_seo
-		block og 
+		block og
 		<!-- ////////////// CSS Include ////////////// -->
 		include ../_include/_css
 		block css
 	body#top-page(class="#{prefix}#{bodyclass || 'default'}")
 		<!-- ////////////// Header ////////////// -->
-		include header
+		//- include header
+		include header-offcanvas
 		<!-- ////////////// End Header ////////////// -->
 		<!-- ////////////// Begin Main ////////////// -->
 		main

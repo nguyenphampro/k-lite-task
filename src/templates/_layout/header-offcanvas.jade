@@ -1,0 +1,44 @@
+
+- var menu = [{'Name':'Home', 'URL':'/index.html', 'Icon':'home_icon.png'}, {'Name':'Contact', 'URL':'/contact', 'Icon':'contact_icon.png'}, {'Name':'About', 'URL': [{'Name':'Typography', 'URL':'/typography', 'Icon':'typography_icon.png'}, {'Name':'Timeline', 'URL':'/timeline', 'Icon':'timeline_icon.png'}], 'Icon':'about_icon.png'}];
+
+<!-- ////////////// HEADER ////////////// -->
+<!-- ////////////// GLOBAL MENU ////////////// -->
+header.pos-f-t.offcanvas
+	.container
+		button.navbar-toggler.navbar-toggler-right.offcanvas-toggle.hidden-lg-up(type='button', data-toggle='offcanvas', data-target='#VienSoiGlobalMenu')
+			i.fa.fa-bars
+		nav#VienSoiGlobalMenu.navbar.navbar-toggleable-md.navbar-light.bg-faded.navbar-offcanvas.navbar-offcanvas-touch(role='navigation')
+			a.navbar-brand.hidden-md-down(href='/index.html')
+				strong(site-logo) NAME
+			ul#VienSoiNAV.navbar-nav.mr-auto.align-self-center
+				each val, key in menu
+					if (typeof(val.URL) == "object")
+						if selected === val.Name
+							li.nav-item.dropdown.active
+								a.nav-link.dropdown-toggle.align-items-center.flex(href="#", title=val.Name, id="navbarDropdownMenu"+val.Name, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+									img.img-fluid(src='/images/'+val.Icon, alt=val.URL.Name)
+									span=val.Name
+								.dropdown-menu(aria-labelledby="navbarDropdownMenu"+val.Name)
+									each second_val, second_key in val.URL
+										a.dropdown-item(href=second_val.URL)=second_val.Name
+						else
+							li.nav-item.dropdown
+								a.nav-link.dropdown-toggle.align-items-center.flex(href="#", title=val.Name, id="navbarDropdownMenu"+val.Name, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+									img.img-fluid(src='/images/'+val.Icon, alt=val.URL.Name)
+									span=val.Name
+								.dropdown-menu(aria-labelledby="navbarDropdownMenu"+val.Name)
+									each second_val, second_key in val.URL
+										a.dropdown-item(href=second_val.URL)=second_val.Name
+					else
+						if selected === val.Name
+							li.nav-item.active
+								a.nav-link.align-items-center.flex(href=val.URL, title=val.Name)
+									img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
+									span=val.Name
+						else
+							li.nav-item
+								a.nav-link.align-items-center.flex(href=val.URL, title=val.Name)
+									img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
+									span=val.Name
+			.navbar-text Right Content
+<!-- ////////////// HEADER ////////////// -->

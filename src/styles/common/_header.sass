@@ -36,6 +36,10 @@ header
 					.nav-link
 						span
 							padding-left: 10px
+
+	////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////
+
 	// Responsive SM
 	+media-breakpoint-up(sm)
 		nav.navbar
@@ -80,3 +84,34 @@ header
 		+media-breakpoint-up(lg)
 			nav.navbar
 				background: rgba(255,255,255,1)
+
+	////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////
+
+	// Offcanvas
+	&.offcanvas
+		+media-breakpoint-down(md)
+			> div
+				+pad(0)
+			nav.navbar
+				position: fixed
+				width: 100%
+				max-width: 250px
+				left: -250px
+				top: 0
+				z-index: 999
+				overflow: scroll
+				-webkit-overflow-scrolling: touch
+				+transition(all 0.15s ease-in)
+				&.navbar-offcanvas.offcanvas-transform.in
+					+transform(translateX(250px))
+					.dropdown-menu.shown
+						display: block
+						margin-bottom: 10px
+		+media-breakpoint-up(lg)
+			nav.navbar
+				&.navbar-offcanvas.offcanvas-transform
+					.dropdown-menu.shown
+						display: block
+						margin-bottom: 10px
+
