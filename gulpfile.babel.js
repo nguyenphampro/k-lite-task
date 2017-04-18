@@ -78,7 +78,7 @@ gulp.task('k-task', function(cb) {
         'sass', // css, less, stylus
         'concat',
         'babel-concat',
-        'jade', // hamber, ejs, pug
+        'pug', // hamber, ejs, pug
         'copy',
         'fonts',
         cb
