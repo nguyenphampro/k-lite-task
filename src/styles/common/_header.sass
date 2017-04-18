@@ -13,8 +13,9 @@ header
 	+pos(fix, 0 null null 0)
 	width: 100%
 	z-index: 9999
+	background: darken(color-get($colors,white),0%)
 	nav.navbar
-		background: darken(color-get($colors,white),0%)
+		background: none 
 		.navbar-toggler
 			+border-radius(2px)
 			+link(color-get($colors,white))
@@ -51,9 +52,8 @@ header
 						width: 50%
 	// Responsive LG
 	+media-breakpoint-up(lg)
-		+pos(relative, initial null null initial)
+		+pos(static, initial null null initial)
 		nav.navbar
-			background: none
 			#VienSoiGlobalMenu.navbar-collapse
 				max-height: initial
 				overflow: initial
@@ -74,44 +74,70 @@ header
 		+transition(all .5s ease-in-out)
 		// Responsive
 		+media-breakpoint-up(lg)
-			nav.navbar
-				background: rgba(255,255,255,.5)
+			background: none 
 
 	// Active header
 	&.active
 		+box-shadow(0 2px 4px darken(color-get($colors,whites),30%))
 		// Responsive
 		+media-breakpoint-up(lg)
-			nav.navbar
-				background: rgba(255,255,255,1)
+			background: rgba(255,255,255,1)
 
 	////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////
 
 	// Offcanvas
 	&.offcanvas
+		nav.navbar
+			#VienSoiNAV
+				width: 100%
+				.nav-item
+					span 	
+						padding-left: 10px 
 		+media-breakpoint-down(md)
 			> div
 				+pad(0)
+			.mainmenu
+				+pad(.5rem 1rem)
+				.navbar-toggler
+					+border-radius(2px)
+					+link(color-get($colors,white))
+					+pad(.5rem)
+					font-size: 1.25rem
+					line-height: 1
+					border: 1px solid transparent
+					background: color-get($colors, blacks)
+					+mar(0)
+					.navbar-toggler-icon
+						+fz(1.3rem)
+						+lh(1.3rem)
 			nav.navbar
+				+box-shadow(3px 0 4px darken(color-get($colors,whites),30%))
 				position: fixed
 				width: 100%
 				max-width: 250px
 				left: -250px
 				top: 0
-				z-index: 999
+				z-index: 9999
 				overflow: scroll
 				-webkit-overflow-scrolling: touch
 				+transition(all 0.15s ease-in)
-				&.navbar-offcanvas.offcanvas-transform.in
-					+transform(translateX(250px))
+				background: darken(color-get($colors,white),0%)
+				&.navbar-offcanvas.offcanvas-transform
+					&.in
+						+transform(translateX(250px))
 					.dropdown-menu.shown
 						display: block
 						margin-bottom: 10px
+					.dropdown-menu
+						border: 1px solid rgba(0, 0, 0, 0.15)
 		+media-breakpoint-up(lg)
 			nav.navbar
+				+pad(0)
 				&.navbar-offcanvas.offcanvas-transform
 					.dropdown-menu.shown
 						display: block
 						margin-bottom: 10px
+				#VienSoiNAV
+					width: initial
 

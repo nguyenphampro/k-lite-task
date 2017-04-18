@@ -1,8 +1,10 @@
 # #####################################################################
 config:
+# Header offcanvas
+  offcanvas: true
 # Concat
   concat:
-    babelconcat: app.bundler
+    babelconcat: app
     namejs: addons
     namecss: addons
     js:

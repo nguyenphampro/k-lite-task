@@ -11,20 +11,20 @@ footer.footer
 		+pad(4rem 1rem)
 		.list-group
 			.list-group-item
-				display: block
+				display: inline-block
 				+bg(none, none, none)
 				border: 0
 				+fw(300)
-				+link(darken(color-get($colors,whites),50%),color-get($colors,whites),color-get($colors,whites))
 				+pad(.5rem 0)
-				&:hover, &.active
-					text-decoration: underline
+				a 
+					+link(darken(color-get($colors,whites),50%),color-get($colors,whites),color-get($colors,whites))
 	.socials
 		+media-breakpoint-down(sm)
 			+mar(2rem null null null)
 		.list-inline
 			+mar(0)
 			.list-inline-item
+				
 				+fz(.9rem)
 				+link(darken(color-get($colors,whites), 85%), color-get($colors,whites), color-get($colors,whites))
 				+mar(null 1rem null null)

@@ -5,12 +5,16 @@
 <!-- ////////////// GLOBAL MENU ////////////// -->
 header.pos-f-t.offcanvas
 	.container
-		button.navbar-toggler.navbar-toggler-right.offcanvas-toggle.hidden-lg-up(type='button', data-toggle='offcanvas', data-target='#VienSoiGlobalMenu')
-			i.fa.fa-bars
-		nav#VienSoiGlobalMenu.navbar.navbar-toggleable-md.navbar-light.bg-faded.navbar-offcanvas.navbar-offcanvas-touch(role='navigation')
-			a.navbar-brand.hidden-md-down(href='/index.html')
+		.mainmenu.clearfix 
+			button.navbar-toggler.navbar-toggler-right.offcanvas-toggle.hidden-lg-up(type='button', data-toggle='offcanvas', data-target='#VienSoiGlobalMenu')
+				i.fa.fa-bars
+			a.navbar-brand.hidden-lg-up(href='/index.html')
 				strong(site-logo) NAME
-			ul#VienSoiNAV.navbar-nav.mr-auto.align-self-center
+		nav#VienSoiGlobalMenu.navbar.navbar-toggleable-md.navbar-light.bg-faded.navbar-offcanvas.navbar-offcanvas-touch(role='navigation')
+			ul#VienSoiNAV.navbar-nav.mr-auto
+				li.nav-item.align-items-center.align-self-center
+					a.navbar-brand.hidden-md-down(href='/index.html')
+						strong(site-logo) NAME
 				each val, key in menu
 					if (typeof(val.URL) == "object")
 						if selected === val.Name
