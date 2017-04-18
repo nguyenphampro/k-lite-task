@@ -53,6 +53,7 @@ config:
   docs: "docs"
   test: "test"
   favicon: "resources/favicon.png"
+  favicondist: "/favicon/"
   resources: "resources"
   config: "config"
   fonts: "fonts"
