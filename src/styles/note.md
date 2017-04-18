@@ -30,4 +30,7 @@
 	.d-{*}-flex
 	.d-{*}-inline-flex
 
+// Browser specific CSS and JavaScript hacks
+// http://browserhacks.com/
+
 	

@@ -1,16 +1,15 @@
-@import ../../bower_components/bootstrap/scss/bootstrap
-@import ../../bower_components/k-sass-core/dist/sass/k-sass-core-with-bootstrap
+@import ../../bower_components/k-sass-core/dist/sass/k-sass-core
+@import ../../bower_components/bootstrap/scss/variables
+@import ../../bower_components/bootstrap/scss/mixins
+@import ../../bower_components/bootstrap/scss/mixins/breakpoints
 
-+font-face('Roboto', "../fonts/", "CenturyGothic")
+@import mixins/base
 
 @import common/colors
-@import common/base
 @import common/global
-@import common/header
-@import common/footer
-@import common/owl
-@import common/btt
 @import common/print
 
-@import pages/home
-@import pages/contact
+@import includes/header
+@import includes/footer
+@import includes/owl
+@import includes/btt

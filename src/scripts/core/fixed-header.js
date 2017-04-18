@@ -23,3 +23,16 @@ $(document).ready(function() {
 $(window).scroll(function() {
     setHeader($(document).scrollTop());
 });
+
+
+//
+$(document).ready(function() {
+    if (VIENSOI_APP.ACTIVE_OFFCANVAS) {
+        $('body').on('click', function() {
+            $('#VienSoiGlobalMenu .nav-item.active').each(function() {
+                $('#VienSoiGlobalMenu .nav-item.active').find('.shown').removeClass('shown')
+                $('#VienSoiGlobalMenu .nav-item.active').removeClass('active')
+            });
+        })
+    }
+})

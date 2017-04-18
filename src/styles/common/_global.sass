@@ -1,12 +1,6 @@
-// Trên dưới
-// .align-self-center: Cân bằng theo inline-block
-// .align-items-center: Cân bằng theo inline-block
-// Trái Phải
-// .justify-content-center
-// .justify-content-md-center
++font-face('Roboto', "../fonts/", "CenturyGothic")
 
 html, body
-	// font-family: "Roboto"
 	background-color: color-get($colors,bg)
 	font-size: 14px
 	height: 100%
@@ -23,12 +17,6 @@ html, body
 		main.main-fixedheader
 			margin-top: 4.5rem
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
-	font-weight: 400
-
-.flex
-	display: flex
-
 .text-xs
 	+fz(.8rem)
 .text-sm
@@ -41,6 +29,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 	+fz(1.8rem)
 .text-xxl
 	+fz(2.2rem)
+.text-shadown
+	+text-shadow(#{1px 1px 0 #fdfdfd, 2px 2px 0 rgba(81, 81, 81, 0.5), 0 0 1px #fdfdfd})
 
 .text-bold
 	+fw(bold)
@@ -76,11 +66,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 	$key: nth($value, 1);
 	$val: nth($value, 2);
 	.bg-#{$key}
-		color: #{$val}
+		background-color: #{$val}
 
-.text-shadown 
-	+text-shadow(#{1px 1px 0 #fdfdfd, 2px 2px 0 rgba(81, 81, 81, 0.5), 0 0 1px #fdfdfd})
-
-.btn-double 
+.btn-double
 	border: 2px solid white
 	+box-shadow(0 0 0 1px #c2c2c2)
