@@ -6,18 +6,30 @@ function setFooter() {
         curentHeight = mainHeight + headerHeight + footerHeight,
         curentfixedHeight = mainHeight + footerHeight,
         newHeight = bodyHeight - (headerHeight + footerHeight),
-        newfixedHeight = bodyHeight - (headerHeight + footerHeight);
-    if (VIENSOI_APP.ACTIVE_FIXED_FOOTER && !VIENSOI_APP.ACTIVE_FIXED_HEADER) {
-        if (curentHeight < bodyHeight) {
-            $("main").css('height', newHeight + 'px')
+        newfixedHeight = bodyHeight - footerHeight;
+    if ($(window).width() > 600) {
+        if ($(window).width() <= VIENSOI_APP.CHANGE_GRID) {
+            $("main").css('min-height', newfixedHeight + 'px')
+        } else {
+            if (!VIENSOI_APP.ACTIVE_FIXED_HEADER) {
+                $("main").css('min-height', newHeight + 'px')
+            } else {
+                $("main").css('min-height', newfixedHeight + 'px')
+            }
         }
     } else {
-        if (curentfixedHeight < bodyHeight) {
-            $("main").css('height', newfixedHeight + 'px')
-        }
+        $("main").css('min-height', 'initial')
     }
 }
 
 $(document).ready(function() {
-    setFooter()
+    if (VIENSOI_APP.ACTIVE_FIXED_FOOTER) {
+        setFooter()
+    }
 });
+
+$(window).resize(function() {
+    if (VIENSOI_APP.ACTIVE_FIXED_FOOTER) {
+        setFooter()
+    }
+})

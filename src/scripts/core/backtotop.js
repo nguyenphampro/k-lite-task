@@ -1,5 +1,5 @@
 if ($('#back-to-top').length && VIENSOI_APP.ACTIVE_BACKTOTOP) {
-    var scrollTrigger = 50, // px
+    var scrollTrigger = VIENSOI_APP.DISPLAY_BACKTOTOP, // px
         backToTop = function() {
             var scrollTop = $(window).scrollTop();
             if (scrollTop > scrollTrigger) {

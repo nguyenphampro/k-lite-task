@@ -5,7 +5,7 @@ $(function() {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
-                if ($(window).width() < 1000) {
+                if ($(window).width() < VIENSOI_APP.CHANGE_GRID) {
                     $('html, body').animate({
                         scrollTop: target.offset().top - 50
                     }, 500);

@@ -1,5 +1,5 @@
 function setHeader(elm) {
-    if (elm >= 50) {
+    if (elm >= VIENSOI_APP.ACTIVE_HEADER_POSITION) {
         $("header").addClass('active');
     } else {
         $("header").removeClass('active');
@@ -11,7 +11,7 @@ $(document).ready(function() {
         $("header").addClass('fixedheader');
     }
 
-    if ($(window).scrollTop() >= 50) {
+    if ($(window).scrollTop() >= VIENSOI_APP.ACTIVE_HEADER_POSITION) {
         setHeader($(window).scrollTop());
     }
     if ($("header").hasClass("fixedheader")) {
