@@ -55,6 +55,11 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
             ], function() {
                 runSequence('jade', 'inject');
             })
+            gulp.watch([
+                path.join(url.source, '**/*.pug')
+            ], function() {
+                runSequence('pug', 'inject');
+            })
 
             gulp.watch([
                 path.join(url.source, '**/*.nunjucks')

@@ -1,6 +1,8 @@
 const VIENSOI_APP = {
     // Bật tắt fixed menu
     ACTIVE_FIXED_HEADER: true,
+    // Bật tắt fixed menu
+    ACTIVE_FIXED_FOOTER: true,
     // Bật tắt responsive img
     ACTIVE_RESPONSIVE: true,
     // Bật tắt backto top
