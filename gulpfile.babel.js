@@ -77,6 +77,7 @@ gulp.task('k-task', function(cb) {
     runSequence(
         'sass', // css, less, stylus
         'concat',
+        'babel',
         'babel-concat',
         'pug', // hamber, ejs, pug
         'copy',
@@ -101,8 +102,7 @@ gulp.task('product', function(cb) {
     runSequence(
         'k-task',
         // Call new task
-        'favicon',
-        'inject-favicon-markups',
+        // 'favicon',
         'cssmin',
         'uglify',
         'csscomb',
@@ -115,6 +115,8 @@ gulp.task('product', function(cb) {
         'htmlmin',
         'header',
         'cleanup',
+        'cleanup-js',
+        'cleanup-css',
         'browserSync',
         'done',
         cb
@@ -125,7 +127,9 @@ gulp.task('product-local', function(cb) {
     runSequence(
         'k-task',
         'favicon',
-        'inject-favicon-markups',
+        // 'inject-favicon-markups',
+        'cssmin',
+        'uglify',
         'csscomb',
         'tobase64',
         'rev',
@@ -133,14 +137,14 @@ gulp.task('product-local', function(cb) {
         'delete-js',
         'revreplace',
         'sitemap',
-        'beautiful-css',
-        'beautiful-js',
         'htmlmin',
         'html-beautify',
         'remove-comment-css',
         'remove-comment-js',
         'header',
         'cleanup',
+        'cleanup-js',
+        'cleanup-css',
         'local-run',
         'local-run-home',
         'browserSync',

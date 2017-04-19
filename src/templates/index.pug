@@ -3,12 +3,15 @@ extends _layout/layout
 block variables
 	- var title = 'Home'
 	- var description = 'Description for home page'
-	- var bodyclass = 'index-page'
+	- var bodyclass = 'home'
 	- var selected = 'Home';
 	- var href = '';
 
 block css
-	link(rel='stylesheet', href='/css/pages/home.css')
+	if process.argv.slice(3) == '--production'
+		link(rel='stylesheet', href='/css/pages/'+bodyclass+'.min.css')
+	else
+		link(rel='stylesheet', href='/css/pages/'+bodyclass+'.css')
 
 block og
 	meta(property="og:image", content='//'+config.SEO.cfg_url+'/home/demo.jpg')
@@ -20,9 +23,10 @@ block body
 				.col.p-4
 					h1 Hello World!
 					hr
-					h5 Todo list 
+					h5 Todo list
 					ul.list-unstyled
-						li - Xem lại k-sass-core box-shawdown 
-						li - Lang 
-						li - class của bootstrap như margin pđing 
-						li - anchorlink 
+						li - Xem lại k-sass-core box-shawdown
+						li - Lang
+						li - class của bootstrap như margin pđing
+						li - anchorlink
+						li - babel js

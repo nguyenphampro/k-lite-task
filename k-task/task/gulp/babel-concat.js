@@ -17,8 +17,8 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     // Run task
     gulp.task('babel-concat', () => {
         return gulp.src([
-                '!' + path.join(url.source, url.ignore.scripts),
-                path.join(url.source, url.scripts.javascript, '**/*.js')
+                path.join(url.source, url.scripts.javascript, url.ignore.concat),
+                // path.join(url.source, url.scripts.javascript, '**/*.js')
             ])
             // .pipe(angularFilesort())
             .pipe(concat(url.concat.babelconcat + '.js'))

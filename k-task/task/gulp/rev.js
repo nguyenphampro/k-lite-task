@@ -22,7 +22,9 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     // Run task
     gulp.task('rev', () => {
         return gulp.src([
-                path.join(target, '**/*.{css,js}')
+                path.join(target, '**/*.{css,js}'),
+                '!' + path.join(target, url.styles.assets, url.ignore.inject),
+                '!' + path.join(target, url.scripts.assets, url.ignore.inject)
             ])
             .pipe(rev())
             .pipe(gulp.dest(dest))

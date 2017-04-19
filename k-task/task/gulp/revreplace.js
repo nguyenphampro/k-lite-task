@@ -26,7 +26,9 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
         var target2 = gulp.src(path.join(target, '**/*.html'));
         return target2.pipe(inject(gulp.src([
                 path.join(target, '**/*.css'),
-                path.join(target, '**/*.js')
+                path.join(target, '**/*.js'),
+                '!' + path.join(target, url.styles.assets, url.ignore.inject),
+                '!' + path.join(target, url.scripts.assets, url.ignore.inject)
             ], {
                 read: false,
                 ignorePath: '/' + target + '/',
