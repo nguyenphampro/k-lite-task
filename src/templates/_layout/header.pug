@@ -15,7 +15,7 @@ header.pos-f-t
 						if (typeof(val.URL) == "object")
 							if selected === val.Name
 								li.nav-item.dropdown.active
-									a.nav-link.dropdown-toggle.align-items-center.flex(href="#", title=val.Name, id="navbarDropdownMenu"+val.Name, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+									a.nav-link.dropdown-toggle.align-items-center.d-flex(href="#", title=val.Name, id="navbarDropdownMenu"+val.Name, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
 										img.img-fluid(src='/images/'+val.Icon, alt=val.URL.Name)
 										span=val.Name
 									.dropdown-menu(aria-labelledby="navbarDropdownMenu"+val.Name)
@@ -23,7 +23,7 @@ header.pos-f-t
 											a.dropdown-item(href=second_val.URL)=second_val.Name
 							else
 								li.nav-item.dropdown
-									a.nav-link.dropdown-toggle.align-items-center.flex(href="#", title=val.Name, id="navbarDropdownMenu"+val.Name, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+									a.nav-link.dropdown-toggle.align-items-center.d-flex(href="#", title=val.Name, id="navbarDropdownMenu"+val.Name, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
 										img.img-fluid(src='/images/'+val.Icon, alt=val.URL.Name)
 										span=val.Name
 									.dropdown-menu(aria-labelledby="navbarDropdownMenu"+val.Name)
@@ -32,12 +32,12 @@ header.pos-f-t
 						else
 							if selected === val.Name
 								li.nav-item.active
-									a.nav-link.align-items-center.flex(href=val.URL, title=val.Name)
+									a.nav-link.align-items-center.d-flex(href=val.URL, title=val.Name)
 										img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
 										span=val.Name
 							else
 								li.nav-item
-									a.nav-link.align-items-center.flex(href=val.URL, title=val.Name)
+									a.nav-link.align-items-center.d-flex(href=val.URL, title=val.Name)
 										img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
 										span=val.Name
 				.navbar-text Right Content
