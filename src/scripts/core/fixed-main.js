@@ -5,13 +5,13 @@ function setMain() {
         $("main").css('padding-top', headerHeight + 'px')
     } else {
         if (!VIENSOI_APP.ACTIVE_PADDING_MAIN) {
+            $("main").css('padding-top', '0px')
+        } else {
             if (!VIENSOI_APP.ACTIVE_FIXED_HEADER) {
                 $("main").css('padding-top', 'initial')
             } else {
                 $("main").css('padding-top', headerHeight + 'px')
             }
-        } else {
-            $("main").css('padding-top', '0px')
         }
     }
 }

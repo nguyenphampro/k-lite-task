@@ -2,7 +2,7 @@ include _config_menu
 
 <!-- ////////////// HEADER ////////////// -->
 <!-- ////////////// GLOBAL MENU ////////////// -->
-header.pos-f-t.offcanvas
+header.pos-f-t.offcanvas(class=!_dataJS.config.VIENSOI_APP.ACTIVE_PADDING_MAIN && _dataJS.config.VIENSOI_APP.ACTIVE_FIXED_HEADER ? 'has-tranparent': '')
 	.container
 		.mainmenu.clearfix 
 			button.navbar-toggler.navbar-toggler-right.offcanvas-toggle.hidden-lg-up(type='button', data-toggle='offcanvas', data-target='#VienSoiGlobalMenu')

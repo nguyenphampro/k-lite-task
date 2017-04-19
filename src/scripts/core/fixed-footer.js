@@ -7,7 +7,7 @@ function setFooter() {
         curentfixedHeight = mainHeight + footerHeight,
         newHeight = bodyHeight - (headerHeight + footerHeight),
         newfixedHeight = bodyHeight - footerHeight;
-    if ($(window).width() > 600) {
+    if ($(window).width() > VIENSOI_APP.DISPLAY_FOOTER) {
         if ($(window).width() <= VIENSOI_APP.CHANGE_GRID) {
             $("main").css('min-height', newfixedHeight + 'px')
         } else {
