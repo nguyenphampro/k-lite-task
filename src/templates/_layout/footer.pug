@@ -23,22 +23,15 @@ footer.footer
 								else 
 									.list-group-item
 										a(href=val.URL)=val.Name
-					.col-sm-12.col-md-4.text-xs-center.text-md-right
+					.col-sm-12.col-md-4
 						.socials
 							p Explore by Bao Nguyen
 							ul.list-inline
-								li.list-inline-item
-									a(href='https://www.linkedin.com/company/baonguyenyam', target='_blank')
-										i.fa.fa-linkedin(ga-action-click='', data-value='Social linkedin icon', data-label='Social linkedin icon', data-action='Social linkedin icon')
-								li.list-inline-item
-									a(href='https://www.facebook.com/baonguyenyam/', target='_blank')
-										i.fa.fa-facebook(ga-action-click='', data-value='Social facebook icon', data-label='Social facebook icon', data-action='Social facebook icon')
-								li.list-inline-item
-									a(href='https://twitter.com/baonguyenyam', target='_blank')
-										i.fa.fa-twitter(ga-action-click='', data-value='Social twitter icon', data-label='Social twitter icon', data-action='Social twitter icon')
-								li.list-inline-item
-									a(href='https://plus.google.com/+baonguyenyam', target='_blank')
-										i.fa.fa-google(ga-action-click='', data-value='Social google icon', data-label='Social google icon', data-action='Social google icon')
+								each val, key in footersocial
+									li.list-inline-item
+										a(href=val.URL, target='_blank')
+											i.fa(class=val.Icon, ga-action-click='', data-value=val.Name, data-label=val.Name, data-action=val.Name)
+								
 	.container-fluid
 		.row
 			.col.copyright.text-center
