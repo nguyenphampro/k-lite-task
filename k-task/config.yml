@@ -1,7 +1,5 @@
 # #####################################################################
 config:
-# Header offcanvas
-  offcanvas: true
 # Concat
   concat:
     babelconcat: app
@@ -57,6 +55,7 @@ config:
   config: "config"
   fonts: "fonts"
   data: "data"
+  dataJS: "scripts"
   blank: "_blank"
   images: "img"
 # Layout

@@ -11,12 +11,14 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     let dest = path.join(target);
     let destjade = path.join(target);
     let dataPath = path.join(url.source, url.data);
+    let dataPathJS = path.join(url.source, url.dataJS);
 
     // Run task
 
     // Jade template compile
     gulp.task('pug', () => {
         let siteData = {};
+        let siteDataJS = '';
         if (fs.existsSync(dataPath)) {
             // Convert directory to JS Object
             siteData = foldero(dataPath, {
@@ -30,6 +32,25 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                         } else {
                             json = JSON.parse(fs.readFileSync(file, 'utf8'));
                         }
+                    } catch (e) {
+                        console.log('Error Parsing JSON file: ' + file);
+                        console.log('==== Details Below ====');
+                        console.log(e);
+                    }
+                    return json;
+                }
+            });
+        }
+        if (fs.existsSync(dataPathJS)) {
+            // Convert directory to JS Object
+            siteDataJS = foldero(dataPathJS, {
+                recurse: true,
+                whitelist: 'config.js',
+                loader: function loadAsString(file) {
+                    let json = {};
+                    try {
+                        json = JSON.parse('{' + fs.readFileSync(file, 'utf8').replace(/const\sVIENSOI_APP\s=/g, '"VIENSOI_APP" :') + '}');
+
                     } catch (e) {
                         console.log('Error Parsing JSON file: ' + file);
                         console.log('==== Details Below ====');
@@ -63,7 +84,8 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                     config: config,
                     debug: true,
                     site: {
-                        data: siteData
+                        data: siteData,
+                        dataJS: siteDataJS
                     }
                 }
             }))
