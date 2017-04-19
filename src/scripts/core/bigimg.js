@@ -13,13 +13,13 @@ function VienSoiResponsive() {
         var bgimg = $(this).attr('bg-img-responsive');
         var bgimgsm = $(this).attr('bg-img-responsive-sm');
         var bgimgxs = $(this).attr('bg-img-responsive-xs');
-        if ($(window).width() >= 1000) {
+        if ($(window).width() >= VIENSOI_APP.CHANGE_GRID) {
             $(this).css({
                 "background-image": "url(" + bgimg + ")",
                 "background-position": "center center",
                 "background-size": "cover"
             });
-        } else if ($(window).width() < 1000 && $(window).width() > 600) {
+        } else if ($(window).width() < VIENSOI_APP.CHANGE_GRID && $(window).width() > 600) {
             $(this).css({
                 "background-image": "url(" + bgimgsm + ")",
                 "background-position": "center center",
@@ -38,9 +38,9 @@ function VienSoiResponsive() {
         var bgimg2 = $(this).attr('img-src-responsive');
         var bgimg2sm = $(this).attr('img-src-responsive-sm');
         var bgimg2xs = $(this).attr('img-src-responsive-xs');
-        if ($(window).width() >= 1000) {
+        if ($(window).width() >= VIENSOI_APP.CHANGE_GRID) {
             $(this).attr("src", "" + bgimg2 + "");
-        } else if ($(window).width() < 1000 && $(window).width() > 600) {
+        } else if ($(window).width() < VIENSOI_APP.CHANGE_GRID && $(window).width() > 600) {
             $(this).attr("src", "" + bgimg2sm + "");
         } else {
             $(this).attr("src", "" + bgimg2xs + "");

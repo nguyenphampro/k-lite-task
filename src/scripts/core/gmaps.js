@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $('#gmap_canvas').kmaps();
+    $('#gmap, #gmap_canvas').kmaps();
 });

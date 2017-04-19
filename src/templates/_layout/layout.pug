@@ -32,7 +32,7 @@ html(dir='ltr', lang=config.SEO.seo_lang, itemscope, itemtype="http://schema.org
 		meta(name='theme-color', content='#ffffff')
 	body#top-page(class=prefix+bodyclass || 'default')
 		<!-- ////////////// Header ////////////// -->
-		if config.offcanvas
+		if _dataJS.config.VIENSOI_APP.ACTIVE_OFFCANVAS
 			include header-offcanvas
 		else
 			include header
