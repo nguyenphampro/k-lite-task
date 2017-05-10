@@ -20,18 +20,19 @@ html(dir='ltr', lang=config.SEO.seo_lang, itemscope, itemtype="http://schema.org
 		include ../_include/_css
 		block css
 		<!-- ////////////// FAVICON ////////////// -->
-		link(rel='apple-touch-icon', sizes='180x180', href=config.favicondist+'apple-touch-icon.png')
-		link(rel='icon', type='image/png', href=config.favicondist+'favicon-32x32.png', sizes='32x32')
-		link(rel='icon', type='image/png', href=config.favicondist+'favicon-16x16.png', sizes='16x16')
-		link(rel='manifest', href=config.favicondist+'manifest.json')
-		link(rel='mask-icon', href=config.favicondist+'safari-pinned-tab.svg', color='#5bbad5')
-		link(rel='shortcut icon', href=config.favicondist+'favicon.ico')
-		meta(name='msapplication-TileColor', content=config.SEO.mobile_color)
-		meta(name='msapplication-TileImage', content=config.favicondist+'mstile-144x144.png')
-		meta(name='msapplication-config', content=config.favicondist+'browserconfig.xml')
-		meta(name='theme-color', content='#ffffff')
+		if process.argv.slice(3).indexOf('--production') > 0
+			link(rel='apple-touch-icon', sizes='180x180', href=config.favicondist+'apple-touch-icon.png')
+			link(rel='icon', type='image/png', href=config.favicondist+'favicon-32x32.png', sizes='32x32')
+			link(rel='icon', type='image/png', href=config.favicondist+'favicon-16x16.png', sizes='16x16')
+			link(rel='manifest', href=config.favicondist+'manifest.json')
+			link(rel='mask-icon', href=config.favicondist+'safari-pinned-tab.svg', color='#5bbad5')
+			link(rel='shortcut icon', href=config.favicondist+'favicon.ico')
+			meta(name='msapplication-TileColor', content=config.SEO.mobile_color)
+			meta(name='msapplication-TileImage', content=config.favicondist+'mstile-144x144.png')
+			meta(name='msapplication-config', content=config.favicondist+'browserconfig.xml')
+			meta(name='theme-color', content='#ffffff')
 	body#top-page(class=prefix+bodyclass+'-page' || 'default'+_dataJS.config.VIENSOI_APP.DEV_MODE ? 'viensoi-develop': '')
-		if _dataJS.config.VIENSOI_APP.DEV_MODE && (process.argv.slice(3).indexOf('--production') == -1)
+		if _dataJS.config.VIENSOI_APP.DEV_MODE && (process.argv.slice(3).indexOf('--production') < 0)
 			include dev
 		<!-- ////////////// Header ////////////// -->
 		if _dataJS.config.VIENSOI_APP.ACTIVE_OFFCANVAS
