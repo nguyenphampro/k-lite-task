@@ -2,6 +2,7 @@
 config:
 # Concat
   concat:
+    ACTIVE_CONCAT: true
     babelconcat: app
     namejs: addons
     namecss: addons

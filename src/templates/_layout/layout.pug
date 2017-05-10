@@ -31,7 +31,7 @@ html(dir='ltr', lang=config.SEO.seo_lang, itemscope, itemtype="http://schema.org
 		meta(name='msapplication-config', content=config.favicondist+'browserconfig.xml')
 		meta(name='theme-color', content='#ffffff')
 	body#top-page(class=prefix+bodyclass+'-page' || 'default'+_dataJS.config.VIENSOI_APP.DEV_MODE ? 'viensoi-develop': '')
-		if _dataJS.config.VIENSOI_APP.DEV_MODE
+		if _dataJS.config.VIENSOI_APP.DEV_MODE && process.argv.slice(3) != '--production'
 			include dev
 		<!-- ////////////// Header ////////////// -->
 		if _dataJS.config.VIENSOI_APP.ACTIVE_OFFCANVAS

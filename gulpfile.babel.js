@@ -101,8 +101,7 @@ gulp.task('ser', function(cb) {
 gulp.task('product', function(cb) {
     runSequence(
         'k-task',
-        // Call new task
-        // 'favicon',
+        'favicon',
         'cssmin',
         'uglify',
         'csscomb',
@@ -127,7 +126,6 @@ gulp.task('product-local', function(cb) {
     runSequence(
         'k-task',
         'favicon',
-        // 'inject-favicon-markups',
         'cssmin',
         'uglify',
         'csscomb',

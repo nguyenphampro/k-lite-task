@@ -45,20 +45,24 @@ if (VIENSOI_APP.DEV_MODE) {
     }
 })(jQuery);
 
-$('.devtools').drags();
+if (VIENSOI_APP.DEV_MODE) {
 
-$(document).ready(function() {
-    if ($('.viensoi-develop .devtools').length) {
-        var devtls = $('.viensoi-develop .devtools').find('.body-devtools button')
-        devtls.click(function() {
-            if ($(this).attr('data-click-state') == 1) {
-                $(this).attr('data-click-state', 0)
-                $('body').find('.devtool-gird').remove()
-            } else {
-                $(this).attr('data-click-state', 1)
-                $('body').toggleClass('active')
-                $('body').append('<div class="devtool-gird"><div class="container d-flex"><div class="row d-flex align-items-stretch bd-highlight"><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div></div></div></div>')
-            }
-        });
-    }
-});
+    $('.devtools').drags();
+
+    $(document).ready(function() {
+        if ($('.viensoi-develop .devtools').length) {
+            var devtls = $('.viensoi-develop .devtools').find('.body-devtools button')
+            devtls.click(function() {
+                if ($(this).attr('data-click-state') == 1) {
+                    $(this).attr('data-click-state', 0)
+                    $('body').toggleClass('active')
+                    $('body').find('.devtool-gird').remove()
+                } else {
+                    $(this).attr('data-click-state', 1)
+                    $('body').toggleClass('active')
+                    $('body').append('<div class="devtool-gird"><div class="container d-flex"><div class="row d-flex align-items-stretch bd-highlight"><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div><div class="col d-flex align-items-stretch"><div class="item"></div></div></div></div></div>')
+                }
+            });
+        }
+    });
+}
