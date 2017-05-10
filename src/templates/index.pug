@@ -9,11 +9,7 @@ block variables
 
 block css
 	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
-	if !config.concat.ACTIVE_CONCAT
-		if (process.argv.slice(3).indexOf('--production') > 0) && (process.argv.slice(3).indexOf('--notmin') < 0)
-			link(rel='stylesheet', href='/css/pages/'+bodyclass+'.min.css')
-		else
-			link(rel='stylesheet', href='/css/pages/'+bodyclass+'.css')
+	+getMin(bodyclass)
 
 block og
 	meta(property="og:image", content='//'+config.SEO.cfg_url+'/home/demo.jpg')

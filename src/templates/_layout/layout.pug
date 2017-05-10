@@ -13,14 +13,14 @@ html(dir='ltr', lang=config.SEO.seo_lang, itemscope, itemtype="http://schema.org
 		meta(name='msapplication-navbutton-color', content=config.SEO.mobile_color)
 		meta(name='apple-mobile-web-app-status-bar-style', content=config.SEO.mobile_color)
 		title #{title || AppName} - #{config.SEO.cfg_name}
-		if process.argv.slice(3) == '--production'
-		include ../_include/_seo
+		if process.argv.slice(3).indexOf('--production') > -1
+			include ../_include/_seo
 		block og
 		<!-- ////////////// CSS Include ////////////// -->
 		include ../_include/_css
 		block css
 		<!-- ////////////// FAVICON ////////////// -->
-		if process.argv.slice(3).indexOf('--production') > 0
+		if process.argv.slice(3).indexOf('--production') > -1
 			link(rel='apple-touch-icon', sizes='180x180', href=config.favicondist+'apple-touch-icon.png')
 			link(rel='icon', type='image/png', href=config.favicondist+'favicon-32x32.png', sizes='32x32')
 			link(rel='icon', type='image/png', href=config.favicondist+'favicon-16x16.png', sizes='16x16')
