@@ -26,7 +26,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
         gulp.src([
                 path.join(url.source, url.styles.sass, '**/*.{sass,scss}'),
                 '!' + path.join(url.source, '{**/\_*,**/\_*/**}'),
-                '!' + path.join(url.source, url.styles.sass, url.ignore.sass),
+                '!' + path.join(url.source, url.styles.sass, url.concat.ACTIVE_CONCAT ? url.ignore.sassactiveconcat : url.ignore.sass),
                 // setgulp.production ? '!' + path.join(url.source, url.styles.sass, '**/viensoi-dev.sass') : path.join()
             ])
             .pipe(plugins.plumber())
