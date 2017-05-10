@@ -8,10 +8,11 @@ block variables
 	- var href = '/contact';
 
 block css
-	if process.argv.slice(3) == '--production'
-		link(rel='stylesheet', href='/css/pages/'+bodyclass+'.min.css')
-	else
-		link(rel='stylesheet', href='/css/pages/'+bodyclass+'.css')
+	if !config.concat.ACTIVE_CONCAT
+		if process.argv.slice(3) == '--production'
+			link(rel='stylesheet', href='/css/pages/'+bodyclass+'.min.css')
+		else
+			link(rel='stylesheet', href='/css/pages/'+bodyclass+'.css')
 block body
 	section#gmap_canvas.gmap
 		.Lat 10.359352

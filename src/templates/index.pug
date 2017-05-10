@@ -8,10 +8,11 @@ block variables
 	- var href = '';
 
 block css
-	if process.argv.slice(3) == '--production'
-		link(rel='stylesheet', href='/css/pages/'+bodyclass+'.min.css')
-	else
-		link(rel='stylesheet', href='/css/pages/'+bodyclass+'.css')
+	if !config.concat.ACTIVE_CONCAT
+		if process.argv.slice(3) == '--production'
+			link(rel='stylesheet', href='/css/pages/'+bodyclass+'.min.css')
+		else
+			link(rel='stylesheet', href='/css/pages/'+bodyclass+'.css')
 
 block og
 	meta(property="og:image", content='//'+config.SEO.cfg_url+'/home/demo.jpg')

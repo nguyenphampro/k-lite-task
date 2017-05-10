@@ -41,6 +41,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                 }
             });
         }
+
         if (fs.existsSync(dataPathJS)) {
             // Convert directory to JS Object
             siteDataJS = foldero(dataPathJS, {
