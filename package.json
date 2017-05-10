@@ -2,8 +2,8 @@
     "scripts": {
         "pro": "gulp build --production",
         "prod": "gulp build-local --production",
-        "pro-no": "gulp build-no --production",
-        "prod-no": "gulp build-local-no --production",
+        "pro-no": "gulp build-no --production --notmin",
+        "prod-no": "gulp build-local-no --production --notmin",
         "test": "gulp test",
         "serve": "gulp serve",
         "start": "gulp server",
