@@ -9,8 +9,6 @@ import minimist from 'minimist';
 import wrench from 'wrench';
 import runSequence from 'run-sequence';
 
-console.log(process.argv.slice(4))
-
 const fs = require('fs');
 const yaml = require("js-yaml");
 const load = yaml.load(fs.readFileSync("./k-task/config.yml"));

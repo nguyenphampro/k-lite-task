@@ -10,7 +10,7 @@ block variables
 block css
 	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
 	if !config.concat.ACTIVE_CONCAT
-		if process.argv.slice(3) == '--production' && process.argv.slice(4) != '--notmin'
+		if (process.argv.slice(3).indexOf('--production') != -1) && (process.argv.slice(3).indexOf('--notmin') == -1)
 			link(rel='stylesheet', href='/css/pages/'+bodyclass+'.min.css')
 		else
 			link(rel='stylesheet', href='/css/pages/'+bodyclass+'.css')
