@@ -8,7 +8,7 @@ block variables
 	- var href = '/contact';
 
 block css
-	// Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
 	if !config.concat.ACTIVE_CONCAT
 		if process.argv.slice(3) == '--production'
 			link(rel='stylesheet', href='/css/pages/'+bodyclass+'.min.css')
