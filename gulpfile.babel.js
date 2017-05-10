@@ -70,6 +70,12 @@ gulp.task('build', ['cleanall'], () => {
 gulp.task('build-local', ['cleanall'], () => {
     gulp.start('product-local');
 });
+gulp.task('build-no', ['cleanall'], () => {
+    gulp.start('product-no');
+});
+gulp.task('build-local-no', ['cleanall'], () => {
+    gulp.start('product-local-no');
+});
 
 
 // Basic production-ready code
@@ -112,7 +118,6 @@ gulp.task('product', function(cb) {
         'revreplace',
         'sitemap',
         'htmlmin',
-        // 'html-beautify',
         'header',
         'cleanup',
         'cleanup-js',
@@ -122,6 +127,28 @@ gulp.task('product', function(cb) {
         cb
     );
 });
+
+// Rebuild will call by browserify
+gulp.task('product-no', function(cb) {
+    runSequence(
+        'k-task',
+        'favicon',
+        'csscomb',
+        'tobase64',
+        'inject',
+        'sitemap',
+        'htmlmin',
+        'remove-comment-css',
+        'remove-comment-js',
+        'html-beautify',
+        'header',
+        'cleanup',
+        'browserSync',
+        'done',
+        cb
+    );
+});
+
 // Not min & can run without localhost
 gulp.task('product-local', function(cb) {
     runSequence(
@@ -137,13 +164,33 @@ gulp.task('product-local', function(cb) {
         'revreplace',
         'sitemap',
         'htmlmin',
-        // 'html-beautify',
-        'remove-comment-css',
-        'remove-comment-js',
         'header',
         'cleanup',
         'cleanup-js',
         'cleanup-css',
+        'local-run',
+        'local-run-home',
+        'browserSync',
+        'done',
+        cb
+    );
+});
+
+// Not min & can run without localhost
+gulp.task('product-local-no', function(cb) {
+    runSequence(
+        'k-task',
+        'favicon',
+        'csscomb',
+        'tobase64',
+        'inject',
+        'sitemap',
+        'htmlmin',
+        'remove-comment-css',
+        'remove-comment-js',
+        'html-beautify',
+        'header',
+        'cleanup',
         'local-run',
         'local-run-home',
         'browserSync',
