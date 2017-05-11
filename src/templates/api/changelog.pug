@@ -1,0 +1,143 @@
+extends ../_layout/layout
+
+block variables
+	- var title = 'Changelog'
+	- var description = 'Description for home page'
+	- var bodyclass = 'documents'
+	- var selected = 'Changelog';
+	- var href = '';
+
+block body
+	section.home
+		.container
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Cài đặt
+					hr
+					p Trước khi sử dụng bộ kit này bạn phải hiểu rằng đây là bộ mã nguồn dùng để tham khảo, chúng tôi khước từ mọi trách nhiệm khi bạn gặp phải rắc rối về pháp lý hay sử dụng nó để thương mại hoá nó. Bằng cách sử dụng và tuân thủ luật nguồn mở nghĩa là bạn đã chấp nhận sự rủi ro khi sử dụng bộ kit này. Tuy nhiên chúng tôi luôn hỗ trợ bạn fix lỗi trong khả năng và thời gian cho phép.
+					p Để cài đặt bộ kit này trước tiên bạn clone source về từ:
+					blockquote.blockquote.text-primary git clone https://github.com/baonguyenyam/k-lite-task.git
+					p Sau đó tiến hành cài đặt bằng cách nhấp vào file
+					blockquote.blockquote.text-primary install.bat
+					p Nếu bạn sử dụng Mac thì có thể chạy file
+						code install.sh
+					hr
+					h5.text-danger 1) config.yml
+					p Vào thư mục
+						code k-task
+						| mở file
+						code config.yml
+						| để cấu hình các thông số cần thiết trong mục SEO
+					p Tại đây bạn sẽ thấy phần
+						code ACTIVE_CONCAT: TRUE
+					p a) Nếu giá trị là TRUE nghĩa là khi build sẽ không nén
+						code js/css
+						| trong thư mục pages mà sẽ được load dynamic theo từng page. Khi đó:
+					p b) Trong file
+						code src/styles/main.sass
+						| bạn phải xoá đi phần các file sass được import từ thư mục pages
+					p Trong file này cũng cho phép bạn gọi các thư viện từ
+						code bower_components
+						| vào bằng cách cấu hình mục concat => js và concat => css
+
+					h5.text-danger 2) config.js
+					p Vào thư mục
+						code src/scripts
+						| để cấu hình các tính năng cho hệ thống, phần này có thể xem chi tiết tại
+						a(href="api/documents.html") đây
+					h5.text-danger 3) main.sass
+					p Bộ kit này chỉ sử dụng viết SASS mà không viết SCSS vì vậy bạn phải tập làm quen nếu chưa dùng. Vào thư mục
+						code src/styles
+						| mở file
+						code main.sass
+						| trong file này bạn có thể import các file mình viết trogn thư mục pages vào
+					h5.text-danger 4) PUG
+					p Bộ kit này cũng không viết HTML mà sử dụng template PUG làm nền tảng vì vậy bạn phải tập làm quen nếu chưa dùng. Mọi cấu hình được đặt trong file
+						code tempaltes/_layout/_config_menu.pug
+
+					hr
+					h1.mt-6#sec1 Build
+					p Để chạy Dev bạn chạy lệnh
+					blockquote.blockquote.text-primary npm start
+					p Để chạy Build deploy lên server bạn chạy lệnh
+					blockquote.blockquote.text-primary npm run pro
+					p Để chạy Build test offline bạn chạy lệnh
+					blockquote.blockquote.text-primary npm run prod
+					p Để chạy Build KHÔNG NÉN deploy lên server bạn chạy lệnh
+					blockquote.blockquote.text-primary npm run pro-no
+					p Để chạy Build KHÔNG NÉN test offline bạn chạy lệnh
+					blockquote.blockquote.text-primary npm run prod-no
+					p Nếu bạn sử dụng mac hay Ubuntu bạn có thể gọi trực tiếp file app.sh
+					blockquote.blockquote.text-primary sh app.sh
+					p.text-italic Chúc bạn thành công!
+
+
+
+					h1.mt-6#sec1 Changelog
+					hr
+					h5.text-danger v3.0.3
+					dl.row.mt-3
+						dt.col-sm-3 Mega menu
+						dd.col-sm-9 Tích hợp mega menu, tính năng cho phép hiển thụ menu dropdown full-width màn hình
+					dl.row.mt-3
+						dt.col-sm-3 Công cụ Dev tools
+						dd.col-sm-9 Công cụ cho phép người dùng bật/tắt lưới khi thiết kế
+					dl.row.mt-3
+						dt.col-sm-3 Fixed Header
+						dd.col-sm-9 Cho phép người dùng bật/tắt tính năng giữ header luôn nổi khi cuộn trang
+					hr
+					h5.text-danger v3.0.2
+					dl.row.mt-3
+						dt.col-sm-3 Fixed Footer
+						dd.col-sm-9 Tính năng luôn đặt Footer sát dưới trang khi nội dung trang quá ngắn
+					dl.row.mt-3
+						dt.col-sm-3 K-Gmaps
+						dd.col-sm-9 Hiển thị bản đồ Google Map với Icon và Infowindow
+					dl.row.mt-3
+						dt.col-sm-3 Responsive Image
+						dd.col-sm-9 Tự động thay đổi ảnh theo thiết bị, nhằm giảm tải những ảnh quá lớn khi sử dụng mobile
+					dl.row.mt-3
+						dt.col-sm-3 Offcanvas
+						dd.col-sm-9 Hiển thị menu theo dạng Offcanvas khi không thích sử dụng menu mặc định của Bootstrap
+					hr
+					h5.text-danger v3.0.1
+					dl.row.mt-3
+						dt.col-sm-3 Back to top
+						dd.col-sm-9 Tính năng cho phép người dùng bật tắt nút cuộn lên đầu trang
+					dl.row.mt-3
+						dt.col-sm-3 Anchor Link
+						dd.col-sm-9 Khi nhấp vào 1 liên kết cùng trang trình duyệt sẽ tự cuộn với tốc độ chỉ định
+					dl.row.mt-3
+						dt.col-sm-3 Fixed Mobile
+						dd.col-sm-9 Khắc phục lỗi mất dấu mũi tên trên select box khi sử dụng trên mobile
+					hr
+					h5.text-danger v3.0.0 beta 1
+					dl.row.mt-3
+						dt.col-sm-3 SVG Logo
+						dd.col-sm-9 Cho phép sử dụng Logo bằng SVG code, ảnh sẽ không vỡ khi phóng lớn
+					dl.row.mt-3
+						dt.col-sm-3 Config.js
+						dd.col-sm-9 CẤU HÌNH SITE dễ dàng với file config có sẵn
+					dl.row.mt-3
+						dt.col-sm-3 Multi-Build
+						dd.col-sm-9 Có thể dễ dàng switch qua lại giữa nhiều chế độ build như: nén hay không nén files, đường dẫn files trực hay gián tiếp
+					hr
+					h5.text-danger v2.0.0
+					dl.row.mt-3
+						dt.col-sm-3 Multi-Build
+						dd.col-sm-9 Có thể dễ dàng switch qua lại giữa nhiều chế độ build như: nén hay không nén files, đường dẫn files trực hay gián tiếp
+					dl.row.mt-3
+						dt.col-sm-3 SEO
+						dd.col-sm-9 Tích hợp công cụ Auto SEO mạnh mẽ
+					dl.row.mt-3
+						dt.col-sm-3 K-SASS-CORE
+						dd.col-sm-9 Viết SASS dễ dàng hơn nhanh hơn với bộ công cụ k-sass-core
+					hr
+					h5.text-danger v1.0.0
+					dl.row.mt-3
+						dt.col-sm-3 One-Click-Install
+						dd.col-sm-9 Cài đặt và nâng cấp hệ thống chỉ với 1 cú click chuột
+					dl.row.mt-3
+						dt.col-sm-3 Menu Image
+						dd.col-sm-9 Có thể bật/tắt Icon cho menu một cách nhanh chóng với file cấu hình

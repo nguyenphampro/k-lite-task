@@ -3,7 +3,7 @@ footer.footer
 		.row
 			.col.linkfooter
 				.row
-					.col-sm-6.col-md-4
+					.col-sm-4.col-md-3
 						nav.list-group.text-sm-center.text-md-left
 							each val, key in footermenu
 								if (typeof(val.URL) == "object")
@@ -13,7 +13,7 @@ footer.footer
 								else
 									.list-group-item
 										a(href=val.URL)=val.Name
-					.col-sm-6.col-md-4
+					.col-sm-4.col-md-3
 						nav.list-group.text-sm-center.text-md-left
 							each val, key in footermenu2
 								if (typeof(val.URL) == "object")
@@ -23,7 +23,17 @@ footer.footer
 								else
 									.list-group-item
 										a(href=val.URL)=val.Name
-					.col-sm-12.col-md-4
+					.col-sm-4.col-md-3
+						nav.list-group.text-sm-center.text-md-left
+							each val, key in footermenu3
+								if (typeof(val.URL) == "object")
+									each second_val, second_key in val.URL
+										.list-group-item
+											a(href=second_val.URL)=second_val.Name
+								else
+									.list-group-item
+										a(href=val.URL)=val.Name
+					.col-sm-12.col-md-3
 						.socials.text-sm-center.text-lg-right
 							p Explore by Bao Nguyen
 							ul.list-inline
