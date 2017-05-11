@@ -145,4 +145,44 @@ header
 						margin-bottom: 10px
 				#VienSoiNAV
 					width: initial
+	////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////
+
+	// MEGA MENU
+	&.mega-menu
+		+media-breakpoint-up(lg)
+			position: relative
+			&.fixedheader
+				position: fixed
+			&.offcanvas
+				> div
+					position: static
+			nav
+				position: static
+				> div
+					position: static
+				#VienSoiNAV
+					.nav-item
+						&.dropdown
+							position: initial
+							.dropdown-menu
+								+mar(0)
+								width: 100%
+								+bor-rad(0)
+								+pad(.5rem)
+			@for $i from 2 through 8
+				&.mega-menu-col-#{$i}
+					nav
+						#VienSoiNAV
+							.nav-item
+								&.dropdown
+									&.show, &.active
+										.dropdown-menu
+											display: flex
+											flex-direction: row
+											flex-wrap: wrap
+											.dropdown-item
+												max-width: calc(#{100/$i}% - .5rem)
+												margin: .15rem .25rem
+
 

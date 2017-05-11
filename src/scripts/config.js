@@ -9,6 +9,8 @@ const VIENSOI_APP = {
     "ACTIVE_BACKTOTOP": true,
     "DISPLAY_BACKTOTOP": 100,
     "CHANGE_GRID": 991,
-    "DEV_MODE": true,
-    "DEV_MODE_GIRD_FULL": false
+    "DEV_MODE": false,
+    "DEV_MODE_GIRD_FULL": false,
+    "MEGA_MENU": false,
+    "MEGA_MENU_COL": 5
 }

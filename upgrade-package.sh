@@ -15,6 +15,7 @@ ncu -u
 printf "\033[0;33mInstall Node Modules...\033[0m\n"
 npm install
 npm install --only=dev
+npm i sass node-sass
 printf "\033[1;32m-----------------------------\033[0m\n"
 printf "\033[1;32mCongrats! Install Finished.\033[0m\n"
 
