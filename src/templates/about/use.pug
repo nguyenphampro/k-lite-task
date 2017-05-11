@@ -3,7 +3,7 @@ extends ../_layout/layout
 block variables
 	- var title = 'Documents'
 	- var description = 'Description for home page'
-	- var bodyclass = 'documents-page'
+	- var bodyclass = 'documents'
 	- var selected = 'Documents';
 	- var href = '';
 
@@ -15,10 +15,7 @@ block body
 				.col.p-4
 					h1.mt-6#sec1 Cấu hình build
 					hr
-					h5 In
-						|
-						span.text-danger k-task/config.yaml
-						| file
+					h5.text-danger In k-task/config.yaml file
 					dl.row.mt-3
 						hr
 						dt.col-sm-3 ACTIVE_CONCAT
@@ -28,3 +25,155 @@ block body
 								.col-sm-9 Nếu giá trị là TRUE nghĩa là ko nén js/css trong thư mục pages mà sẽ được load dynamic theo từng page. Khi đó:
 									br
 									span.text-danger - Trong file main.sass bạn phải xoá đi phần các file sass được import từ thư mục pages
+					hr
+					h5.text-danger Breakpoint
+					dl.row.mt-3
+						hr
+						dt.col-sm-5 @include media-breakpoint-up(xs) { ... }
+						dd.col-sm-7
+							.row
+								.col-sm-6 +media-breakpoint-up(xs) { ... }
+								.col-sm-6 min-width: 575px
+					dl.row.mt-3
+						hr
+						dt.col-sm-5 @include media-breakpoint-down(xs) { ... }
+						dd.col-sm-7
+							.row
+								.col-sm-6 +media-breakpoint-down(xs) { ... }
+								.col-sm-6 max-width: 575px
+					dl.row.mt-3
+						hr
+						dt.col-sm-5 @include media-breakpoint-only(sm) { ... }
+						dd.col-sm-7
+							.row
+								.col-sm-6 +media-breakpoint-only(sm) { ... }
+								.col-sm-6 min-width: 576px ~ max-width: 767px
+					dl.row.mt-3
+						hr
+						dt.col-sm-5 @include media-breakpoint-between(xs,lg) { ... }
+						dd.col-sm-7
+							.row
+								.col-sm-6 +media-breakpoint-between(xs,lg) { ... }
+								.col-sm-6 min-width: 0px ~ max-width: 1199px
+					hr
+					h5.text-danger Grid system
+					p Normal
+					.container.demo.mt-3
+						.text-xs .container > .row
+						.row
+							.col-sm
+								.bg .col-sm
+							.col-sm
+								.bg .col-sm
+							.col-sm
+								.bg .col-sm
+					p.mt-3 .no-gutters on .row
+					.container.demo.mt-3
+						.text-xs .container > .row.no-gutters
+						.row.no-gutters
+							.col
+								.bg .col
+							.col-6
+								.bg .col-6
+							.col
+								.bg .col
+					p.mt-3 .justify-content
+					.container.demo
+						.text-xs .container > .row.justify-content-md-center
+						.row.justify-content-md-center
+							.col.col-lg-3
+								.bg .col.col-lg-3
+							.col-12.col-md-auto
+								.bg .col-md-auto
+							.col.col-lg-3
+								.bg .col.col-lg-3
+					p.mt-3 .align-items-center
+					.container.demo.height
+						.text-xs .container > .row.align-items-center
+						.row.align-items-center
+							.col.col-lg-3
+								.bg .col.col-lg-3
+							.col-12.col-md-auto
+								.bg .col-md-auto
+							.col.col-lg-3
+								.bg .col.col-lg-3
+					p.mt-3 .align-items-center.justify-content-center
+					.container.demo.height
+						.text-xs .container > .row.align-items-center.justify-content-center
+						.row.align-items-center.justify-content-center
+							.col.col-lg-3
+								.bg .col.col-lg-3
+							.col-12.col-md-auto
+								.bg .col-md-auto
+							.col.col-lg-3
+								.bg .col.col-lg-3
+
+					hr
+					h5.text-danger Table responsive
+					p .table.table-responsive
+					.container.mt-3
+						.row.no-gutters
+							.col
+								table.table.table-responsive.table-striped.table-bordered
+									thead
+										tr
+											th #
+											th Table heading
+											th Table heading
+											th Table heading
+											th Table heading
+											th Table heading
+											th Table heading
+											th Table heading
+											th Table heading
+											th Table heading
+											th Table heading
+											th Table heading
+											th Table heading
+											th Table heading
+									tbody
+										tr
+											th(scope='row') 1
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+										tr
+											th(scope='row') 2
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+										tr
+											th(scope='row') 3
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
+											td Table cell
