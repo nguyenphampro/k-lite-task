@@ -18,6 +18,7 @@ else
     printf "\033[0;33mInstall Node Modules...\033[0m\n"
     npm install --only=dev
     npm install
+    npm i sass node-sass
 	(
 	   printf 'v0.0.1\n'
 	) > install.lock

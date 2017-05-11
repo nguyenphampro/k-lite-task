@@ -59,7 +59,7 @@ MAC/Ubuntu: run file `sh update.sh`
 
 ### Upgrade & Check Missing package
 
-run `npm run check`
+run `npm run update`
 
 ### Config 
 
@@ -67,13 +67,7 @@ Config file `config.yml`
 
 ### Working in Project
 
-Test: run `npm run test`
-
-Serve: run `npm run serve`
-
-Build: run `npm run pro`
-
-Dev: run `npm run dev`
+Run: run `npm run app`
 
 Tools: run `npm run tool`
 

@@ -16,6 +16,7 @@ if exist install.lock (
 	ECHO Install Node Modules...
 	npm install --only=dev
 	npm install
+	npm i sass node-sass
 	rem Saved
 	@echo off
 	@echo v0.0.1> install.lock

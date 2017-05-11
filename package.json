@@ -12,7 +12,7 @@
         "clean-deps": "rimraf node_modules",
         "rebuild": "npm rebuild",
         "clear-cache": "npm cache clean",
-        "update": "ncu -u && npm i && npm - --only=dev"
+        "update": "ncu -u && npm i && npm - --only=dev && npm i sass node-sass"
     },
     "dependencies": {
         "autoprefixer": "7.0.1",
@@ -23,6 +23,7 @@
         "babelify": "7.3.0",
         "body-parser": "1.17.1",
         "browser-sync": "2.18.8",
+        "browserify": "^14.3.0",
         "browserify-shim": "3.8.14",
         "clean-css": "4.1.2",
         "colors": "1.1.2",
@@ -111,7 +112,7 @@
         "karma-phantomjs-launcher": "1.0.4",
         "lodash": "4.17.4",
         "main-bower-files": "2.13.1",
-        "node-sass": "4.5.2",
+        "node-sass": "^4.5.2",
         "npm-check-updates": "2.11.1",
         "phantomjs": "2.1.7",
         "pug": "2.0.0-rc.1",
@@ -120,7 +121,7 @@
         "rev-del": "1.0.5",
         "rimraf": "2.6.1",
         "run-sequence": "1.2.2",
-        "sass": "0.5.0",
+        "sass": "^0.5.0",
         "vinyl-buffer": "1.0.0",
         "vinyl-source-stream": "1.1.0",
         "watchify": "3.9.0",
