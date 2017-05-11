@@ -1,0 +1,28 @@
+extends _layout/layout
+
+block variables
+	- var title = 'Home'
+	- var description = 'Description for home page'
+	- var bodyclass = 'home'
+	- var selected = 'Home';
+	- var href = '';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block og
+	meta(property="og:image", content='//'+config.SEO.cfg_url+'/home/demo.jpg')
+
+block body
+	section.home
+		.container
+			.row
+				.col.p-4
+					h1 Hello World!
+					hr
+					h5 Todo list
+					ul.list-unstyled
+						li - Lang
+						li - KMAPS chưa có destroy
+						li - class của bootstrap như margin pđing

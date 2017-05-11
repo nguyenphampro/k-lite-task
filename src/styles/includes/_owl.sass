@@ -1,0 +1,64 @@
+.owl-nav 
+	text-align: center
+	-webkit-tap-highlight-color: transparent
+	margin-top: 10px
+	+media-breakpoint-up(lg)
+		position: absolute
+		width: 100%
+		top: 50%
+		left: 0
+		height: 40px
+		margin-top: -30px
+		.owl-prev
+			position: absolute
+			left: -15px
+			top: 0
+		.owl-next
+			position: absolute
+			right: -15px
+			top: 0
+	[class*='owl-']
+		color: #FFF
+		font-size: 14px
+		margin: 5px
+		padding: 4px 12px
+		background: rgba(red(darken(#fff,60%)),green(darken(#fff,60%)),blue(darken(#fff,60%)),.7)
+		display: inline-block
+		cursor: pointer
+		&:hover
+			background: color-get($colors,main)
+			color: #FFF
+			text-decoration: none
+	.disabled
+		opacity: 0.5
+		cursor: default
+		+ .owl-dots
+			margin-top: 10px
+
+	.owl-dots
+		text-align: center
+		-webkit-tap-highlight-color: transparent
+		.owl-dot
+			display: inline-block
+			zoom: 1
+			*display: inline
+			span
+				width: 10px
+				height: 10px
+				margin: 5px 7px
+				background: darken(#fff,30%)
+				display: block
+				-webkit-backface-visibility: visible
+				transition: opacity 200ms ease
+				border-radius: 30px
+				&:hover, &.active
+					span
+						background: color-get($colors,main)
+
+.owl-carousel
+	.owl-item
+		text-align: center
+		img
+			width: initial
+			display: initial
+			max-width: 100%

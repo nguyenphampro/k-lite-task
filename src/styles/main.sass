@@ -1,2 +1,21 @@
-@import ../../bower_components/k-sass-core/src/sass/k-sass-core-only
-@import ../../bower_components/bootstrap/scss/bootstrap-flex
+@import ../../bower_components/bootstrap/scss/variables
+@import ../../bower_components/bootstrap/scss/mixins
+@import ../../bower_components/bootstrap/scss/mixins/breakpoints
+@import ../../bower_components/k-sass-core/dist/sass/k-sass-core
+
+@import mixins/base
+
+@import common/colors
+@import common/global
+@import common/print
+
+@import includes/header
+@import includes/footer
+@import includes/owl
+@import includes/btt
+
+// Nếu ACTIVE_CONCAT = false thì không import thư mục pages
+@import pages/home
+@import pages/contact
+
+@import pages/viensoi-dev

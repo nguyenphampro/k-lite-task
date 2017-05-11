@@ -1,0 +1,76 @@
+extends ../_layout/layout
+
+block variables
+	- var title = 'Contact'
+	- var description = 'Description for contact'
+	- var selected = 'Contact';
+	- var bodyclass = 'contact'
+	- var href = '/contact';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block body
+	section#gmap_canvas.gmap
+		.Lat 10.359352
+		.Lng 106.673089
+		.MarginLat -0.0050
+		.MarginLng 0
+		.imgMap /images/logo.png
+		address 211A Ngô Tùng Châu, Gò Công, Tiền Giang, Việt Nam
+		.infoWindow
+			h3 Bảo Nguyên
+			p
+				strong Tại Tiền Giang :
+				br
+				|  211A Ngô Tùng Châu, KP.3, P.1, Gò Công
+				br
+				|  Email: info@baonguyenyam.com
+				br
+				|  Tel :
+				a(href='tel:+840000000', onclick="_gaq.push(['_trackEvent', 'Mobile', 'Click to Call'])") 0908.000.000
+		.mapType ROADMAP
+		.mapCenter true
+		.Title Hello
+		.infoWidth 200
+		.ms black
+		.mapZoom 15
+		.scrollwheel false
+		.disableDoubleClickZoom true
+		.fullscreenControl true
+		.disableOpenURL false
+		.OpenURL View full map
+		.draggable false
+		.disableDefaultUI false
+
+	section.clients
+		.container
+			.row
+				.col
+					h2 FEATURED ON
+					.owl-carousel.owl-theme
+						.item
+							a(href='#', target='_blank')
+								img.gray_to_def(src='/images/clients/01.png', alt='')
+						.item
+							a(href='#', target='_blank')
+								img.gray_to_def(src='/images/clients/02.png', alt='')
+						.item
+							a(href='#', target='_blank')
+								img.gray_to_def(src='/images/clients/03.png', alt='')
+						.item
+							a(href='#', target='_blank')
+								img.gray_to_def(src='/images/clients/04.png', alt='')
+						.item
+							a(href='#', target='_blank')
+								img.gray_to_def(src='/images/clients/05.png', alt='')
+						.item
+							a(href='#', target='_blank')
+								img.gray_to_def(src='/images/clients/06.png', alt='')
+						.item
+							a(href='#', target='_blank')
+								img.gray_to_def(src='/images/clients/07.png', alt='')
+
+block js
+	script(src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&key=AIzaSyC4TPIe70ez19mrYgRtgj0oTcjxHxiJObY")

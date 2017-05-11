@@ -1,6 +1,6 @@
 @echo off
 ECHO =====================================
-ECHO Welcome to the Web-App. 
+ECHO Welcome to the Web-App.
 ECHO Copyright 2016
 ECHO Build by Bao Nguyen
 ECHO =====================================
@@ -9,9 +9,8 @@ Pause
 if exist install.lock (
     ECHO App is ready in your system. To Re-Install, please remove the 'install.lock' file and run again! Thanks.
 ) else (
-	rem ECHO Install Global Modules...
-	rem npm install --global --production windows-build-tools
-	rem npm i gulp gulp-cli bower phantomjs -g
+	ECHO Install Global Modules...
+	npm i gulp bower phantomjs npm-check-updates -g
 	ECHO Update Bower Components...
 	bower update
 	ECHO Install Node Modules...

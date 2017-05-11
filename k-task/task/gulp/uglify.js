@@ -21,7 +21,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                 suffix: '.min'
             }))
             .pipe(gulpif(!setgulp.production, plugins.sourcemaps.write('./')))
-            .pipe(plugins.changed(dest))
+            // .pipe(plugins.changed(dest))
             .pipe(gulp.dest(dest));
 
     });

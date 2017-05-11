@@ -1,0 +1,18 @@
+block variables
+if process.argv.slice(3) == '--production'
+	//- include _watermark
+
+//- Call Data from folder data
+- var _data = site.data
+- var _dataJS = site.dataJS
+//- Variable site
+- var prefix = "viensoi-"
+
+mixin getMin(bodyClass)
+	if !config.concat.ACTIVE_CONCAT
+		if (process.argv.slice(3).indexOf('--production') > -1) && (process.argv.slice(3).indexOf('--notmin') < 0)
+			link(rel='stylesheet', href='/css/pages/'+bodyClass+'.min.css')
+		else if (process.argv.slice(3).indexOf('--production') > -1) && (process.argv.slice(3).indexOf('--notmin') > -1)
+			link(rel='stylesheet', href='/css/pages/'+bodyClass+'.css')
+		else
+			link(rel='stylesheet', href='/css/pages/'+bodyClass+'.css')

@@ -12,7 +12,8 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
         ' // @version v<%= url.version %>',
         ' // @link <%= url.author.link %>',
         ' // @license <%= url.license %>',
-        ' // @<%= url.author.coding %>',
+        ' // @<%= url.author.coding %> - <%= url.author.phone %>',
+        ' // @<%= url.author.email %>',
         ' ////////////////////////////////////////////////////////',
         '*/'
     ].join('\n');

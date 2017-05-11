@@ -3,7 +3,7 @@
 import path from 'path';
 import gulpif from 'gulp-if';
 import minifyHtml from 'gulp-htmlmin';
-// import htmlReplace from 'gulp-html-replace';
+import replace from 'gulp-replace';
 
 module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     let url = config;
@@ -14,16 +14,9 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     gulp.task('htmlmin', () => {
 
         return gulp.src(path.join(target, '**/*.html'))
-            .pipe(gulpif(setgulp.production, minifyHtml({
-                collapseWhitespace: true,
-                conservativeCollapse: true,
-                collapseInlineTagWhitespace: true,
-                collapseBooleanAttributes: true,
-                removeCommentsFromCDATA: true,
-                removeEmptyAttributes: true,
-                removeRedundantAttributes: true
-            })))
-            .pipe(plugins.changed(dest))
+            .pipe(minifyHtml({ collapseWhitespace: true }))
+            .pipe(replace('</html></html>', '</html>'))
+            // .pipe(plugins.changed(dest))
             .pipe(gulp.dest(dest));
 
     });

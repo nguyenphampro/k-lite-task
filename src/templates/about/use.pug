@@ -1,0 +1,30 @@
+extends ../_layout/layout
+
+block variables
+	- var title = 'Documents'
+	- var description = 'Description for home page'
+	- var bodyclass = 'documents-page'
+	- var selected = 'Documents';
+	- var href = '';
+
+block body
+	section.home
+		.container
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Cấu hình build
+					hr
+					h5 In
+						|
+						span.text-danger k-task/config.yaml
+						| file
+					dl.row.mt-3
+						hr
+						dt.col-sm-3 ACTIVE_CONCAT
+						dd.col-sm-9
+							.row
+								.col-sm-3=config.concat.ACTIVE_CONCAT
+								.col-sm-9 Nếu giá trị là TRUE nghĩa là ko nén js/css trong thư mục pages mà sẽ được load dynamic theo từng page. Khi đó:
+									br
+									span.text-danger - Trong file main.sass bạn phải xoá đi phần các file sass được import từ thư mục pages

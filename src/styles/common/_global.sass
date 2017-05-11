@@ -1,0 +1,73 @@
++font-face('Roboto', "../fonts/", "CenturyGothic")
+
+html, body
+	background-color: color-get($colors,bg)
+	font-size: 14px
+	height: 100%
+	width: 100%
+	+selection
+		background-color: color-get($colors,main)
+		color: #fff
+	+media-breakpoint-down(md)
+		.container
+			width: 100%
+		main
+			// margin-top: 3.5rem
+	+media-breakpoint-up(lg)
+		main.main-fixedheader
+			// margin-top: 4.5rem
+
+.text-xs
+	+fz(.8rem)
+.text-sm
+	+fz(.9rem)
+.text-md
+	+fz(1.2rem)
+.text-lg
+	+fz(1.4rem)
+.text-xl
+	+fz(1.8rem)
+.text-xxl
+	+fz(2.2rem)
+.text-shadown
+	+text-shadow(#{1px 1px 0 #fdfdfd, 2px 2px 0 rgba(81, 81, 81, 0.5), 0 0 1px #fdfdfd})
+
+.text-bold
+	+fw(bold)
+.text-400
+	+fw(400)
+.text-500
+	+fw(500)
+.text-600
+	+fw(600)
+.text-700
+	+fw(700)
+
+.ishover
+	&:hover
+		+opacity(.5)
+
+@-moz-document url-prefix()
+  fieldset
+		display: table-cell
+
+.get-responsive
+	min-height: .01%
+	overflow-x: auto
+
+// Get text colors
+@each $value in $colors
+	$key: nth($value, 1);
+	$val: nth($value, 2);
+	.text-#{$key}
+		color: #{$val}
+// Get background colors
+@each $value in $colors
+	$key: nth($value, 1);
+	$val: nth($value, 2);
+	.bg-#{$key}
+		background-color: #{$val}
+
+.btn-double
+	border: 2px solid white
+	+box-shadow(0 0 0 1px #c2c2c2)

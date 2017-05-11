@@ -75,6 +75,6 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                 removeRedundantAttributes: true
             }))
             .pipe(gulp.dest(destjade))
-            .on('end', browserSync.reload);
+            // .on('end', browserSync.reload);
     });
 }

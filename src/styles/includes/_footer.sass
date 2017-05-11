@@ -1,0 +1,48 @@
+footer.footer
+	background-color: darken(color-get($colors,whites) ,80%)
+	position: relative
+	z-index: 1
+	color: darken(color-get($colors,whites) ,50%)
+	+pad(0)
+	overflow: hidden
+	+media-breakpoint-down(xs)
+		text-align: center
+	.linkfooter
+		+pad(4rem 1rem)
+		.list-group
+			.list-group-item
+				display: inline-block
+				+bg(none, none, none)
+				border: 0
+				+fw(300)
+				+pad(.5rem 0)
+				a 
+					+link(darken(color-get($colors,whites),50%),color-get($colors,whites),color-get($colors,whites))
+	.socials
+		+media-breakpoint-down(sm)
+			+mar(2rem null null null)
+		.list-inline
+			+mar(0)
+			.list-inline-item
+				
+				+fz(.9rem)
+				+link(darken(color-get($colors,whites), 85%), color-get($colors,whites), color-get($colors,whites))
+				+mar(null 1rem null null)
+				a
+					display: block
+					height: 2rem
+					width: 2rem
+					+lh(2rem)
+					+bg(darken(color-get($colors,whites),40%), color-get($colors,whites), color-get($colors,whites))
+					+link(darken(color-get($colors,whites),85%))
+					+border-radius(50%)
+					text-align: center
+					i
+						+lh(2rem)
+				&:last-child
+					+mar(0)
+	.copyright
+		background-color: darken(color-get($colors,whites) ,100%)
+		+pad(1rem 2rem)
+		a
+			+link(darken(color-get($colors,whites) ,15%), color-get($colors,whites))

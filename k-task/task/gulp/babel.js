@@ -17,6 +17,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     gulp.task('babel', () => {
         return gulp.src([
                 '!' + path.join(url.source, url.ignore.scripts),
+                '!' + path.join(url.source, url.scripts.javascript, url.concat.ACTIVE_CONCAT ? url.ignore.concatactiveconcat : url.ignore.concat),
                 path.join(url.source, url.scripts.javascript, '**/*.js')
             ])
             .pipe(plugins.sourcemaps.init())

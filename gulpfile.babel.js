@@ -13,7 +13,7 @@ const fs = require('fs');
 const yaml = require("js-yaml");
 const load = yaml.load(fs.readFileSync("./k-task/config.yml"));
 
-// Global 
+// Global
 const plugins = gulpLoadPlugins();
 
 // Create karma server
@@ -30,10 +30,10 @@ const defaultNotification = function(err) {
     };
 };
 
-// Call Config 
+// Call Config
 let config = Object.assign({}, load.config, defaultNotification);
 
-// Call ENV 
+// Call ENV
 let setgulp = minimist(process.argv.slice(2));
 
 let target = setgulp.production ? config.dest : config.tmp;
@@ -67,15 +67,25 @@ gulp.task('server', ['clean'], () => {
 gulp.task('build', ['cleanall'], () => {
     gulp.start('product');
 });
+gulp.task('build-local', ['cleanall'], () => {
+    gulp.start('product-local');
+});
+gulp.task('build-no', ['cleanall'], () => {
+    gulp.start('product-no');
+});
+gulp.task('build-local-no', ['cleanall'], () => {
+    gulp.start('product-local-no');
+});
 
 
 // Basic production-ready code
 gulp.task('k-task', function(cb) {
     runSequence(
-        'sass', // css, less, stylus 
+        'sass', // css, less, stylus
         'concat',
+        'babel',
         'babel-concat',
-        'jade', // hamber, ejs, pug 
+        'pug', // hamber, ejs, pug
         'copy',
         'fonts',
         cb
@@ -85,7 +95,8 @@ gulp.task('k-task', function(cb) {
 gulp.task('ser', function(cb) {
     runSequence(
         'k-task',
-        'browserSyncPhp',
+        'inject',
+        'browserSync',
         'watch',
         cb
     );
@@ -96,19 +107,93 @@ gulp.task('ser', function(cb) {
 gulp.task('product', function(cb) {
     runSequence(
         'k-task',
-        // Call new task 
         'favicon',
-        'inject-favicon-markups',
         'cssmin',
         'uglify',
-        // 'htmlmin',
-        // 'imagemin',
         'csscomb',
         'tobase64',
         'rev',
         'delete-css',
         'delete-js',
         'revreplace',
+        'sitemap',
+        'htmlmin',
+        'header',
+        'cleanup',
+        'cleanup-js',
+        'cleanup-css',
+        'browserSync',
+        'done',
+        cb
+    );
+});
+
+// Rebuild will call by browserify
+gulp.task('product-no', function(cb) {
+    runSequence(
+        'k-task',
+        'favicon',
+        'csscomb',
+        'tobase64',
+        'inject',
+        'sitemap',
+        'htmlmin',
+        'remove-comment-css',
+        'remove-comment-js',
+        'html-beautify',
+        'header',
+        'cleanup',
+        'browserSync',
+        'done',
+        cb
+    );
+});
+
+// Not min & can run without localhost
+gulp.task('product-local', function(cb) {
+    runSequence(
+        'k-task',
+        'favicon',
+        'cssmin',
+        'uglify',
+        'csscomb',
+        'tobase64',
+        'rev',
+        'delete-css',
+        'delete-js',
+        'revreplace',
+        'sitemap',
+        'htmlmin',
+        'header',
+        'cleanup',
+        'cleanup-js',
+        'cleanup-css',
+        'local-run',
+        'local-run-home',
+        'browserSync',
+        'done',
+        cb
+    );
+});
+
+// Not min & can run without localhost
+gulp.task('product-local-no', function(cb) {
+    runSequence(
+        'k-task',
+        'favicon',
+        'csscomb',
+        'tobase64',
+        'inject',
+        'sitemap',
+        'htmlmin',
+        'remove-comment-css',
+        'remove-comment-js',
+        'html-beautify',
+        'header',
+        'cleanup',
+        'local-run',
+        'local-run-home',
+        'browserSync',
         'done',
         cb
     );
