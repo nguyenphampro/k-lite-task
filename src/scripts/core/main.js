@@ -9,10 +9,10 @@ console.log('%c VienSoi ' + '%c - Customer success is our mission.', 'border-rad
 console.warn("VienSoi warning: This is a browser feature intended for developers. If someone told you to copy and paste something here to enable a 4xlabs feature or 'hack' someone's account, it is a scam and will give them access to your 4xlabs account.");
 
 document.onkeyup = function(e) {
-    var e = e || window.event; // for IE to cover IEs window object
+    var e = e || window.event;
     if (e.altKey && e.ctrlKey && e.shiftKey && e.which == 13) {
         $('body')
-        alert('BAO NGUYEN - 0969689893')
+        alert('BAO NGUYEN - 0969689893\nEmail: baonguyenyam@gmail.com\nWeb: baonguyenyam.github.io')
         return false;
     }
 };
