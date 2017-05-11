@@ -10,5 +10,5 @@ const VIENSOI_APP = {
     "DISPLAY_BACKTOTOP": 100,
     "CHANGE_GRID": 991,
     "DEV_MODE": true,
-    "DEV_MODE_GIRD_FULL": true
+    "DEV_MODE_GIRD_FULL": false
 }
