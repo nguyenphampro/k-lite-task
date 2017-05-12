@@ -9,22 +9,11 @@ block variables
 
 block body
 	section.home
-		.container
+		.container.p-4
 
 			.row
 				.col.p-4
-					h1.mt-6#sec1 Cấu hình build
-					hr
-					h5.text-danger In k-task/config.yaml file
-					dl.row.mt-3
-						hr
-						dt.col-sm-3 ACTIVE_CONCAT
-						dd.col-sm-9
-							.row
-								.col-sm-3=config.concat.ACTIVE_CONCAT
-								.col-sm-9 Nếu giá trị là TRUE nghĩa là ko nén js/css trong thư mục pages mà sẽ được load dynamic theo từng page. Khi đó:
-									br
-									span.text-danger - Trong file main.sass bạn phải xoá đi phần các file sass được import từ thư mục pages
+					h1.mt-6#sec1 Bootstrap Core
 					hr
 					h5.text-danger Breakpoint
 					dl.row.mt-3
@@ -177,3 +166,48 @@ block body
 											td Table cell
 											td Table cell
 											td Table cell
+
+
+			.row
+				.col
+					hr
+					h5.text-danger Flexbox
+					p Normal
+					.text-xs .d-flex.flex-column.flex-lg-row > div
+					.d-flex.flex-column.flex-lg-row.demo.mt-3
+						div.item
+							.bg Items
+						div.item
+							.bg Items
+						div.item
+							.bg Items
+					p.mt-3 Center
+					.text-xs .d-flex.flex-column.flex-lg-row.justify-content-center > div
+					.d-flex.flex-column.flex-lg-row.justify-content-center.demo.mt-3.heightflex
+						div.item
+							.bg Items
+						div.item
+							.bg Items
+						div.item
+							.bg Items
+					p.mt-3 Stretch
+					.text-xs .d-flex.flex-column.flex-lg-row.justify-content-center > .d-flex.align-items-stretch
+					.d-flex.flex-column.flex-lg-row.justify-content-center.demo.mt-3.heightflex
+						div.item.d-flex.align-items-stretch
+							.bg Items
+						div.item.d-flex.align-items-stretch
+							.bg Items
+						div.item.d-flex.align-items-stretch
+							.bg Items
+					p.mt-3 Stretch
+					.text-xs .d-flex.flex-column.flex-lg-row.justify-content-center > .d-flex.align-items-stretch > .d-flex.align-items-center > div
+					.d-flex.flex-column.flex-lg-row.justify-content-center.demo.mt-3.heightflex
+						div.item.d-flex.align-items-stretch
+							.bg.d-flex.align-items-center
+								div Items
+						div.item.d-flex.align-items-stretch
+							.bg.d-flex.align-items-center
+								div Items
+						div.item.d-flex.align-items-stretch
+							.bg.d-flex.align-items-center
+								div Items

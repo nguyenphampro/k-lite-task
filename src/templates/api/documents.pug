@@ -130,6 +130,8 @@ block body
 									code=_data.info.SET.name
 									pre.mt-4 EX: _data.config.CON.version
 									code=_data.config.CON.version
+					
+
 					h1.mt-5#sec3 Cấu hình build
 					hr
 					h5 In config.yaml file
@@ -143,7 +145,16 @@ block body
 								.col-sm-6
 									pre EX: config.concat.ACTIVE_CONCAT
 									code=config.concat.ACTIVE_CONCAT
-
+					dl.row.mt-3
+						hr
+						dt.col-sm-3 ACTIVE_CONCAT
+						dd.col-sm-9
+							.row
+								.col-sm-3=config.concat.ACTIVE_CONCAT
+								.col-sm-9 Nếu giá trị là TRUE nghĩa là ko nén js/css trong thư mục pages mà sẽ được load dynamic theo từng page. Khi đó:
+									br
+									span.text-danger - Trong file main.sass bạn phải xoá đi phần các file sass được import từ thư mục pages
+					hr 
 					dl.row
 						each val, key in config
 							if (typeof(val) == "object")
