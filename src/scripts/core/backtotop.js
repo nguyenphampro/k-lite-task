@@ -1,23 +1,16 @@
 function backToTop() {
-    if ($('#back-to-top').length) {
-        var backToTop = function() {
-            var scrollTop = $(window).scrollTop();
-            if (scrollTop > VIENSOI_APP.DISPLAY_BACKTOTOP) {
-                $('#back-to-top').addClass('show');
-            } else {
-                $('#back-to-top').removeClass('show');
-            }
+    if ($("#back-to-top").length) {
+        var o = function() {
+            var o = $(window).scrollTop();
+            o > VIENSOI_APP.DISPLAY_BACKTOTOP ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show")
         };
-        backToTop();
-        $(window).on('scroll', function() {
-            backToTop();
-        });
-        $('#back-to-top').on('click', function(e) {
-            e.preventDefault();
-            $('html,body').animate({
+        o(), $(window).on("scroll", function() {
+            o()
+        }), $("#back-to-top").on("click", function(o) {
+            o.preventDefault(), $("html,body").animate({
                 scrollTop: 0
-            }, 700);
-        });
+            }, 700)
+        })
     }
 }
 
