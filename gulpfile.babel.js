@@ -88,7 +88,6 @@ gulp.task('k-task', function(cb) {
         'pug', // hamber, ejs, pug
         'copy',
         'fonts',
-        'main-bower-files',
         cb
     );
 });
