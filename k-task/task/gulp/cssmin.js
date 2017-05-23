@@ -2,7 +2,7 @@
 
 import path from 'path';
 import del from 'del';
-import minifyCss from 'gulp-minify-css';
+import minifyCss from 'gulp-csso';
 import cleanCSS from 'gulp-clean-css';
 import sourcemaps from 'gulp-sourcemaps';
 import rename from 'gulp-rename';
