@@ -60,7 +60,7 @@ config:
   data: "data"
   dataJS: "scripts"
   blank: "_blank"
-  images: "img"
+  images: "images"
 # Layout
   layouts:
     assets: "partials"
