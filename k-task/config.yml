@@ -7,6 +7,7 @@ config:
     namejs: addons
     namecss: addons
     js:
+      - "bower_components/Modernizr/modernizr.custom.js"
       - "bower_components/jquery/dist/jquery.js"
       - "bower_components/tether/dist/js/tether.js"
       - "bower_components/bootstrap/dist/js/bootstrap.js"
@@ -59,7 +60,7 @@ config:
   data: "data"
   dataJS: "scripts"
   blank: "_blank"
-  images: "img"
+  images: "images"
 # Layout
   layouts:
     assets: "partials"
