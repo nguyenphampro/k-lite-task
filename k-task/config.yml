@@ -21,6 +21,7 @@ config:
       - "bower_components/owl.carousel/dist/assets/owl.carousel.min.css"
       - "bower_components/owl.carousel/dist/assets/owl.theme.default.css"
       - "bower_components/bootstrap-offcanvas/dist/css/bootstrap.offcanvas.css"
+      - "bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css"
 # SEO
   SEO:
     AppName: "Home"

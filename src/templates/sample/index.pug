@@ -112,6 +112,18 @@ block body
 								.custom-control-indicator
 								.custom-control-description.y I agree
 							.help-block.with-errors.text-danger
+					.col-md-12
+						.form-group.has-feedback
+							.checkbox
+								input(name="IsChecked", id="checkbox", type='checkbox', required, data-error="Fleid is required", value="true")
+								label(for="checkbox") I agree
+							.help-block.with-errors.text-danger
+					.col-md-12
+						.form-group.has-feedback
+							.radio
+								input(name="IsCheckedradio", id="radio", type='radio', required, data-error="Fleid is required", value="true")
+								label(for="radio") I agree
+							.help-block.with-errors.text-danger
 					.col-md-12.text-center.mt-3
 						.form-group
 							button(type="submit").btn.btn-lg.btn-primary Submit
