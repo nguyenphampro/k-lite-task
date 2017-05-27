@@ -28,7 +28,7 @@ block body
 				br
 				|  Email: info@baonguyenyam.com
 				br
-				|  Tel : 
+				|  Tel :
 				a(href='tel:+840000000', onclick="_gaq.push(['_trackEvent', 'Mobile', 'Click to Call'])") 0.96.96.89.89.3
 		.mapType ROADMAP
 		.mapCenter true
@@ -71,6 +71,50 @@ block body
 						.item
 							a(href='#', target='_blank')
 								img.gray_to_def(src='/images/clients/07.png', alt='')
+	section.formcheck.pt-5.pb-5
+		form(data-toggle="validator", role="form")
+			.container
+				.row.align-items-center
+					.col-md-6
+						.form-group.has-feedback
+							input(type="text", name="FirstName", class="form-control" id="firstName" placeholder="First name", required)
+							span.form-control-feedback(aria-hidden="true")
+					.col-md-6
+						.form-group.has-feedback
+							input(type="text", name="LastName", class="form-control" id="lastName" placeholder="Last name", required)
+					.col-md-6
+						.form-group.has-feedback
+							input(type="email", name="Email", class="form-control" id="email" placeholder="Email", required)
+					.col-md-6
+						.form-group.has-feedback
+							input(type="tel", name="Phone", class="form-control" id="phone" placeholder="Phone", required)
+					.col-md-12
+						.form-group.has-feedback
+							input(type="text" name="Name", class="form-control" id="company" placeholder="Company")
+					.col-md-12
+						.form-group.has-feedback
+							select(class="custom-select form-control", name="CountryCode", id="countries", required)
+								option(selected, disabled) Select country
+								option(value="1") Val 1
+					.col-md-12
+						.form-group.has-feedback
+							input(type="text", name="Address", class="form-control" id="address" placeholder="Address", required)
+					.col-md-12
+						.form-group.has-feedback
+							label What feature are you most interested in ?
+							textarea(class="form-control", rows="3", name="PreferFeature", id="features", required)
+
+
+					.col-md-12
+						.form-group.has-feedback
+							label.custom-control.custom-checkbox
+								input.custom-control-input(name="IsCheckedTerm", type='checkbox', required, data-error="Fleid is required", value="true")
+								.custom-control-indicator
+								.custom-control-description.y I agree
+							.help-block.with-errors.text-danger
+					.col-md-12.text-center.mt-3
+						.form-group
+							button(type="submit").btn.btn-lg.btn-primary Submit
 
 block js
 	script(src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&key=AIzaSyC4TPIe70ez19mrYgRtgj0oTcjxHxiJObY")

@@ -13,6 +13,7 @@ config:
       - "bower_components/bootstrap/dist/js/bootstrap.js"
       - "bower_components/owl.carousel/dist/owl.carousel.min.js"
       - "bower_components/k-gmaps/dist/js/kmaps.js"
+      - "bower_components/bootstrap-validator/dist/validator.min.js"
       - "bower_components/bootstrap-offcanvas/dist/js/bootstrap.offcanvas.js"
     css:
       - "bower_components/animate.css/animate.css"
