@@ -1,0 +1,1 @@
+var DOMAIN_URL = 'http://domain.xyz'

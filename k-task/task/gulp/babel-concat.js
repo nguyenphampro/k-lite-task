@@ -17,6 +17,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     // Run task
     gulp.task('babel-concat', () => {
         return gulp.src([
+                setgulp.production ? './src/_env/config.prod.js' : './src/_env/config.dev.js',
                 path.join(url.source, url.scripts.javascript, url.concat.ACTIVE_CONCAT ? url.ignore.concatactiveconcat : url.ignore.concat),
                 setgulp.production ? '!' + path.join(url.source, url.scripts.javascript, '**/viensoi-dev.js') : path.join()
             ])
