@@ -73,7 +73,7 @@ header
 
 	// Fixed header
 	&.fixedheader
-		+box-shadow(0 1px 0 rgba(255,255,255,.3))
+		+box-shadows(0 1px 0 rgba(255,255,255,.3))
 		+pos(fix, 0 null null 0)
 		+transition(all .5s ease-in-out)
 		// Responsive
@@ -83,7 +83,7 @@ header
 
 	// Active header
 	&.active
-		+box-shadow(0 2px 4px darken(color-get($colors,whites),30%))
+		+box-shadows(0 2px 4px darken(color-get($colors,whites),30%))
 		// Responsive
 		+media-breakpoint-up(lg)
 			&.fixedheader
@@ -119,7 +119,7 @@ header
 						+fz(1.3rem)
 						+lh(1.3rem)
 			nav.navbar
-				+box-shadow(3px 0 4px darken(color-get($colors,whites),30%))
+				+box-shadows(3px 0 4px darken(color-get($colors,whites),30%))
 				position: fixed
 				width: 100%
 				max-width: 250px
