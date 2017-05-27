@@ -12,7 +12,7 @@
         "clean-deps": "rimraf node_modules",
         "rebuild": "npm rebuild",
         "clear-cache": "npm cache clean",
-        "update": "ncu -u && ncu -m bower && npm i && npm - --only=dev && npm i sass node-sass && bower update"
+        "update": "ncu -u && ncu -u -m bower && npm i && npm - --only=dev && npm i sass node-sass && bower update"
     },
     "dependencies": {
         "autoprefixer": "7.1.1",
