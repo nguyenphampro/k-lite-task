@@ -13,7 +13,8 @@ header
 	+pos(fix, 0 null null 0)
 	width: 100%
 	z-index: 8888
-	background: darken(color-get($colors,white),0%)
+	&.no-tranparent
+		background: color-get($colors, whites)
 	nav.navbar
 		background: none
 		.navbar-toggler
