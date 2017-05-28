@@ -39,12 +39,19 @@ header
 		&.navbar-toggleable-xs
 			flex-wrap: nowrap
 			flex-direction: row
+			align-items: center
 			> .container
 				padding-left: 0
 				padding-right: 0
-				.navbar-collapse
-					display: flex !important
+				display: flex
+				align-items: center
+				#VienSoiGlobalMenu.navbar-collapse
+					display: flex
 					width: 100%
+					overflow: initial
+					ul#VienSoiNAV
+						.nav-item
+							width: initial
 		#VienSoiGlobalMenu.navbar-collapse
 			max-height: 300px
 			overflow: auto
