@@ -1,6 +1,23 @@
-if (VIENSOI_APP.DEV_MODE) {
-    // $('body').append('<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">')
-    // .append('<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>')
+$(document).ready(function() {
+    checkDev()
+});
+
+$(window).resize(function() {
+    checkDev()
+})
+
+function checkDev() {
+    if ($(window).width() < 576) {
+        $('.viensoi-develop .devtools .header-devtools h3').html('Dev - XS')
+    } else if ($(window).width() >= 576 && $(window).width() < 768) {
+        $('.viensoi-develop .devtools .header-devtools h3').html('Dev - SM')
+    } else if ($(window).width() >= 768 && $(window).width() < 992) {
+        $('.viensoi-develop .devtools .header-devtools h3').html('Dev - MD')
+    } else if ($(window).width() >= 992 && $(window).width() < 1200) {
+        $('.viensoi-develop .devtools .header-devtools h3').html('Dev - LG')
+    } else {
+        $('.viensoi-develop .devtools .header-devtools h3').html('Dev - XL')
+    }
 }
 
 (function($) {

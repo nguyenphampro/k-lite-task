@@ -1,3 +1,7 @@
+$active_menu_on: 'sm' // Theo giá trị trong file config.js
+$active_menu_on_up: 'md' // Thêm 1 bậc theo giá trị trong file config.js
+$active_menu_on_down: 'xs' // Giảm 1 bậc theo giá trị trong file config.js
+//////////////////////////////////////////////////////////////////
 // Logo
 [site-logo]
 	display: block
@@ -31,8 +35,16 @@ header
 				+lh(1.3rem)
 			&.navbar-toggler-right
 				right: 0
-				+media-breakpoint-up(md)
 		.navbar-brand
+		&.navbar-toggleable-xs
+			flex-wrap: nowrap
+			flex-direction: row
+			> .container
+				padding-left: 0
+				padding-right: 0
+				.navbar-collapse
+					display: flex !important
+					width: 100%
 		#VienSoiGlobalMenu.navbar-collapse
 			max-height: 300px
 			overflow: auto
@@ -46,7 +58,7 @@ header
 	////////////////////////////////////////////////////////////////////////////////////
 
 	// Responsive SM
-	+media-breakpoint-up(sm)
+	+media-breakpoint-up($active_menu_on_down)
 		nav.navbar
 			#VienSoiGlobalMenu.navbar-collapse
 				ul#VienSoiNAV
@@ -55,7 +67,7 @@ header
 					.nav-item
 						width: 50%
 	// Responsive LG
-	+media-breakpoint-up(lg)
+	+media-breakpoint-up($active_menu_on_up)
 		+pos(static, initial null null initial)
 		nav.navbar
 			#VienSoiGlobalMenu.navbar-collapse
@@ -77,7 +89,7 @@ header
 		+pos(fix, 0 null null 0)
 		+transition(all .5s ease-in-out)
 		// Responsive
-		+media-breakpoint-up(lg)
+		+media-breakpoint-up($active_menu_on_up)
 			&.has-tranparent
 				background: none
 
@@ -85,7 +97,7 @@ header
 	&.active
 		+box-shadows(0 2px 4px darken(color-get($colors,whites),30%))
 		// Responsive
-		+media-breakpoint-up(lg)
+		+media-breakpoint-up($active_menu_on_up)
 			&.fixedheader
 				&.has-tranparent
 					background: rgba(255,255,255,1)
@@ -101,7 +113,7 @@ header
 				.nav-item
 					span
 						padding-left: 10px
-		+media-breakpoint-down(md)
+		+media-breakpoint-down($active_menu_on)
 			> div
 				+pad(0)
 			.mainmenu
@@ -138,7 +150,7 @@ header
 						margin-bottom: 10px
 					.dropdown-menu
 						border: 1px solid rgba(0, 0, 0, 0.15)
-		+media-breakpoint-up(lg)
+		+media-breakpoint-up($active_menu_on_up)
 			nav.navbar
 				+pad(0)
 				&.navbar-offcanvas.offcanvas-transform
@@ -152,7 +164,7 @@ header
 
 	// MEGA MENU
 	&.mega-menu
-		+media-breakpoint-up(lg)
+		+media-breakpoint-up($active_menu_on_up)
 			position: relative
 			&.fixedheader
 				position: fixed
