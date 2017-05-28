@@ -1,7 +1,7 @@
 const VIENSOI_APP = {
     "ACTIVE_FIXED_HEADER": true,
     "HEADER_TRANPARENT": false,
-    "NAV_CHANGE_ON": "xs",
+    "NAV_CHANGE_ON": "sm",
     "ACTIVE_HEADER_POSITION": 1,
     "ACTIVE_PADDING_MAIN": true,
     "ACTIVE_FIXED_FOOTER": true,
