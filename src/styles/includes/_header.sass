@@ -1,5 +1,5 @@
-$active_menu_on: 'sm' // Theo giá trị trong file config.js
-$active_menu_on_up: 'md' // Thêm 1 bậc theo giá trị trong file config.js
+$active_menu_on: 'xs' // Theo giá trị trong file config.js
+$active_menu_on_up: 'sm' // Thêm 1 bậc theo giá trị trong file config.js
 $active_menu_on_down: 'xs' // Giảm 1 bậc theo giá trị trong file config.js
 //////////////////////////////////////////////////////////////////
 // Logo
@@ -52,6 +52,9 @@ header
 					ul#VienSoiNAV
 						.nav-item
 							width: initial
+							.nav-link
+								+pad(0)
+								margin-right: 1rem
 		#VienSoiGlobalMenu.navbar-collapse
 			max-height: 300px
 			overflow: auto
