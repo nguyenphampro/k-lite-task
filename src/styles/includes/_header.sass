@@ -2,6 +2,7 @@ $active_menu_on: 'sm' // Theo giá trị trong file config.js
 $active_menu_on_up: 'md' // Thêm 1 bậc theo giá trị trong file config.js
 $active_menu_on_down: 'xs' // Giảm 1 bậc theo giá trị trong file config.js
 $active_menu_on_cut: 'sm' // Giá trị chia 2 cột menu dropdown
+$active_menu_on_cut_columns: 2 // Giá trị chia 2 cột menu dropdown
 //////////////////////////////////////////////////////////////////
 // Logo
 [site-logo]
@@ -69,14 +70,14 @@ header
 	////////////////////////////////////////////////////////////////////////////////////
 
 	// Responsive SM
-	+media-breakpoint-between($active_menu_on_cut, $active_menu_on)
+	+media-breakpoint-between($active_menu_on, $active_menu_on_cut)
 		nav.navbar
 			#VienSoiGlobalMenu.navbar-collapse
 				ul#VienSoiNAV
 					flex-direction: initial
 					flex-wrap: wrap
 					.nav-item
-						width: 50%
+						width: calc(100% / #{$active_menu_on_cut_columns})
 	// Responsive LG
 	+media-breakpoint-up($active_menu_on_up)
 		+pos(static, initial null null initial)
