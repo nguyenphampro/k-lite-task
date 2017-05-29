@@ -12,11 +12,15 @@ html, body
 	+media-breakpoint-down(md)
 		.container
 			width: 100%
-		main
-			// margin-top: 3.5rem
-	+media-breakpoint-up(lg)
-		main.main-fixedheader
-			// margin-top: 4.5rem
+	&.offcanvas-stop-scrolling
+		&:before
+			display: block
+			height: 100%
+			width: 100%
+			content: ''
+			+pos(abs, 0 0 null null)
+			background: rgba(0,0,0,.5)
+			z-index: 90
 
 .text-xs
 	+fz(.8rem)

@@ -7,7 +7,7 @@ const VIENSOI_APP = {
     "ACTIVE_FIXED_FOOTER": true,
     "DISPLAY_FOOTER": 600,
     "ACTIVE_RESPONSIVE": true,
-    "ACTIVE_OFFCANVAS": false,
+    "ACTIVE_OFFCANVAS": true,
     "ACTIVE_BACKTOTOP": true,
     "DISPLAY_BACKTOTOP": 100,
     "CHANGE_GRID": 991,

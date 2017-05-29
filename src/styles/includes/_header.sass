@@ -18,7 +18,7 @@ header
 	flex-direction: column
 	+pos(fix, 0 null null 0)
 	width: 100%
-	z-index: 8888
+	z-index: 100
 	&.no-tranparent
 		background: color-get($colors, whites)
 	nav.navbar
@@ -147,16 +147,16 @@ header
 				position: fixed
 				width: 100%
 				max-width: 250px
-				left: -250px
+				left: -260px
 				top: 0
-				z-index: 9999
-				overflow: scroll
+				z-index: 200
+				overflow-y: auto
 				-webkit-overflow-scrolling: touch
 				+transition(all 0.15s ease-in)
 				background: darken(color-get($colors,white),0%)
 				&.navbar-offcanvas.offcanvas-transform
 					&.in
-						+transform(translateX(250px))
+						+transform(translateX(260px))
 					.dropdown-menu.shown
 						display: block
 						margin-bottom: 10px
