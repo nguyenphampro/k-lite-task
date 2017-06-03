@@ -17,6 +17,20 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     // Run task
 
     gulp.task('concat', function() {
+        gulp.src(url.concat.js_core)
+            .pipe(concat(url.concat.namejs_core + '.js'))
+            .pipe(plugins.changed(dest))
+            .pipe(gulp.dest(destjs));
+
+        gulp.src(url.concat.css_core)
+            .pipe(concatCss(url.concat.namecss_core + '.css', {
+                includePaths: '',
+                rebaseUrls: false,
+                inlineImports: false
+            }))
+            .pipe(plugins.changed(dest))
+            .pipe(gulp.dest(destcss));
+
         gulp.src(url.concat.js)
             .pipe(concat(url.concat.namejs + '.js'))
             .pipe(plugins.changed(dest))

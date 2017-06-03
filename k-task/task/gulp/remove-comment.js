@@ -15,6 +15,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
 
         return gulp.src([
                 path.join(target, '**/*.css'),
+                '!' + path.join(target, url.styles.assets, url.concat.namecss_core + '-*.css'),
                 '!' + path.join(target, url.styles.assets, url.concat.namecss + '-*.css')
             ])
             .pipe(stripCssComments())
@@ -26,6 +27,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
 
         return gulp.src([
                 path.join(target, '**/*.js'),
+                '!' + path.join(target, url.scripts.assets, url.concat.namejs_core + '-*.js'),
                 '!' + path.join(target, url.scripts.assets, url.concat.namejs + '-*.js')
             ])
             .pipe(stripJsComments())
