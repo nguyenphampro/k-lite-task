@@ -13,8 +13,10 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
 
             // Concat
             gulp.watch([
-                path.join('./config.yml')
-            ], ['concat'])
+                path.join('./k-task/config.yml')
+            ], function() {
+                runSequence('k-task', 'inject');
+            })
 
 
             // Styles
