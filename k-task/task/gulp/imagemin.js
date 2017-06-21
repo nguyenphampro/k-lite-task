@@ -15,7 +15,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
         return gulp.src(path.join(target, '**/.{gif,png,jpg,jpeg,bmp,svg}'))
             .pipe(imagemin([
                 imagemin.gifsicle({ interlaced: true }),
-                imagemin.jpegtran({ progressive: true, arithmetic: true }),
+                imagemin.jpegtran({ progressive: true }),
                 imagemin.optipng({ optimizationLevel: 7 }),
                 imagemin.svgo({ plugins: [{ removeViewBox: true }] })
             ], {
