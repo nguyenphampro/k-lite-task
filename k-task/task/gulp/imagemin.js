@@ -12,7 +12,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
 
     gulp.task('imagemin', () => {
 
-        return gulp.src(path.join(target, '**/*'))
+        return gulp.src(path.join(target, '**/.{gif,png,jpg,jpeg,bmp,svg}'))
             .pipe(imagemin([
                 imagemin.gifsicle({ interlaced: true }),
                 imagemin.jpegtran({ progressive: true, arithmetic: true }),
