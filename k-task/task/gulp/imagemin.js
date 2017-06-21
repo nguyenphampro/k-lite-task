@@ -13,8 +13,15 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     gulp.task('imagemin', () => {
 
         return gulp.src(path.join(target, '**/*'))
-            .pipe(imagemin())
-            .pipe(plugins.changed(dest))
+            .pipe(imagemin([
+                imagemin.gifsicle({ interlaced: true }),
+                imagemin.jpegtran({ progressive: true, arithmetic: true }),
+                imagemin.optipng({ optimizationLevel: 7 }),
+                imagemin.svgo({ plugins: [{ removeViewBox: true }] })
+            ], {
+                verbose: true
+            }))
+            // .pipe(plugins.changed(dest))
             .pipe(gulp.dest(dest));
 
     });
