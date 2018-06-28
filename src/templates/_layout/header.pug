@@ -1,44 +1,4 @@
-include _config_menu
-
 <!-- ////////////// HEADER ////////////// -->
-header.pos-f-t(class=_dataJS.config.VIENSOI_APP.HEADER_TRANPARENT ? 'has-tranparent': 'no-tranparent')
-	<!-- ////////////// GLOBAL MENU ////////////// -->
-	nav.navbar.navbar-light.bg-faded(role='navigation', class=_dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "sm" ? 'navbar-toggleable-sm' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "md" ? 'navbar-toggleable-md' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "lg" ? 'navbar-toggleable-lg': 'navbar-toggleable-xs')
-		.container
-			button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#VienSoiGlobalMenu', aria-controls='VienSoiGlobalMenu', aria-expanded='false', aria-label='Toggle navigation', class=_dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "sm" ? 'hidden-md-up' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "md" ? 'hidden-lg-up' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "lg" ? 'hidden-xl-up': 'hidden-xs-up')
-				i.fa.fa-bars
-			a.navbar-brand(href='/index.html')
-				strong(site-logo) NAME
-			#VienSoiGlobalMenu.collapse.navbar-collapse.align-items-center
-				ul#VienSoiNAV.navbar-nav.mr-auto.align-self-center
-					each val, key in menu
-						if (typeof(val.URL) == "object")
-							if selected === val.Name
-								li.nav-item.dropdown.active
-									a.nav-link.dropdown-toggle.align-items-center.d-flex(href="#", title=val.Name, id="navbarDropdownMenu"+val.Name, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
-										img.img-fluid(src='/images/'+val.Icon, alt=val.URL.Name)
-										span=val.Name
-									.dropdown-menu(aria-labelledby="navbarDropdownMenu"+val.Name)
-										each second_val, second_key in val.URL
-											a.dropdown-item(href=second_val.URL)=second_val.Name
-							else
-								li.nav-item.dropdown
-									a.nav-link.dropdown-toggle.align-items-center.d-flex(href="#", title=val.Name, id="navbarDropdownMenu"+val.Name, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
-										img.img-fluid(src='/images/'+val.Icon, alt=val.URL.Name)
-										span=val.Name
-									.dropdown-menu(aria-labelledby="navbarDropdownMenu"+val.Name)
-										each second_val, second_key in val.URL
-											a.dropdown-item(href=second_val.URL)=second_val.Name
-						else
-							if selected === val.Name
-								li.nav-item.active
-									a.nav-link.align-items-center.d-flex(href=val.URL, title=val.Name)
-										img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
-										span=val.Name
-							else
-								li.nav-item
-									a.nav-link.align-items-center.d-flex(href=val.URL, title=val.Name)
-										img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
-										span=val.Name
-				.navbar-text Right Content
+header.text-center.p-3
+	h1.h3 k-lite-task
 <!-- ////////////// HEADER ////////////// -->

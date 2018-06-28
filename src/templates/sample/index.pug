@@ -12,65 +12,6 @@ block css
 	+getMin(bodyclass)
 
 block body
-	section#gmap_canvas.gmap
-		.Lat 10.359352
-		.Lng 106.673089
-		.MarginLat -0.0050
-		.MarginLng 0
-		.imgMap /images/logo.png
-		address 211A Ngô Tùng Châu, Gò Công, Tiền Giang, Việt Nam
-		.infoWindow
-			h3 Bảo Nguyên
-			p
-				strong Tại Tiền Giang :
-				br
-				|  211A Ngô Tùng Châu, KP.3, P.1, Gò Công
-				br
-				|  Email: info@baonguyenyam.com
-				br
-				|  Tel :
-				a(href='tel:+840000000', onclick="_gaq.push(['_trackEvent', 'Mobile', 'Click to Call'])") 0.96.96.89.89.3
-		.mapType ROADMAP
-		.mapCenter true
-		.Title Hello
-		.infoWidth 200
-		.ms black
-		.mapZoom 15
-		.scrollwheel false
-		.disableDoubleClickZoom true
-		.fullscreenControl true
-		.disableOpenURL false
-		.OpenURL View full map
-		.draggable false
-		.disableDefaultUI false
-
-	section.clients
-		.container
-			.row
-				.col
-					h2 FEATURED ON
-					.owl-carousel.owl-theme
-						.item
-							a(href='#', target='_blank')
-								img.gray_to_def(src='/images/clients/01.png', alt='')
-						.item
-							a(href='#', target='_blank')
-								img.gray_to_def(src='/images/clients/02.png', alt='')
-						.item
-							a(href='#', target='_blank')
-								img.gray_to_def(src='/images/clients/03.png', alt='')
-						.item
-							a(href='#', target='_blank')
-								img.gray_to_def(src='/images/clients/04.png', alt='')
-						.item
-							a(href='#', target='_blank')
-								img.gray_to_def(src='/images/clients/05.png', alt='')
-						.item
-							a(href='#', target='_blank')
-								img.gray_to_def(src='/images/clients/06.png', alt='')
-						.item
-							a(href='#', target='_blank')
-								img.gray_to_def(src='/images/clients/07.png', alt='')
 	section.formcheck.pt-5.pb-5
 		form(data-toggle="validator", role="form")
 			.container
@@ -104,26 +45,6 @@ block body
 							label What feature are you most interested in ?
 							textarea(class="form-control", rows="3", name="PreferFeature", id="features", required)
 
-
-					.col-md-12
-						.form-group.has-feedback
-							label.custom-control.custom-checkbox
-								input.custom-control-input(name="IsCheckedTerm", type='checkbox', required, data-error="Fleid is required", value="true")
-								.custom-control-indicator
-								.custom-control-description.y I agree
-							.help-block.with-errors.text-danger
-					.col-md-12
-						.form-group.has-feedback
-							.checkbox
-								input(name="IsChecked", id="checkbox", type='checkbox', required, data-error="Fleid is required", value="true")
-								label(for="checkbox") I agree
-							.help-block.with-errors.text-danger
-					.col-md-12
-						.form-group.has-feedback
-							.radio
-								input(name="IsCheckedradio", id="radio", type='radio', required, data-error="Fleid is required", value="true")
-								label(for="radio") I agree
-							.help-block.with-errors.text-danger
 					.col-md-12.text-center.mt-3
 						.form-group
 							button(type="submit").btn.btn-lg.btn-primary Submit

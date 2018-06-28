@@ -4,20 +4,19 @@ import path from 'path';
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSyncLib from 'browser-sync';
-import autoprefixer from 'autoprefixer';
 import minimist from 'minimist';
 import wrench from 'wrench';
 import runSequence from 'run-sequence';
 
-const fs = require('fs');
-const yaml = require("js-yaml");
-const load = yaml.load(fs.readFileSync("./k-task/config.yml"));
+import { readFileSync } from 'fs';
+import { load as _load } from "js-yaml";
+const load = _load(readFileSync("./k-task/config.yml"));
 
 // Global
 const plugins = gulpLoadPlugins();
 
 // Create karma server
-const KarmaServer = require('karma').Server;
+import { Server as KarmaServer } from 'karma';
 
 // Create a new browserSync
 

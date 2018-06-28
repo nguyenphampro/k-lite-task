@@ -2,12 +2,12 @@
 
 html, body
 	// font-family: 'CenturyGothic'
-	background-color: color-get($colors,bg)
+	background-color: color-get($mau,bg)
 	font-size: 14px
 	height: 100%
 	width: 100%
 	+selection
-		background-color: color-get($colors,main)
+		background-color: color-get($mau,main)
 		color: #fff
 	+media-breakpoint-down(md)
 		.container
@@ -35,7 +35,7 @@ html, body
 .text-xxl
 	+fz(2.2rem)
 .text-shadown
-	+text-shadow(#{1px 1px 0 #fdfdfd, 2px 2px 0 rgba(81, 81, 81, 0.5), 0 0 1px #fdfdfd})
+	+text-sha(#{1px 1px 0 #fdfdfd, 2px 2px 0 rgba(81, 81, 81, 0.5), 0 0 1px #fdfdfd})
 
 .text-bold
 	+fw(bold)
@@ -61,13 +61,13 @@ html, body
 	overflow-x: auto
 
 // Get text colors
-@each $value in $colors
+@each $value in $mau
 	$key: nth($value, 1);
 	$val: nth($value, 2);
 	.text-#{$key}
 		color: #{$val}
 // Get background colors
-@each $value in $colors
+@each $value in $mau
 	$key: nth($value, 1);
 	$val: nth($value, 2);
 	.bg-#{$key}
@@ -75,4 +75,4 @@ html, body
 
 .btn-double
 	border: 2px solid white
-	+box-shadows(0 0 0 1px #c2c2c2)
+	+box-sha(0 0 0 1px #c2c2c2)

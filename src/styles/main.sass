@@ -1,31 +1,15 @@
-@import ../../bower_components/bootstrap/scss/variables
-@import ../../bower_components/bootstrap/scss/mixins
-@import ../../bower_components/bootstrap/scss/mixins/breakpoints
+@import ../../bower_components/bootstrap/scss/bootstrap
 @import ../../bower_components/k-sass-core/dist/sass/k-sass-core
 
 ////////////////////////////////////////
 // CORE KHÔNG NÊN TÁC ĐỘNG /////////////
 ////////////////////////////////////////
-@import mixins/base
 // Khai báo các giá trị cho site
 @import common/colors
 @import common/global
 @import common/print
-// Luôn giữ dòng này để bật dev tools
-@import pages/viensoi-dev
-////////////////////////////////////////
-// CẤU TRÚC SITE ///////////////////////
-////////////////////////////////////////
-@import includes/header
-@import includes/footer
-@import includes/owl
-@import includes/btt
-@import includes/validator
 ////////////////////////////////////////
 // STYLES //////////////////////////////
 // Nếu ACTIVE_CONCAT = false thì không import thư mục pages
-@import pages/override
-@import pages/header
 @import pages/home
-@import pages/sample
 ////////////////////////////////////////

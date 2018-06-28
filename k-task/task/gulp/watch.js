@@ -53,18 +53,18 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
 
             // Templates
             gulp.watch([
-                path.join(url.source, '**/*.jade')
+                path.join(url.source, url.layouts.jade, '**/*.jade')
             ], function() {
                 runSequence('jade', 'inject');
             })
             gulp.watch([
-                path.join(url.source, '**/*.pug')
+                path.join(url.source, url.layouts.jade, '**/*.pug')
             ], function() {
                 runSequence('pug', 'inject');
             })
 
             gulp.watch([
-                path.join(url.source, '**/*.nunjucks')
+                path.join(url.source, url.layouts.jade, '**/*.nunjucks')
             ], function() {
                 runSequence('nunjucks');
             });
